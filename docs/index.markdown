@@ -6,7 +6,13 @@ layout: page
 ---
 
 
+
+
+
+
 <img style="float: right;" src="me.JPEG">
+
+### About
 
 
 I am a 3rd year undergraduate student at the [Department of  Computer Science and Engineering](https://www.cse.iitd.ac.in/) of
