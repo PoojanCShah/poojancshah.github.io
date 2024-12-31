@@ -6,7 +6,7 @@ layout: page
 ---
 
 
-<img style="float: right;" src="me.JPEG">
+<img style="float: center;" src="me.JPEG" class = "circular-frame" >
 
 
 

@@ -32,3 +32,12 @@ body {
      -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
 }
+
+.circular-frame {
+  width: 250px; /* Adjust size as needed */
+  height: 250px; /* Make height equal to width */
+  border-radius: 40%; /* Makes the image circular */ /* Optional: Add a border for the frame */
+  object-fit: cover; /* Ensures the image fits within the circle */
+  display: block;
+  margin: 0 auto; /* Optional: Centers the image */
+}
