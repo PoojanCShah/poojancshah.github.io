@@ -3,7 +3,7 @@ title:       Poojan Shah
 email:       shahpoojan2004@gmail.com
 author:      Poojan SHah
 description: "Poojan Shah's Personal Website"
-baseurl:     "/poojancshah.github.io"
+baseurl:     ""
 url:         "https://github.com/PoojanCShah/"
 date_format: "%b %-d, %Y"
 header_pages:
