@@ -3,12 +3,11 @@ title:       Poojan Shah
 email:       shahpoojan2004@gmail.com
 author:      Poojan SHah
 description: "Poojan Shah's Personal Website"
-baseurl:     ""
-url:         ""
+baseurl:     "/poojancshah.github.io"
+url:         "https://github.com/PoojanCShah/"
 date_format: "%b %-d, %Y"
 header_pages:
- - about.md
- - contact.html
+
 
 # Google services
 google_verification:
