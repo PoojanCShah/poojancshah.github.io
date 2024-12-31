@@ -4,19 +4,19 @@
   "description": "Poojan Shah's Personal Website",
   "icons": [
     {
-      "src": "/poojancshah.github.io/splash-512x512.png",
+      "src": "/splash-512x512.png",
       "type": "image/png",
       "sizes": "512x512"
     },
     {
-      "src": "/poojancshah.github.io/favicon-192x192.png",
+      "src": "/favicon-192x192.png",
       "type": "image/png",
       "sizes": "192x192"
     }
   ],
-  "start_url": "/poojancshah.github.io/",
+  "start_url": "/",
   "background_color": "#ffffff",
   "display": "standalone",
-  "scope": "/poojancshah.github.io/",
+  "scope": "/",
   "theme_color": "#ffffff"
 }
