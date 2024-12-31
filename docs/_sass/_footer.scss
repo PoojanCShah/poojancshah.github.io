@@ -27,3 +27,23 @@ footer {
   padding: $footer-padding;
   text-align: center;
 }
+
+
+
+.social-links a {
+  text-decoration: none ;
+  margin: 0 10px;
+  font-size: 32px;
+  color: #333; /* Default color */
+  transition: color 0.3s;
+  outline: none;
+
+}
+
+.social-links a:hover {
+  color: #0077b5; /* LinkedIn blue */
+}
+
+.social-links a:nth-child(2):hover {
+  color: #6e5495; /* GitHub black */
+}
