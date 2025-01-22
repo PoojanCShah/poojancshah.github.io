@@ -15,7 +15,7 @@ layout: page
 
 I am a 3rd year undergraduate student at the [Department of  Computer Science & Engineering](https://www.cse.iitd.ac.in/) at [IIT Delhi](https://home.iitd.ac.in/) .  I will be spending the winter semester of 2025 as an exchange student at the [Faculty of Mathematics](https://uwaterloo.ca/math/) at the [University of Waterloo](https://uwaterloo.ca/). 
 
-I am excited to join [Atlas Research](https://www.linkedin.com/company/atlas-research-ai/posts/?feedView=all) as a quantitative trading and research intern during the summer of 2025. I spent the summer of 2024  at the [Computer Scienc Group](https://www.quantumlah.org/research/group/Rahul-Jain) of the [Center for Quantum Technologies](https://www.quantumlah.org/) at the [National University of Singapore](https://nus.edu.sg/) as a research intern.
+I am excited to join [Atlas Research](https://www.linkedin.com/company/atlas-research-ai/posts/?feedView=all) as a quantitative trading and research intern during the summer of 2025. I spent the summer of 2024  at the [Computer Science Group](https://www.quantumlah.org/research/group/Rahul-Jain) of the [Center for Quantum Technologies](https://www.quantumlah.org/) at the [National University of Singapore](https://nus.edu.sg/) as a research intern.
 
 
 [Me](me.JPEG) and my brief [CV](https://drive.google.com/drive/search?q=cv). 
@@ -28,9 +28,9 @@ I am currently working on algorithms for clustering problems and applications of
 
 
 
-#### Preprints
+#### Publications
 
-- [Ragesh Jaiswal](https://www.cse.iitd.ac.in/~rjaiswal/) and Poojan Shah. [Quantum (Inspired) \\(D^2\\)-sampling with Applications](https://arxiv.org/abs/2405.13351)
+-  Poojan Shah and  [Ragesh Jaiswal](https://www.cse.iitd.ac.in/~rjaiswal/). [Quantum (Inspired) \\(D^2\\)-sampling with Applications](https://arxiv.org/abs/2405.13351). To appear in proceedings of the thirteenth International Conference of Learning Representations (ICLR 2025).
 
 #### Manuscripts
 
