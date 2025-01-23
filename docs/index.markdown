@@ -32,10 +32,6 @@ I am currently working on algorithms for clustering problems and applications of
 
 -  Poojan Shah and  [Ragesh Jaiswal](https://www.cse.iitd.ac.in/~rjaiswal/). [Quantum (Inspired) \\(D^2\\)-sampling with Applications](https://arxiv.org/abs/2405.13351). To appear in proceedings of the thirteenth International Conference of Learning Representations (ICLR 2025).
 
-#### Manuscripts
-
-- [A Fast Rejection Sampling Approach to \\(k\\)-means++](https://drive.google.com/file/d/1vvr4s53QjXd0NVKyaiGSvBlPr0kdQ0NB/view?usp=sharing)
-
 #### Miscellaneous
 
 - [Project Report](https://drive.google.com/file/d/1sAMgy_b85TmKmn6PrFv3pYO3LL50Jl6t/view?usp=sharing) on _CLWE_ for [COL872](https://sites.google.com/view/rajendrak/home/col872-lattices-in-computer-science) : Lattices in Computer Science. 
