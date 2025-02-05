@@ -30,9 +30,14 @@ I am currently working on algorithms for clustering problems and applications of
 
 #### Publications
 
--  Poojan Shah and  [Ragesh Jaiswal](https://www.cse.iitd.ac.in/~rjaiswal/).  [Quantum (Inspired) \\(D^2\\)-sampling with Applications](https:
-//openreview.net/forum?id=tDIL7UXmSS). To Appear In The Thirteenth [International Conference on Learning Representations](https://en.wikipedia.org/wiki/International_Conference_on_Learning_Representations), 2025
+-  Poojan Shah and [Ragesh Jaiswal](https://www.cse.iitd.ac.in/~rjaiswal/) (2025). Quantum (inspired) $D^2$-sampling with applications. In The Thirteenth
+International Conference on Learning Representations. [[OpenReview]](https://openreview.net/forum?id=tDIL7UXmSS)[[arXiv]](https://arxiv.org/abs/2405.13351)
 
+
+#### Preprints
+
+- Poojan Shah, Shashwat Agrawal, and [Ragesh Jaiswal](https://www.cse.iitd.ac.in/~rjaiswal/) (2025). A new rejection sampling approach to k-means++ with
+improved trade-offs. [[arXiv]](https://arxiv.org/abs/2502.02085)
 
 #### Miscellaneous
 
