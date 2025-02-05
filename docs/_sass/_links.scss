@@ -1,9 +1,10 @@
 a {
   color: $link-color;
+  text-decoration: none !important; // Prevent underlines
   background-image: linear-gradient(to top,
     rgba(0,0,0,0) 13%,
     rgba($link-color,.8) 13%,
-    rgba($link-color,.8) 18%,
+    rgba($link-color,.8) 17%,
     rgba(0,0,0,0) 17%
   );
   text-shadow: white 1px 0px 0px, white -1px 0px 0px;
@@ -14,7 +15,7 @@ a:focus,
 a:active {
   border: 0;
   color: $link-hover-color;
-  text-decoration: none;
+  text-decoration: none !important; // Ensure no underlines on hover
   background-image: linear-gradient(to top,
     rgba(0,0,0,0) 13%,
     rgba($link-hover-color,.8) 13%,
@@ -40,14 +41,17 @@ button,
 }
 
 .anchorjs-link {
-    text-shadow: none;
-    background-image: none;
+  text-shadow: none;
+  background-image: none;
+  text-decoration: none !important; // Remove underlines from anchor links
 }
+
 .anchorjs-link:hover,
 .anchorjs-link:focus,
-.anchorjs-link:active{
-    border: 0;
-    color: $link-hover-color;
-    text-shadow: none;
-    background-image: none;
+.anchorjs-link:active {
+  border: 0;
+  color: $link-hover-color;
+  text-shadow: none;
+  background-image: none;
+  text-decoration: none !important; // Ensure no underlines on hover
 }

@@ -34,14 +34,14 @@ During much of 2024, I studied an algorithmic framework for efficient classical 
 
 #### Publications
 
--  Poojan Shah and [Ragesh Jaiswal](https://www.cse.iitd.ac.in/~rjaiswal/) (2025). Quantum (inspired) \\(D^2\\)-sampling with applications. In The Thirteenth
-International Conference on Learning Representations. [[OpenReview]](https://openreview.net/forum?id=tDIL7UXmSS)[[arXiv]](https://arxiv.org/abs/2405.13351)
+-  _Poojan Shah and [Ragesh Jaiswal](https://www.cse.iitd.ac.in/~rjaiswal/) (2025). Quantum (inspired) \\(D^2\\)-sampling with applications. In The Thirteenth
+International Conference on Learning Representations. [[OpenReview]](https://openreview.net/forum?id=tDIL7UXmSS)[[arXiv]](https://arxiv.org/abs/2405.13351)_
 
 
 #### Preprints
 
-- Poojan Shah, Shashwat Agrawal and [Ragesh Jaiswal](https://www.cse.iitd.ac.in/~rjaiswal/) (2025). A new rejection sampling approach to k-means++ with
-improved trade-offs. [[arXiv]](https://arxiv.org/abs/2502.02085)
+- _Poojan Shah, Shashwat Agrawal and [Ragesh Jaiswal](https://www.cse.iitd.ac.in/~rjaiswal/) (2025). A new rejection sampling approach to k-means++ with
+improved trade-offs. [[arXiv]](https://arxiv.org/abs/2502.02085)_
 
 #### Miscellaneous
 
