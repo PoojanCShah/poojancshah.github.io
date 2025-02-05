@@ -24,7 +24,11 @@ I am excited to join [Atlas Research](https://www.linkedin.com/company/atlas-res
 
 I enjoy thinking about problems broadly under theoretical computer science including algorithms, cryptography, quantum information processing and machine learning. 
 
-I am currently working on algorithms for clustering problems and applications of the [_Continuous Learning With Errors_](https://arxiv.org/abs/2005.09595) problem from [Lattice based cryptography](https://en.wikipedia.org/wiki/Lattice-based_cryptography). During much of 2024, I studied an algorithmic framework for efficient classical simulation of quantum machine learning algorithms referred to as [_Dequantized QML_](https://ewintang.com/assets/tang_thesis.pdf) and worked on applying it to clustering problems. During my time at CQT, I studied [_pseudo random quantum states_](https://arxiv.org/abs/2112.10020) which are a  potentially weaker [cryptographic assumption](https://en.wikipedia.org/wiki/Computational_hardness_assumption) compared to [one-way functions](https://en.wikipedia.org/wiki/One-way_function).  
+I am currently working on algorithms for clustering problems and applications of the [_Continuous Learning With Errors_](https://arxiv.org/abs/2005.09595) problem from [Lattice based cryptography](https://en.wikipedia.org/wiki/Lattice-based_cryptography). 
+
+During much of 2024, I studied an algorithmic framework for efficient classical simulation of quantum machine learning algorithms referred to as [_Dequantized QML_](https://ewintang.com/assets/tang_thesis.pdf) and worked on applying it to clustering problems.
+
+ During my time at CQT, I studied [_pseudo random quantum states_](https://arxiv.org/abs/2112.10020) which are a  potentially weaker [cryptographic assumption](https://en.wikipedia.org/wiki/Computational_hardness_assumption) compared to [one-way functions](https://en.wikipedia.org/wiki/One-way_function).  
 
 
 
