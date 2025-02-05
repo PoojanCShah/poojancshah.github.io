@@ -30,7 +30,7 @@ I am currently working on algorithms for clustering problems and applications of
 
 #### Publications
 
--  Poojan Shah and [Ragesh Jaiswal](https://www.cse.iitd.ac.in/~rjaiswal/) (2025). Quantum (inspired) $D^2$-sampling with applications. In The Thirteenth
+-  Poojan Shah and [Ragesh Jaiswal](https://www.cse.iitd.ac.in/~rjaiswal/) (2025). Quantum (inspired) \\(D^2\\)-sampling with applications. In The Thirteenth
 International Conference on Learning Representations. [[OpenReview]](https://openreview.net/forum?id=tDIL7UXmSS)[[arXiv]](https://arxiv.org/abs/2405.13351)
 
 
