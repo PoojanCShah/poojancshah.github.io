@@ -18,7 +18,7 @@ I am a 3rd year undergraduate student at the [Department of  Computer Science & 
 I am excited to join [Atlas Research](https://www.linkedin.com/company/atlas-research-ai/posts/?feedView=all) as a quantitative trading and research intern during the summer of 2025. I spent the summer of 2024  at the [Computer Science Group](https://www.quantumlah.org/research/group/Rahul-Jain) of the [Center for Quantum Technologies](https://www.quantumlah.org/) at the [National University of Singapore](https://nus.edu.sg/) as a research intern.
 
 
-[Me](me.JPEG) and my brief [CV](https://drive.google.com/file/d/148U38niU05YE_U1oDqrKn0I8wXLGgbxG/view?usp=sharing). 
+[Me](me.JPEG) and my brief [CV](https://drive.google.com/file/d/148U38niU05YE_U1oDqrKn0I8wXLGgbxG/view?usp=sharing).  [Google Scholar](https://scholar.google.ca/citations?hl=en&view_op=list_works&gmla=AOv-ny_OFkMHrWUMPNHQCyvv05avR8LXUHY6vYYfLZpDepuWzLy1DVgpFu_KIZzge24Ap-uclYsDnkziNSYbtu0dH-nr&user=uedBN20AAAAJ)
 
 ### Research
 
