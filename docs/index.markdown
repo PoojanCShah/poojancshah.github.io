@@ -24,7 +24,7 @@ I am excited to join [Atlas Research](https://www.linkedin.com/company/atlas-res
 
 I enjoy thinking about problems broadly under theoretical computer science including algorithms, cryptography, quantum information processing and machine learning. 
 
-I am currently working on algorithms for clustering problems and applications of the [_Continuous Learning With Errors_](https://arxiv.org/abs/2005.09595) problem from [Lattice based cryptography](https://en.wikipedia.org/wiki/Lattice-based_cryptography). 
+I am currently studying a class of problems in statistical learning referred to as _planted inference_, for example  the [_Continuous Learning With Errors_](https://arxiv.org/abs/2005.09595) problem from [Lattice based cryptography](https://en.wikipedia.org/wiki/Lattice-based_cryptography). 
 
 During much of 2024, I studied an algorithmic framework for efficient classical simulation of quantum machine learning algorithms referred to as [_Dequantized QML_](https://ewintang.com/assets/tang_thesis.pdf) and worked on applying it to clustering problems.
 

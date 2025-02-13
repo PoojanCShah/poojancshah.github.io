@@ -1,8 +1,8 @@
 # Site settings
-title:       Poojan Shah's Homepage
+title:       Poojan Shah
 email:       shahpoojan2004@gmail.com
-author:      Poojan SHah
-description: "Poojan Shah's Personal Website"
+author:      Poojan Shah
+description: "Poojan Shah's Homepage"
 baseurl:     ""
 url:         ""
 date_format: "%b %-d, %Y"
