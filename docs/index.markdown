@@ -41,7 +41,7 @@ International Conference on Learning Representations. [[OpenReview]](https://ope
 #### Preprints
 
 - _Poojan Shah, Shashwat Agrawal and [Ragesh Jaiswal](https://www.cse.iitd.ac.in/~rjaiswal/) (2025). A new rejection sampling approach to k-means++ with
-improved trade-offs. [[arXiv]](https://arxiv.org/abs/2502.02085)_
+improved trade-offs. [[arXiv]](https://arxiv.org/abs/2502.02085) [[code]](https://rskmeanspp.readthedocs.io/en/latest/)_
 
 #### Miscellaneous
 
