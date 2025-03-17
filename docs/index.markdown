@@ -46,7 +46,7 @@ improved trade-offs. [[arXiv]](https://arxiv.org/abs/2502.02085) [[code]](https:
 #### Miscellaneous
 
 - [Project Report](https://drive.google.com/file/d/1sAMgy_b85TmKmn6PrFv3pYO3LL50Jl6t/view?usp=sharing) on _CLWE_ for [COL872](https://sites.google.com/view/rajendrak/home/col872-lattices-in-computer-science) : Lattices in Computer Science. 
-- A [Talk](https://drive.google.com/file/d/10hbt5_6Pd_qbcC5O_FxOspqenUsylO2V/view?usp=sharing) on Dequantization which I gave at IIT D's [TCS Seminar](https://cstheory.iitd.ac.in/seminars.html) seminar. 
+- A [Talk](https://drive.google.com/file/d/10hbt5_6Pd_qbcC5O_FxOspqenUsylO2V/view?usp=sharing) on Dequantization which I gave at IIT D's [TCS Seminar](https://cstheory.iitd.ac.in/seminars.html). 
 - [Training Diary](https://drive.google.com/file/d/172Y9i1EXFuj7_xUx312oYL4hXghbKaMp/view) for internship at CQT. 
 - [Research Proposal](https://drive.google.com/file/d/1Tv6BSx-AccOXlK7cKLiOE22D6t3l7Z-M/view?usp=sharing) and [subsequent work](https://drive.google.com/file/d/1tlcvpPDR4P1Kk0BI8ktx4NAZ7K8qCX65/view?usp=sharing) on _Exploring Dequantisation of QML_ .
 
