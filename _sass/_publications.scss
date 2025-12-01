@@ -1,0 +1,92 @@
+.pub-item {
+  margin-bottom: 1.5rem;
+  padding: 1rem 1.5rem;
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: 6px;
+
+  .pub-title {
+    font-weight: normal;
+    color: #111;
+    margin-bottom: 0.25rem;
+  }
+
+  .pub-number {
+    font-weight: 600;
+    color: #333;
+    margin-right: 0.3rem;
+  }
+
+  .pub-authors {
+    font-size: 0.95rem;
+    color: #444;
+    margin-bottom: 0.25rem;
+  }
+
+  .pub-venue {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #666;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.pub-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+
+  a {
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+    font-family: 'Source Code Pro', Consolas, monospace;
+    font-size: 0.75rem;
+    font-weight: 500;
+    border-radius: 3px;
+    letter-spacing: 0.02em;
+    transition: opacity 0.2s;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  .btn-arxiv {
+    background: #b22222; // brick red
+    color: white;
+  }
+
+  .btn-conf {
+    background: #4682b4; // steel blue
+    color: white;
+  }
+
+  .btn-code {
+    background: #8957e5; // github purple
+    color: white;
+  }
+
+  .btn-poster {
+    background: #14b8a6; // teal
+    color: white;
+  }
+
+  .btn-slides {
+    background: #6b7280; // gray
+    color: white;
+  }
+
+  .btn-pdf {
+    background: #ec4899; // pink
+    color: white;
+  }
+
+  .btn-video {
+    background: #dc5f5f; // lighter red
+    color: white;
+  }
+
+  .btn-blog {
+    background: #14b8a6; // teal
+    color: white;
+  }
+}

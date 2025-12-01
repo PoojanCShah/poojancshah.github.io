@@ -1,57 +1,94 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
 layout: page
 ---
 
+<div class="profile-header">
+<div class="profile-photo">
+<img src="me.JPEG" class="circular-frame">
+</div>
+<div class="profile-info">
+<div class="profile-contact">
+<p>IITD e-mail : <code>cs1221594@iitd.ac.in</code></p>
+<p>Personal e-mail : <code>shahpoojan2004@gmail.com</code></p>
+<p>Phone : <code>+91 9924636975</code></p>
+</div>
+<div class="profile-links">
+<a href="me.JPEG">[Me]</a>
+<a href="https://drive.google.com/file/d/148U38niU05YE_U1oDqrKn0I8wXLGgbxG/view?usp=sharing">[CV]</a>
+<a href="https://scholar.google.ca/citations?hl=en&view_op=list_works&gmla=AOv-ny_OFkMHrWUMPNHQCyvv05avR8LXUHY6vYYfLZpDepuWzLy1DVgpFu_KIZzge24Ap-uclYsDnkziNSYbtu0dH-nr&user=uedBN20AAAAJ">[Google Scholar]</a>
+</div>
+</div>
+</div>
 
-<img style="float: center;" src="me.JPEG" class = "circular-frame" >
+### About
 
-
-
-### About 
-
-
-I am a 3rd year undergraduate student at the [Department of  Computer Science & Engineering](https://www.cse.iitd.ac.in/) at [IIT Delhi](https://home.iitd.ac.in/) .  I will be spending the winter semester of 2025 as an exchange student at the [Faculty of Mathematics](https://uwaterloo.ca/math/) at the [University of Waterloo](https://uwaterloo.ca/). 
-
-I am excited to join [Atlas Research](https://www.linkedin.com/company/atlas-research-ai/posts/?feedView=all) as a quantitative trading and research intern during the summer of 2025. I spent the summer of 2024  at the [Computer Science Group](https://www.quantumlah.org/research/group/Rahul-Jain) of the [Center for Quantum Technologies](https://www.quantumlah.org/) at the [National University of Singapore](https://nus.edu.sg/) as a research intern.
-
-
-[[Me]](me.JPEG) and my brief [[CV]](https://drive.google.com/file/d/148U38niU05YE_U1oDqrKn0I8wXLGgbxG/view?usp=sharing) (last updated on Feb 6 2025).  [[Google Scholar]](https://scholar.google.ca/citations?hl=en&view_op=list_works&gmla=AOv-ny_OFkMHrWUMPNHQCyvv05avR8LXUHY6vYYfLZpDepuWzLy1DVgpFu_KIZzge24Ap-uclYsDnkziNSYbtu0dH-nr&user=uedBN20AAAAJ). [[Projects]](/projects/)
-
-### Research
-
-I enjoy thinking about problems broadly under theoretical computer science including algorithms, cryptography, quantum information processing and  statistical learning. 
-
-I am currently studying methods inspired from statistical physics for a  class of problems in statistical learning referred to as _planted inference_, for example  the [_Continuous Learning With Errors_](https://arxiv.org/abs/2005.09595) problem from [Lattice based cryptography](https://en.wikipedia.org/wiki/Lattice-based_cryptography). 
-
-During much of 2024, I studied an algorithmic framework for efficient classical simulation of quantum machine learning algorithms in the QRAM model referred to as [_Dequantized QML_](https://ewintang.com/assets/tang_thesis.pdf) and worked on applying it to sampling based algorithms for clustering problems.
-
- During my time at CQT, I studied [_pseudo random quantum states_](https://arxiv.org/abs/2112.10020) which are a  potentially weaker [cryptographic assumption](https://en.wikipedia.org/wiki/Computational_hardness_assumption) compared to [one-way functions](https://en.wikipedia.org/wiki/One-way_function).  
+I am a senior undergraduate student at the [Department of  Computer Science & Engineering](https://www.cse.iitd.ac.in/) at [IIT Delhi](https://home.iitd.ac.in/). I also spent a semester at the [Faculty of Mathematics](https://uwaterloo.ca/math/) at the [University of Waterloo](https://uwaterloo.ca/). I have worked on quantum-inspired classical algorithms and large scale data clustering at [IIT Delhi](https://home.iitd.ac.in/) advised by [Ragesh Jaiswal](https://www.cse.iitd.ac.in/~rjaiswal/) and [Rajendra Kumar](https://k-rajendra.github.io/), self supervised learning at [Wadhwani AI](https://www.wadhwaniai.org/) hosted by [Makarand Tapaswi](https://makarandtapaswi.github.io/), applied statistical learning at [Atlas Research](https://www.atlasresearch.ai/) and quantum cryptographic primitives at the [Computer Science Group](https://cs.quantumlah.org/) of [Center for Quantum Technologies](https://www.quantumlah.org/) hosted by [Rahul Jain](https://www.comp.nus.edu.sg/~rahul/).  
 
 
-
-#### Publications
-
--  _Poojan Shah and [Ragesh Jaiswal](https://www.cse.iitd.ac.in/~rjaiswal/) (2025). Quantum (inspired) \\(D^2\\)-sampling with applications. In The Thirteenth
-International Conference on Learning Representations. [[OpenReview]](https://openreview.net/forum?id=tDIL7UXmSS)[[arXiv]](https://arxiv.org/abs/2405.13351)_
+I spent my high school years enjoying competitive physics. Aside from technical research,  I am a percussionist with a particular interest in Indian classical instruments. I also spend scattered spans of time learning about language, religion, philosophy, natural sciences and anthropology. 
 
 
-#### Preprints
 
-- _Poojan Shah, Shashwat Agrawal and [Ragesh Jaiswal](https://www.cse.iitd.ac.in/~rjaiswal/) (2025). A new rejection sampling approach to k-means++ with
-improved trade-offs. [[arXiv]](https://arxiv.org/abs/2502.02085) [[code]](https://rskmeanspp.readthedocs.io/en/latest/)_
+<div class="news-section">
+<h3>News</h3>
+<div class="news-box">
+<ul>
+<li><span class="news-date">Dec 2025</span> I will be attending FSTTCS-2025 at BITS Goa !  </li>
+<li><span class="news-date">Nov 2025</span> Starting a collaboration with <a href="https://www.wadhwaniai.org/">Wadhwani AI</a>  for research on self supervised learning for anthropometry, under the guidance of <a href="https://makarandtapaswi.github.io/"> Makarand Tapaswi ! </a></li>
+<li><span class="news-date">Oct 2025</span> Our work was featured by CSE-IITD's blogpost ! Have a look at it <a href="https://homecse.iitd.ac.in/students-research-shines-at-iclr-2025/">here</a>. </li> 
+</ul>
+</div>
+</div>
 
-#### Miscellaneous
+### Research Interests
 
-- [Project Report](https://drive.google.com/file/d/1sAMgy_b85TmKmn6PrFv3pYO3LL50Jl6t/view?usp=sharing) on _CLWE_ for [COL872](https://sites.google.com/view/rajendrak/home/col872-lattices-in-computer-science) : Lattices in Computer Science. 
-- A [Talk](https://drive.google.com/file/d/10hbt5_6Pd_qbcC5O_FxOspqenUsylO2V/view?usp=sharing) on Dequantization which I gave at IIT D's [TCS Seminar](https://cstheory.iitd.ac.in/seminars.html). 
-- [Training Diary](https://drive.google.com/file/d/172Y9i1EXFuj7_xUx312oYL4hXghbKaMp/view) for internship at CQT. 
-- [Research Proposal](https://drive.google.com/file/d/1Tv6BSx-AccOXlK7cKLiOE22D6t3l7Z-M/view?usp=sharing) and [subsequent work](https://drive.google.com/file/d/1tlcvpPDR4P1Kk0BI8ktx4NAZ7K8qCX65/view?usp=sharing) on _Exploring Dequantisation of QML_ .
 
-### Contact 
 
-IITD e-mail : \\(  \mathtt{cs1221594@iitd.ac.in}\\) 
 
-Personal e-mail : \\( \mathtt{shahpoojan2004@gmail.com} \\) 
+
+### Publications
+
+<div class="pub-item">
+<div class="pub-title"><span class="pub-number">1.</span> Quantum (inspired) D²-sampling with applications</div>
+<div class="pub-authors">Poojan Shah and <a href="https://www.cse.iitd.ac.in/~rjaiswal/">Ragesh Jaiswal</a></div>
+<div class="pub-venue">ICLR 2025 — The Thirteenth International Conference on Learning Representations</div>
+<div class="pub-links">
+<a href="https://arxiv.org/abs/2405.13351" class="btn-arxiv">arXiv</a>
+<a href="https://openreview.net/forum?id=tDIL7UXmSS" class="btn-conf">OpenReview</a>
+<a href="https://iclr.cc/virtual/2025/poster/28068" class="btn-poster">Poster</a>
+</div>
+</div>
+
+### Preprints
+
+<div class="pub-item">
+<div class="pub-title"><span class="pub-number">1.</span> A new rejection sampling approach to k-means++ with improved trade-offs</div>
+<div class="pub-authors">Poojan Shah, Shashwat Agrawal and <a href="https://www.cse.iitd.ac.in/~rjaiswal/">Ragesh Jaiswal</a></div>
+<div class="pub-venue">2025</div>
+<div class="pub-links">
+<a href="https://arxiv.org/abs/2502.02085" class="btn-arxiv">arXiv</a>
+<a href="https://rskmeanspp.readthedocs.io/en/latest/" class="btn-code">Code</a>
+</div>
+</div>
+
+### Talks
+
+<div class="pub-item">
+<div class="pub-title"><span class="pub-number">1.</span> Quantum and Quantum Inspired Classical Algorithms for Clustering</div>
+<div class="pub-venue">CS Group Meeting CQT - NUS, April 20, 2025</div>
+<div class="pub-links">
+<a href="https://iclr.cc/virtual/2025/poster/28068" class="btn-poster">Poster</a>
+</div>
+</div>
+
+<div class="pub-item">
+<div class="pub-title"><span class="pub-number">2.</span> Quantum Machine Learning without any Quantum</div>
+<div class="pub-venue">TCS Seminar, IIT Delhi — Bharti 501, November 4, 2024</div>
+<div class="pub-links">
+<a href="https://drive.google.com/file/d/10hbt5_6Pd_qbcC5O_FxOspqenUsylO2V/view?usp=sharing" class="btn-slides">Slides</a>
+</div>
+</div>
+
+### Teaching
+
+Teaching Assistant for [COL7160 : Quantum Computing](https://k-rajendra.github.io/courses/quantum252601.html), Winter 2026

@@ -4,88 +4,53 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Jekyll-based personal academic website for Poojan Shah (IIT Delhi).
+Jekyll-based personal academic website using the Pixyll theme, deployed via GitHub Pages.
 
 ## Build Commands
 
 ```bash
-# Install dependencies (first time only)
+# Install dependencies
 bundle install
 
 # Start development server with live reload
 make serve
-# Or directly:
-bundle exec jekyll serve --watch
+# Or: bundle exec jekyll serve --watch
 
-# Build static site
+# Build static site to _site/
 make build
-
-# Preview with draft posts visible
-rake preview
 ```
 
-## Content Management
+## Architecture
 
-```bash
-# Create new blog post (auto-dated)
-rake post['Post Title']
+### Styling System
+- `css/pixyll.scss` - Main entry point that imports all SCSS partials
+- `_sass/_variables.scss` - Design tokens: colors, typography, spacing
+- Key custom components: `_profile.scss`, `_publications.scss`, `_news.scss`, `_research.scss`
 
-# Create draft (no date prefix)
-rake draft['Draft Title']
+### Layout System
+- `_layouts/default.html` - Base template (includes head, header, footer)
+- `_layouts/post.html` - Blog post template
+- `_layouts/center.html` - Centered content layout
 
-# Publish draft with today's date
-rake undraft['draft-file.md']
-```
+### Includes
+- `header.html`, `footer.html` - Site chrome
+- `navigation.html` - Nav menu (controlled by `header_pages` in config)
+- `social_links.html` - Social media icons
+- `head.html` - Meta tags, CSS, MathJax loading
 
-## Directory Structure
+## Content
 
-- `_posts/` - Blog posts with `YYYY-MM-DD-title.md` naming
-- `_drafts/` - Unpublished drafts
-- `_layouts/` - HTML templates (default, post, page, center)
-- `_includes/` - Reusable components (header, footer, navigation, social_links)
-- `_sass/` - SCSS stylesheets; `_variables.scss` has colors/fonts
-- `css/pixyll.scss` - Main stylesheet that imports all SCSS
-
-## Key Pages
-
-- `index.markdown` - Homepage with profile, research, publications
-- `research.md` - Research interests with collapsible sections
-- `projects.md`, `essays.md`, `affiliations.md` - Navigation pages
-
-## Front Matter
-
-Posts:
-```yaml
----
-layout: post
-title: "Post Title"
-date: YYYY-MM-DD HH:MM
-categories:
----
-```
-
-Pages:
-```yaml
----
-layout: page
----
-```
+- `index.markdown` - Homepage with profile photo, about, news, publications, talks, teaching
+- `_posts/` - Blog posts (YYYY-MM-DD-title.md naming)
 
 ## Configuration (_config.yml)
 
-Key settings:
-- `enable_mathjax: true` - LaTeX math support
-- `animated: true` - Page fade-in animations
-- `header_pages:` - Navigation menu items
-
-## LaTeX/MathJax
-
-Inline: `\\( ... \\)` | Display: `$$ ... $$`
+```yaml
+enable_mathjax: true   # LaTeX support: inline \\( \\), display $$ $$
+animated: true         # Page fade-in animations
+header_pages: []       # Navigation menu items (currently empty)
+```
 
 ## Deployment
 
-Site deploys automatically via GitHub Pages when pushing to `main`. After reorganization, update GitHub Pages settings to deploy from root directory (not `docs/`).
-
-```bash
-make deploy
-```
+Push to `main` branch triggers automatic GitHub Pages deployment.

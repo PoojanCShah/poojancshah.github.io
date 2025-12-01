@@ -1,0 +1,37 @@
+.news-section {
+  margin: 1.5rem 0;
+
+  h4 {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.news-box {
+  max-height: 150px;
+  overflow-y: auto;
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  background: rgba(0, 0, 0, 0.03);
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    padding: 0.4rem 0;
+    border-bottom: 1px solid #eee;
+    font-size: 0.9rem;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  .news-date {
+    color: #777;
+    font-size: 0.8rem;
+    margin-right: 0.5rem;
+  }
+}
