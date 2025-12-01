@@ -42,7 +42,7 @@ I spent my high school years enjoying competitive physics. Aside from technical 
 
 ### Research Interests
 
-
+Broadly speaking, I am interested in the study of the world from a theoretical perspective. Specific interests, which tend to grow as time goes on include data clustering, quantum computing, statistical learning and algorithm design for modern information processing. 
 
 
 
