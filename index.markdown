@@ -4,7 +4,7 @@ layout: page
 
 <div class="profile-header">
 <div class="profile-photo">
-<img src="me.JPEG" class="circular-frame">
+<img src="menew.jpeg" class="circular-frame">
 </div>
 <div class="profile-info">
 <div class="profile-contact">
