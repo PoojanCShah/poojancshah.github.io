@@ -1,0 +1,22 @@
+# Generated site
+_site/
+
+# Dependencies
+vendor/
+.bundle/
+
+# Jekyll cache
+.jekyll-cache/
+.jekyll-metadata
+
+# macOS
+.DS_Store
+*.swp
+
+# Ruby
+Gemfile.lock
+
+# IDE
+.idea/
+.vscode/
+*.sublime-*

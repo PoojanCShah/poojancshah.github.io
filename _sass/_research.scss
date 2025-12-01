@@ -1,0 +1,102 @@
+// Research page collapsible sections styling
+
+.research-sections {
+  margin-top: 2rem;
+}
+
+.research-topic {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  padding: 0;
+  background-color: #fff;
+  transition: all 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  summary {
+    padding: 1.25rem 1.5rem;
+    font-size: 1.05rem;
+    font-weight: 400;
+    font-style: italic;
+    cursor: pointer;
+    user-select: none;
+    list-style: none;
+    position: relative;
+    color: #333;
+    transition: all 0.2s ease;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &::after {
+      content: '▼';
+      position: absolute;
+      right: 1.5rem;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1rem;
+      font-weight: 300;
+      font-style: normal;
+      transition: transform 0.3s ease;
+    }
+
+    &:hover {
+      color: #0066cc;
+      background-color: #f8f9fa;
+    }
+  }
+
+  &[open] summary {
+    border-bottom: 1px solid #e0e0e0;
+    background-color: #f8f9fa;
+
+    &::after {
+      content: '▲';
+      transform: translateY(-50%) rotate(0deg);
+    }
+  }
+
+  .research-content {
+    padding: 1.5rem;
+    animation: fadeIn 0.3s ease;
+    font-size: 0.95rem;
+
+    p {
+      margin-bottom: 1rem;
+      line-height: 1.6;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    strong {
+      color: #555;
+      display: inline-block;
+      margin-right: 0.5rem;
+      font-weight: 500;
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// MathJax styling
+.research-topic .MathJax,
+.research-topic .MathJax_Display,
+.research-topic .MathJax * {
+  font-style: italic !important;
+}
