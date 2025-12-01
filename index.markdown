@@ -14,7 +14,7 @@ layout: page
 </div>
 <div class="profile-links">
 <a href="me.JPEG">[Me]</a>
-<a href="https://drive.google.com/file/d/148U38niU05YE_U1oDqrKn0I8wXLGgbxG/view?usp=sharing">[CV]</a>
+<a href="https://drive.google.com/file/d/1KJMR-lBt-MmfssjZDvTtzdv9TqbNXI5n/view?usp=sharing">[CV]</a>
 <a href="https://scholar.google.ca/citations?hl=en&view_op=list_works&gmla=AOv-ny_OFkMHrWUMPNHQCyvv05avR8LXUHY6vYYfLZpDepuWzLy1DVgpFu_KIZzge24Ap-uclYsDnkziNSYbtu0dH-nr&user=uedBN20AAAAJ">[Google Scholar]</a>
 </div>
 </div>
