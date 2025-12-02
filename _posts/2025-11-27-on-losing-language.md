@@ -2,6 +2,7 @@
 layout: post
 title: "On losing language"
 date: 2025-11-27
+category: personal
 ---
 
 With the current progress in AI tools, it is possible for me to input a jumbled mess of words into a bot and it perfectly understands me. Many a times I have seen people trying to communicate on e-mail use chatbots to frame their sentences. It seems that one need not be proficient in writing at all. Is it not much more efficient to just "think" of a bunch of words and let the machine complete your thought? It is not uncommon to see skills which are easily automated by machines to become extinct into oblivion. Certainly, there is no use of the skill of writing code on punchcards for an ENIAC machine right?

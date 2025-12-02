@@ -25,7 +25,7 @@ layout: page
 I am a senior undergraduate student at the [Department of  Computer Science & Engineering](https://www.cse.iitd.ac.in/) at [IIT Delhi](https://home.iitd.ac.in/). I also spent a semester at the [Faculty of Mathematics](https://uwaterloo.ca/math/) at the [University of Waterloo](https://uwaterloo.ca/). I have worked on quantum-inspired classical algorithms and large scale data clustering at [IIT Delhi](https://home.iitd.ac.in/) advised by [Ragesh Jaiswal](https://www.cse.iitd.ac.in/~rjaiswal/) and [Rajendra Kumar](https://k-rajendra.github.io/), self supervised learning at [Wadhwani AI](https://www.wadhwaniai.org/) hosted by [Makarand Tapaswi](https://makarandtapaswi.github.io/), applied statistical learning at [Atlas Research](https://www.atlasresearch.ai/) and quantum cryptographic primitives at the [Computer Science Group](https://cs.quantumlah.org/) of [Center for Quantum Technologies](https://www.quantumlah.org/) hosted by [Rahul Jain](https://www.comp.nus.edu.sg/~rahul/).  
 
 
-I spent my high school years studying physics. Aside from technical research,  I am a percussionist with a particular interest in Indian classical instruments. I also spend scattered spans of time learning about language, religion, philosophy, natural sciences and anthropology. I frequently write on my [blog](/blog).
+I spent my high school years studying physics. Aside from technical research,  I am a percussionist with a particular interest in Indian classical instruments. I also spend scattered spans of time learning about language, religion, philosophy, natural sciences and anthropology. I frequently write on my [personal blog](/blog) and [research blog](/research-blog).
 
 
 

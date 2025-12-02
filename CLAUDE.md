@@ -25,7 +25,8 @@ make build
 ### Styling System
 - `css/pixyll.scss` - Main entry point that imports all SCSS partials
 - `_sass/_variables.scss` - Design tokens: colors, typography, spacing
-- Key custom components: `_profile.scss`, `_publications.scss`, `_news.scss`, `_research.scss`
+- Custom academic components: `_profile.scss`, `_publications.scss`, `_news.scss`, `_research.scss`
+  - These style the homepage sections (profile header, publication items with venue/links, news timeline)
 
 ### Layout System
 - `_layouts/default.html` - Base template (includes head, header, footer)
@@ -42,11 +43,12 @@ make build
 
 - `index.markdown` - Homepage with profile photo, about, news, publications, talks, teaching
 - `_posts/` - Blog posts (YYYY-MM-DD-title.md naming)
+- `/blog` - Blog index page (referenced from homepage)
 
 ## Configuration (_config.yml)
 
 ```yaml
-enable_mathjax: true   # LaTeX support: inline \\( \\), display $$ $$
+enable_mathjax: true   # LaTeX support: inline \( \), display $$ $$
 animated: true         # Page fade-in animations
 header_pages: []       # Navigation menu items (currently empty)
 ```
