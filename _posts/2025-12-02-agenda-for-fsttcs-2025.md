@@ -11,4 +11,4 @@ I list down several directions which I have been recently interested in explorin
 
 ### 2. Spectral algorithms for detecting low-dimensional manifold structure 
 
-### 3. Data driven algorithms for data processing 
+### 3. Data driven algorithms for k means clustering
