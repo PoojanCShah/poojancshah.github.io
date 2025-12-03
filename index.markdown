@@ -33,8 +33,8 @@ I spent my high school years studying physics. Aside from technical research,  I
 <h3>News</h3>
 <div class="news-box">
 <ul>
-<li> <span class="news-date">Feb 2026</span> Glad to be invited for a *lightning talk* at <a href="https://event.india.acm.org/arcs/home/#arcs_about_2026"> 
-*ACM-ARCS 2026*</a> and to attend the <a href="https://event.india.acm.org/annualevent/home/"> *ACM India Annual Event* </a> </li>
+<li> <span class="news-date">Feb 2026</span> Glad to be invited for a lightning talk at <a href="https://event.india.acm.org/arcs/home/#arcs_about_2026"> 
+ACM-ARCS 2026</a> and to attend the <a href="https://event.india.acm.org/annualevent/home/"> ACM India Annual Event </a> </li>
 <li><span class="news-date">Dec 2025</span> I will be attending FSTTCS-2025 at BITS Goa !  </li>
 <li><span class="news-date">Nov 2025</span> Starting a collaboration with <a href="https://www.wadhwaniai.org/">Wadhwani AI</a>  for research on self supervised learning for anthropometry, under the guidance of <a href="https://makarandtapaswi.github.io/"> Makarand Tapaswi ! </a></li>
 <li><span class="news-date">Oct 2025</span> Our work was featured by CSE-IITD's blogpost ! Have a look at it <a href="https://homecse.iitd.ac.in/students-research-shines-at-iclr-2025/">here</a>. </li> 
