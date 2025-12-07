@@ -30,6 +30,7 @@ make build
 
 ### Layout System
 - `_layouts/default.html` - Base template (includes head, header, footer)
+- `_layouts/page.html` - Standard page layout (used by homepage)
 - `_layouts/post.html` - Blog post template
 - `_layouts/center.html` - Centered content layout
 
