@@ -5,7 +5,7 @@ date: 2025-12-08
 category: personal
 ---
 
-When I try to explain what I do to people (outside my research community), I am often met with the reaction of "...ok, but what practical applications does it have?". I often sense a feeling of aversion especially at the mention of the word "theoretical", which I was surprised to know is thought of as being "...completely and utterly useless in the "real" world, done just for the sake of one's own amusement...". Though this might be true to some extent, I want to focus on the word "theoretical" today. Let's see how the dictionary defines the word "theory":
+When I try to explain what I do to people (outside my research community), I am often met with the reaction of "…ok, but what practical applications does it have?". I often sense a feeling of aversion especially at the mention of the word "theoretical", which I was surprised to know is thought of as being "…completely and utterly useless in the "real" world, done just for the sake of one's own amusement…". Though this might be true to some extent, I want to focus on the word "theoretical" today. Let's see how the dictionary defines the word "theory":
 
 > **Theory** *(noun)*: a supposition or a system of ideas intended to explain something, especially one based on general principles independent of the thing to be explained.
 

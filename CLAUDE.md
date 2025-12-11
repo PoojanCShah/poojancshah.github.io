@@ -16,8 +16,14 @@ bundle install
 make serve
 # Or: bundle exec jekyll serve --watch
 
+# If port 4000 is in use, run on a different port
+bundle exec jekyll serve --watch --port 4001
+
 # Build static site to _site/
 make build
+
+# Quick deploy (add, commit, push)
+make deploy
 ```
 
 ## Architecture
