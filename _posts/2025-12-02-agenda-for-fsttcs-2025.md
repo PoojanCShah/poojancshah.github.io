@@ -1,14 +1,14 @@
 ---
 layout: post
-title: "Agenda for FSTTCS 2025"
+title: "Insights from FSTTCS2025"
 date: 2025-12-02
 category: research
 ---
 
-I list down several directions which I have been recently interested in exploring, these are largely motivated by my thesis work during this semester. These are currently semi-technical, but my goal is to eventually formalize them and even more eventually answer them someday. 
+Here are some interesting topics I discovered during FSTTCS which I want to learn about : \
 
-### 1. Limits on geometric ID estimators
-
-### 2. Spectral algorithms for detecting low-dimensional manifold structure 
-
-### 3. Data driven algorithms for k means clustering
+1. Semi Definite Programming - apparently SDPs arise everywhere. Maybe I'll finally get down to studying Watrous' *Quantum Information Theory* 
+2. Approximation Theory - it is the study of using polynomials to approximate functions. An interesting class is the study of *Tschebyschef Polynomials*. This method forms the workhorse of Tang's thesis
+3. Lattices and Homomorphic Encryption - the ability to perform computation on encrypted data using lattices is *magical*. 
+4. Foundations of cryptography - want to review one way functions, pseudorandom generators etc 
+5. Theoretical physics - apparently Landau and Lifshitz  wrote a series of textbook on the *whole* of physics 
