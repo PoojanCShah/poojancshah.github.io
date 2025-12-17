@@ -12,4 +12,6 @@ Here are some interesting topics I discovered during FSTTCS which I want to lear
 3. Lattices and Homomorphic Encryption - the ability to perform computation on encrypted data using lattices is *magical*. 
 4. Foundations of cryptography - want to review one way functions, pseudorandom generators etc 
 5. Theoretical physics - apparently Landau and Lifshitz  wrote a series of textbook on the *whole* of physics 
-6. Boolean functional analysis 
+6. Boolean functional analysis - Ryan O'donnel's book 
+7. Probabilistically Checkable Proofs 
+8. Giibs distributions, markov random fields, mixing times
