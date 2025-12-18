@@ -15,3 +15,8 @@ Here are some interesting topics I discovered during FSTTCS which I want to lear
 6. Boolean functional analysis - Ryan O'donnel's book 
 7. Probabilistically Checkable Proofs 
 8. Giibs distributions, markov random fields, mixing times
+9. Roundung methods for LP 
+10. Sariel Har Peled's geometric algorithms
+11. Matroids anf their applications
+12. Quantum error correction codes 
+13. Exploiting specific structure to come up with better algorithms  
