@@ -6,6 +6,8 @@ description: "Poojan Shah's Homepage"
 baseurl:     ""
 url:         ""
 header_pages:
+  - blog.md
+  - research-blog.md
   - calendar.md
 
 # Optional features
