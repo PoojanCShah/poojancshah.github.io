@@ -5,7 +5,8 @@ author:      Poojan Shah
 description: "Poojan Shah's Homepage"
 baseurl:     ""
 url:         ""
-header_pages: []
+header_pages:
+  - calendar.md
 
 # Optional features
 animated:       true
