@@ -8,6 +8,7 @@ url:         ""
 header_pages:
   - blog.md
   - research-blog.md
+  - book-collection.md
   - calendar.md
 
 # Optional features

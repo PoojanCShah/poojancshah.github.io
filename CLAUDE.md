@@ -45,7 +45,7 @@ make deploy
 - `header.html`, `footer.html` - Site chrome
 - `navigation.html` - Nav menu (controlled by `header_pages` in config)
 - `social_links.html` - Social media icons
-- `head.html` - Meta tags, CSS, MathJax loading, Google Fonts (Merriweather, Lato)
+- `head.html` - Meta tags, CSS, MathJax loading, Google Fonts (EB Garamond)
 
 ## Content
 

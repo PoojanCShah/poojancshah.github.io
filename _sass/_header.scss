@@ -55,3 +55,77 @@
 .site-header .site-nav {
   text-align: right;
 }
+
+// Dropdown Menu
+.nav-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.nav-dropdown-toggle {
+  background: none;
+  border: 1px solid $nav-color;
+  border-radius: 4px;
+  color: $nav-color;
+  font-family: inherit;
+  font-size: $h5;
+  padding: 0.4rem 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: $nav-color;
+    color: #fff;
+  }
+
+  .dropdown-arrow {
+    font-size: 0.75em;
+    margin-left: 0.25rem;
+    transition: transform 0.2s ease;
+  }
+}
+
+.nav-dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  margin-top: 0.5rem;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  min-width: 180px;
+  z-index: 100;
+  overflow: hidden;
+
+  a {
+    display: block;
+    padding: 0.75rem 1rem;
+    color: $nav-color;
+    font-size: $h5;
+    text-decoration: none;
+    border-bottom: none;
+    transition: background 0.15s ease;
+
+    &:hover {
+      background: #f5f5f5;
+      opacity: 1;
+    }
+
+    &.nav-active {
+      background: #f9f7f3;
+      font-weight: 600;
+      border-bottom: none;
+    }
+  }
+}
+
+.nav-dropdown:hover .nav-dropdown-content,
+.nav-dropdown:focus-within .nav-dropdown-content {
+  display: block;
+}
+
+.nav-dropdown:hover .dropdown-arrow {
+  transform: rotate(180deg);
+}
