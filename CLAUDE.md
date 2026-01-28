@@ -22,7 +22,8 @@ bundle exec jekyll serve --watch --port 4001
 # Build static site to _site/
 make build
 
-# Quick deploy (add, commit, push)
+# Quick deploy (add, commit, push with generic "Update site" message)
+# Prefer manual git commits with descriptive messages instead
 make deploy
 ```
 
@@ -93,7 +94,7 @@ Posts with `category: personal` appear on `/blog`, posts with `category: researc
 Key settings:
 - `enable_mathjax: true` - LaTeX support: inline `\( \)`, display `$$ $$`
 - `animated: true` - Page fade-in animations
-- `header_pages` - Navigation menu items (blog.md, research-blog.md, calendar.md)
+- `header_pages` - Navigation menu items (blog.md, research-blog.md, book-collection.md, calendar.md)
 - `extended_fonts: true` - Extended Google Font character sets
 
 ## Deployment
