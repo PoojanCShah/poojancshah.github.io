@@ -68,12 +68,20 @@ Broadly speaking, I am interested in the study of the world from a theoretical p
 ### Preprints
 
 <div class="pub-item">
-<div class="pub-title"><span class="pub-number">1.</span> A new rejection sampling approach to k-means++ with improved trade-offs</div>
+<div class="pub-title"><span class="pub-number">1.</span> Fast k-means seeding under the Manifold Hypothesis </div>
+<div class="pub-authors">Poojan Shah, Shashwat Agrawal and <a href="https://www.cse.iitd.ac.in/~rjaiswal/">Ragesh Jaiswal</a></div>
+<div class="pub-venue">2025</div>
+<div class="pub-links">
+<a href="https://www.arxiv.org/abs/2602.01104" class="btn-arxiv">arXiv</a>
+</div>
+</div>
+
+<div class="pub-item">
+<div class="pub-title"><span class="pub-number">2.</span> A new rejection sampling approach to k-means++ with improved trade-offs</div>
 <div class="pub-authors">Poojan Shah, Shashwat Agrawal and <a href="https://www.cse.iitd.ac.in/~rjaiswal/">Ragesh Jaiswal</a></div>
 <div class="pub-venue">2025</div>
 <div class="pub-links">
 <a href="https://arxiv.org/abs/2502.02085" class="btn-arxiv">arXiv</a>
-<a href="https://rskmeanspp.readthedocs.io/en/latest/" class="btn-code">Code</a>
 </div>
 </div>
 
