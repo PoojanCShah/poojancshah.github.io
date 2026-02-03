@@ -14,3 +14,4 @@ This is where I keep a list of books that I have liked very much.
 5. [Metric Embeddings by Jiří Matoušek](https://kam.mff.cuni.cz/~matousek/ba-a4.pdf)
 6. [Pattern Recognition and Machine Learning by Christopher Bishop](https://www.microsoft.com/en-us/research/wp-content/uploads/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf)
 7. [Understanding Machine Learning from Theory to Algorithms by Shai Shalev-Schwartz and Shai Ben-David](https://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning/understanding-machine-learning-theory-algorithms.pdf)
+8. [Geometric Functional Analysis by ROman Vershynin](https://www.math.uci.edu/~rvershyn/papers/GFA-book.pdf)
