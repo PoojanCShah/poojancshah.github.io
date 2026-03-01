@@ -54,6 +54,8 @@ make deploy
 - `_posts/` - Blog posts (YYYY-MM-DD-title.md naming)
 - `blog.md` - Personal blog index (filters posts by category: "personal")
 - `research-blog.md` - Research blog index (filters posts by category: "research")
+- `book-collection.md` - Static list of recommended books (plain markdown list)
+- `calendar.md` - Embeds Google Calendar via iframe
 
 ### Adding Publications
 
@@ -100,3 +102,9 @@ Key settings:
 ## Deployment
 
 Push to `main` branch triggers automatic GitHub Pages deployment.
+
+## Notes
+
+- `CLAUDE.md` is in the `_config.yml` exclude list, so it won't appear in the built site.
+- The site uses `github-pages` gem (not standalone Jekyll), which pins Jekyll and plugin versions. Run `bundle update github-pages` to upgrade.
+- Images (profile photo, logos) are stored at the repo root (`me.JPEG`, `menew.jpeg`) and in `logos/`.
