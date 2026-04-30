@@ -119,4 +119,4 @@ We designed a quantum algorithm for D²-sampling (and through this, the first qu
 
 ### Teaching
 
-Teaching Assistant for [COL7160 : Quantum Computing](https://k-rajendra.github.io/courses/quantum252601.html), Winter 2026
+Teaching Assistant for [COL7160 : Quantum Computing](https://k-rajendra.github.io/courses/QuantumComputing/quantum252601.html), Winter 2026
