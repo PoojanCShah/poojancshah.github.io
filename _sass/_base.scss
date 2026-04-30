@@ -19,7 +19,11 @@ html, body {
 }
 
 body {
-  background-color: #faf9f6;
+  background-color: #f0e5c8;
+  // Subtle paper grain via SVG noise — evokes aged textbook pages
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 200px 200px;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -35,11 +39,13 @@ em img {
 }
 
 .circular-frame {
-  width: 250px; /* Adjust size as needed */
-  height: 250px; /* Make height equal to width */
-  border-radius: 40%; /* Makes the image circular */ /* Optional: Add a border for the frame */
-  object-fit: cover; /* Ensures the image fits within the circle */
+  width: 250px;
+  height: 250px;
+  border-radius: 0;
+  object-fit: cover;
   display: block;
-  margin: 0 auto; /* Optional: Centers the image */
+  margin: 0 auto;
+  border: 1px solid #a89070;
+  box-shadow: 2px 2px 0 rgba(28, 16, 8, 0.12);
 }
 

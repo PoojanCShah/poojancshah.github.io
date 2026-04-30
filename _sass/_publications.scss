@@ -3,29 +3,29 @@
   padding-left: 1rem;
 
   .pub-title {
-    font-weight: 500;
-    color: #1a1a1a;
+    font-weight: 600;
+    color: #1c1008;
     margin-bottom: 0.2rem;
     font-size: 1.05rem;
   }
 
   .pub-number {
     font-weight: 600;
-    color: #333;
+    color: #8b1a1a;
     margin-right: 0.3rem;
   }
 
   .pub-authors {
     font-size: 0.95rem;
     font-style: italic;
-    color: #444;
+    color: #3a2a18;
     margin-bottom: 0.2rem;
   }
 
   .pub-venue {
     font-size: 0.9rem;
     font-style: italic;
-    color: #666;
+    color: #6b5040;
     margin-bottom: 0.3rem;
   }
 }
@@ -62,4 +62,33 @@
   .btn-pdf    { color: #8b4563; }
   .btn-video  { color: #8b5a3d; }
   .btn-blog   { color: #3d7a6e; }
+}
+
+details.pub-abstract {
+  summary {
+    list-style: none;
+    cursor: pointer;
+    font-family: 'EB Garamond', Georgia, serif;
+    font-size: 0.9rem;
+    color: #5a7040;
+    transition: opacity 0.15s ease;
+
+    &::-webkit-details-marker { display: none; }
+    &::marker { display: none; }
+    &::before { content: '['; color: #888; }
+    &::after  { content: ']'; color: #888; }
+
+    &:hover { opacity: 0.7; }
+  }
+
+  .abstract-text {
+    display: block;
+    margin-top: 0.5rem;
+    padding-left: 0.75rem;
+    border-left: 2px solid rgba(139, 26, 26, 0.3);
+    font-size: 0.88rem;
+    color: #3a2a18;
+    line-height: 1.65;
+    font-style: italic;
+  }
 }

@@ -1,0 +1,150 @@
+// ─────────────────────────────────────────────────────────────
+// Mir Publishers Textbook Aesthetic
+// Издательство «Мир» — Moscow, 1960–1990s
+// ─────────────────────────────────────────────────────────────
+
+// Section headings: § symbol in deep red, underlined with rule
+h2 {
+  color: #1c1008;
+  font-weight: 600;
+  letter-spacing: 0.015em;
+  margin-top: 2.5rem;
+  margin-bottom: 0.65rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid rgba(139, 26, 26, 0.45);
+
+  &::before {
+    content: '§\00a0';
+    color: #8b1a1a;
+    font-weight: 400;
+    font-style: normal;
+  }
+}
+
+// Suppress § on post-page title headings and profile name
+.post-title,
+.profile-info h1 {
+  &::before { content: none; }
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+// Subsection headings: small caps, warm ink
+h3 {
+  color: #1c1008;
+  font-weight: 600;
+  font-variant: small-caps;
+  letter-spacing: 0.04em;
+  margin-top: 1.75rem;
+}
+
+// Horizontal rules — thin Mir red
+hr {
+  border: none;
+  border-top: 1px solid rgba(139, 26, 26, 0.35);
+  margin: 2rem 0;
+}
+
+// Body text color
+body,
+li,
+td,
+th {
+  color: #1c1008;
+}
+
+// Blockquotes styled as "Remark" — left rule in red, no italic slab
+blockquote {
+  border-left: 3px solid #8b1a1a;
+  background: rgba(139, 26, 26, 0.04);
+  padding: 0.75rem 1.25rem;
+  margin-left: 0;
+  margin-right: 0;
+  font-style: normal;
+
+  p {
+    font-style: italic;
+    color: #3a2a18;
+    margin-bottom: 0;
+  }
+}
+
+// Post meta date — warm muted tone
+.post-meta,
+.meta {
+  color: #6b5040;
+}
+
+// Post list title color
+.post-link .post-title {
+  color: #1c1008;
+}
+
+// Footer colophon — small italic note
+footer {
+  font-style: italic;
+  letter-spacing: 0.01em;
+}
+
+// Site title in header — dignified weight
+.site-header .site-title {
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+// Nav toggle button square corners
+.nav-dropdown-toggle {
+  border-radius: 0;
+  border-color: #a89070;
+  color: #6b5040;
+
+  &:hover {
+    background: #8b1a1a;
+    border-color: #8b1a1a;
+    color: #f0e5c8;
+  }
+}
+
+// Code blocks — inset look on paper background
+code {
+  background: #e5d5a8;
+  padding: 0.1em 0.3em;
+  border-radius: 0;
+  font-size: 0.9em;
+  color: #1c1008;
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+}
+
+pre {
+  border-left: 3px solid #8b1a1a;
+  padding-left: 1rem;
+}
+
+// Tables — clean ruled lines, no box
+table {
+  border-collapse: collapse;
+  width: 100%;
+
+  th {
+    border-bottom: 2px solid #8b1a1a;
+    padding: 0.4rem 0.75rem;
+    font-variant: small-caps;
+    letter-spacing: 0.04em;
+    color: #1c1008;
+    background: transparent;
+    text-align: left;
+  }
+
+  td {
+    border-bottom: 1px solid rgba(168, 144, 112, 0.4);
+    padding: 0.35rem 0.75rem;
+  }
+
+  tr:last-child td {
+    border-bottom: 1px solid #8b1a1a;
+  }
+}

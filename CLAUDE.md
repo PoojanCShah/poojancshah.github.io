@@ -35,6 +35,7 @@ make deploy
 - Custom academic components: `_profile.scss`, `_publications.scss`, `_news.scss`, `_research.scss`
   - These style the homepage sections (profile header, publication items with venue/links, news timeline)
   - Publication links use colored badges defined in `_publications.scss` (arxiv=brick red, conf=steel blue, code=purple, etc.)
+- `_sass/_mir.scss` - Last import (highest specificity); applies a "Mir Publishers" textbook aesthetic: dark ink body color `#1c1008`, deep red `#8b1a1a` accents on `h2` borders/`§` prefix, `hr`, blockquotes, code blocks, and tables. Edit here when overriding base theme colors or typographic rules globally.
 
 ### Layout System
 - `_layouts/default.html` - Base template (includes head, header, footer)
