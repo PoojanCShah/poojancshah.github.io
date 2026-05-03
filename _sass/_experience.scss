@@ -1,0 +1,55 @@
+.experience-timeline {
+  position: relative;
+  padding-left: 1.75rem;
+  margin: 1.25rem 0 1.5rem;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0.3rem;
+    top: 0.4rem;
+    bottom: 0.4rem;
+    width: 1.5px;
+    background: rgba(139, 26, 26, 0.35);
+  }
+}
+
+.exp-item {
+  position: relative;
+  padding: 0 0 1.4rem 1rem;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: -1.5rem;
+    top: 0.42rem;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #8b1a1a;
+  }
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+}
+
+.exp-role {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #1c1008;
+  line-height: 1.4;
+}
+
+.exp-org {
+  font-size: 0.88rem;
+  color: #4a3728;
+  margin-top: 0.15rem;
+}
+
+.exp-date {
+  font-size: 0.82rem;
+  font-style: italic;
+  color: #6b5040;
+  margin-top: 0.1rem;
+}
