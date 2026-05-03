@@ -74,6 +74,11 @@ Publications in `index.markdown` use this HTML structure:
 </div>
 ```
 
+To add a collapsible abstract inside `pub-links`, use:
+```html
+<details class="pub-abstract"><summary>short description</summary><div class="abstract-text">Abstract text here. MathJax works: \(O(n \log k)\).</div></details>
+```
+
 Available button classes: `btn-arxiv` (brick red), `btn-conf` (steel blue), `btn-code` (purple), `btn-poster` (teal), `btn-slides` (gray), `btn-pdf` (pink), `btn-video` (light red), `btn-blog` (teal).
 
 ### Adding Blog Posts

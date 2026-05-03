@@ -61,7 +61,7 @@ Broadly speaking, I am interested in the study of the world from a theoretical p
 <div class="pub-item">
 <div class="pub-title"><span class="pub-number">1.</span> Fast k-means seeding under the manifold hypothesis </div>
 <div class="pub-authors">Poojan Shah, Shashwat Agrawal and <a href="https://www.cse.iitd.ac.in/~rjaiswal/">Ragesh Jaiswal</a></div>
-<div class="pub-venue">ICML 2026 : The Fourty Third International Conference on Machine Learning </div>
+<div class="pub-venue"><strong>ICML 2026</strong> : The Forty Third International Conference on Machine Learning </div>
 <div class="pub-links">
 <details class="pub-abstract"><summary>short description</summary><div class="abstract-text">We study fast k-means++ seeding under the assumption that data lies near a low-dimensional manifold. Traditional algorithm design often focuses on worst case guarantees, but real world data is often not worst case. We identify key geometrical scaling laws for clustering dependent on the intrinsic data dimension under the manifold hypothesis and show how to algorithmically exploit this structure to obtain fast seeding algorithms. We also perform an extensive empirical study to show the practical advantages of our algorithms. Our method has an \(O(\rho^{-2} \log k)\) approximation guarantee and runs in time \(\tilde{O}(nD) + \tilde{O}(k^{1 + \epsilon + \rho})\) where \(\rho < 1\) is a tuning parameter and \(\epsilon = 2/d\) is the quantization exponent.</div></details>
 <a href="https://arxiv.org/abs/2602.01104" class="btn-arxiv">arXiv</a>
@@ -72,7 +72,7 @@ Broadly speaking, I am interested in the study of the world from a theoretical p
 <div class="pub-item">
 <div class="pub-title"><span class="pub-number">2.</span> Quantum (inspired) D²-sampling with applications</div>
 <div class="pub-authors">Poojan Shah and <a href="https://www.cse.iitd.ac.in/~rjaiswal/">Ragesh Jaiswal</a></div>
-<div class="pub-venue">ICLR 2025 : The Thirteenth International Conference on Learning Representations</div>
+<div class="pub-venue"><strong>ICLR 2025</strong> : The Thirteenth International Conference on Learning Representations</div>
 <div class="pub-links">
 <details class="pub-abstract"><summary>short description</summary><div class="abstract-text">
 
