@@ -22,36 +22,10 @@ layout: page
 
 ### About
 
-I am a senior undergraduate student at the [Department of  Computer Science & Engineering](https://www.cse.iitd.ac.in/) at [IIT Delhi](https://home.iitd.ac.in/). I also spent a semester at the [Faculty of Mathematics](https://uwaterloo.ca/math/) at the [University of Waterloo](https://uwaterloo.ca/). I have worked on quantum-inspired classical algorithms and large scale data clustering at [IIT Delhi](https://home.iitd.ac.in/) advised by [Ragesh Jaiswal](https://www.cse.iitd.ac.in/~rjaiswal/) and [Rajendra Kumar](https://k-rajendra.github.io/), self supervised learning at [Wadhwani AI](https://www.wadhwaniai.org/) hosted by [Makarand Tapaswi](https://makarandtapaswi.github.io/), applied statistical learning at [Atlas Research](https://www.atlasresearch.ai/) and quantum cryptographic primitives at the [Computer Science Group](https://cs.quantumlah.org/) of [Center for Quantum Technologies](https://www.quantumlah.org/) hosted by [Rahul Jain](https://www.comp.nus.edu.sg/~rahul/).  
+I am a senior undergraduate student at the [Department of  Computer Science & Engineering](https://www.cse.iitd.ac.in/) at [IIT Delhi](https://home.iitd.ac.in/). I also spent a semester at the [Faculty of Mathematics](https://uwaterloo.ca/math/) at the [University of Waterloo](https://uwaterloo.ca/). I have worked on quantum-inspired classical algorithms and large scale data clustering at [IIT Delhi](https://home.iitd.ac.in/) advised by [Ragesh Jaiswal](https://www.cse.iitd.ac.in/~rjaiswal/) and [Rajendra Kumar](https://k-rajendra.github.io/), self supervised learning at [Wadhwani AI](https://www.wadhwaniai.org/) hosted by [Makarand Tapaswi](https://makarandtapaswi.github.io/), applied statistical learning at [Atlas Research](https://www.atlasresearch.ai/) and quantum cryptographic primitives at the [Computer Science Group](https://cs.quantumlah.org/) of [Center for Quantum Technologies](https://www.quantumlah.org/) hosted by [Rahul Jain](https://www.comp.nus.edu.sg/~rahul/).
 
 
 I spent my high school years studying physics. Aside from technical research,  I am a percussionist with a particular interest in Indian classical instruments. I also spend scattered spans of time learning about language, religion, philosophy, natural sciences and anthropology. I frequently write on my [personal blog](/blog) and [research blog](/research-blog).
-
-
-
-<div class="news-section">
-<h3>News</h3>
-<div class="news-box">
-<ul>
-
-<li> <span class="news-date">May 2026</span> Our work on beyond worst case clustering algorithms under the manifold hypothesis is accepted to <a href = "https://icml.cc/"> ICML 2026 </a> !  </li>
-
-<li> <span class="news-date">Feb 2026</span> Glad to be invited for a lightning talk at <a href="https://event.india.acm.org/arcs/home/#arcs_about_2026"> 
-ACM-ARCS 2026</a> and to attend the <a href="https://event.india.acm.org/annualevent/home/"> ACM India Annual Event
-
- </a> </li>
- <li> <span class="news-date">Jan 2026</span> Starting as TA for <a href="https://k-rajendra.github.io/courses/QuantumComputing/quantum252601.html"> 
-COL7160 : Quantum Computing !</a>  </li>
-<li><span class="news-date">Dec 2025</span> I will be attending FSTTCS-2025 at BITS Goa !  </li>
-<li><span class="news-date">Nov 2025</span> Starting a collaboration with <a href="https://www.wadhwaniai.org/">Wadhwani AI</a>  for research on self supervised learning for anthropometry, under the guidance of <a href="https://makarandtapaswi.github.io/"> Makarand Tapaswi ! </a></li>
-<li><span class="news-date">Oct 2025</span> Our work was featured by CSE-IITD's blogpost ! Have a look at it <a href="https://homecse.iitd.ac.in/students-research-shines-at-iclr-2025/">here</a>. </li> 
-</ul>
-</div>
-</div>
-
-### Research Interests
-
-Broadly speaking, I am interested in the study of the world from a theoretical perspective. Specific interests, which tend to grow as time goes on include data clustering, quantum computing, statistical learning and algorithm design for modern information processing. 
 
 
 
@@ -98,6 +72,30 @@ We designed a quantum algorithm for D²-sampling (and through this, the first qu
 <a href="https://arxiv.org/abs/2502.02085" class="btn-arxiv">arXiv</a>
 </div>
 </div>
+
+<div class="news-section">
+<h3>News</h3>
+<div class="news-box">
+<ul>
+
+<li> <span class="news-date">May 2026</span> Our work on beyond worst case clustering algorithms under the manifold hypothesis is accepted to <a href = "https://icml.cc/"> ICML 2026 </a> !  </li>
+
+<li> <span class="news-date">Feb 2026</span> Glad to be invited for a lightning talk at <a href="https://event.india.acm.org/arcs/home/#arcs_about_2026">
+ACM-ARCS 2026</a> and to attend the <a href="https://event.india.acm.org/annualevent/home/"> ACM India Annual Event
+
+ </a> </li>
+ <li> <span class="news-date">Jan 2026</span> Starting as TA for <a href="https://k-rajendra.github.io/courses/QuantumComputing/quantum252601.html">
+COL7160 : Quantum Computing !</a>  </li>
+<li><span class="news-date">Dec 2025</span> I will be attending FSTTCS-2025 at BITS Goa !  </li>
+<li><span class="news-date">Nov 2025</span> Starting a collaboration with <a href="https://www.wadhwaniai.org/">Wadhwani AI</a>  for research on self supervised learning for anthropometry, under the guidance of <a href="https://makarandtapaswi.github.io/"> Makarand Tapaswi ! </a></li>
+<li><span class="news-date">Oct 2025</span> Our work was featured by CSE-IITD's blogpost ! Have a look at it <a href="https://homecse.iitd.ac.in/students-research-shines-at-iclr-2025/">here</a>. </li>
+</ul>
+</div>
+</div>
+
+### Research Interests
+
+Broadly speaking, I am interested in the study of the world from a theoretical perspective. Specific interests, which tend to grow as time goes on include data clustering, quantum computing, statistical learning and algorithm design for modern information processing.
 
 ### Talks
 
