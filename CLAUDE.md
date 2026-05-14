@@ -22,6 +22,9 @@ bundle exec jekyll serve --watch --port 4001
 # Build static site to _site/
 make build
 
+# Compile essays: LaTeX → HTML + PDF (run after editing any .tex file)
+make essays
+
 # Quick deploy (add, commit, push with generic "Update site" message)
 # Prefer manual git commits with descriptive messages instead
 make deploy
@@ -32,9 +35,10 @@ make deploy
 ### Styling System
 - `css/pixyll.scss` - Main entry point that imports all SCSS partials
 - `_sass/_variables.scss` - Design tokens: colors, typography, spacing
-- Custom academic components: `_profile.scss`, `_publications.scss`, `_news.scss`, `_research.scss`
+- Custom academic components: `_profile.scss`, `_publications.scss`, `_news.scss`, `_research.scss`, `_experience.scss`
   - These style the homepage sections (profile header, publication items with venue/links, news timeline)
   - Publication links use colored badges defined in `_publications.scss` (arxiv=brick red, conf=steel blue, code=purple, etc.)
+  - `_experience.scss` provides `.experience-timeline` / `.exp-item` classes for a vertical timeline with a red accent line (unused currently, available for adding an experience section)
 - `_sass/_mir.scss` - Last import (highest specificity); applies a "Mir Publishers" textbook aesthetic: dark ink body color `#1c1008`, deep red `#8b1a1a` accents on `h2` borders/`§` prefix, `hr`, blockquotes, code blocks, and tables. Edit here when overriding base theme colors or typographic rules globally.
 
 ### Layout System
@@ -52,11 +56,30 @@ make deploy
 ## Content
 
 - `index.markdown` - Homepage with profile photo, about, news, publications, talks, teaching
-- `_posts/` - Blog posts (YYYY-MM-DD-title.md naming)
-- `blog.md` - Personal blog index (filters posts by category: "personal")
-- `research-blog.md` - Research blog index (filters posts by category: "research")
+- `essays.md` - Essay index page (lists all essays from the `_essays/` collection)
 - `book-collection.md` - Static list of recommended books (plain markdown list)
 - `calendar.md` - Embeds Google Calendar via iframe
+- `_posts/` - Legacy blog posts (orphaned; no longer linked from navigation)
+
+### Adding Essays
+
+Essays are written in LaTeX and compiled to HTML + PDF with a single command. The workflow:
+
+1. Create `essays/src/my-essay.tex` (add `% date: YYYY-MM-DD` and `% description: ...` comments at the top)
+2. Run `make essays` — this calls `scripts/build-essays.sh`, which:
+   - Extracts metadata from the `.tex` file
+   - Runs `pandoc` to produce `_essays/my-essay.html` (Jekyll collection file with front matter)
+   - Runs `pdflatex` twice to produce `essays/pdf/my-essay.pdf`
+3. Commit `_essays/` and `essays/pdf/` alongside the source `.tex` — GitHub Pages cannot run Pandoc, so generated files must be committed
+
+**Metadata in `.tex` files:**
+```latex
+% date: 2026-05-01
+% description: One-line summary shown in the essay index.
+\title{Essay Title Here}
+```
+
+The `_layouts/essay.html` layout provides the e-reader UI: sticky back/PDF bar, reading column (700px, EB Garamond), section headings with `§` prefix and red border. The `_sass/_essay_reader.scss` file styles both the reader and the index listing; it is imported just before `_mir.scss` so Mir overrides still apply globally.
 
 ### Adding Publications
 

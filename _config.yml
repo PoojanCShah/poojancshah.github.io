@@ -6,10 +6,14 @@ description: "Poojan Shah's Homepage"
 baseurl:     ""
 url:         ""
 header_pages:
-  - blog.md
-  - research-blog.md
+  - essays.md
   - book-collection.md
   - calendar.md
+
+collections:
+  essays:
+    output: true
+    permalink: /essays/:name/
 
 # Optional features
 animated:       true
@@ -29,3 +33,5 @@ exclude:
   - Makefile
   - CLAUDE.md
   - vendor
+  - scripts
+  - essays/src

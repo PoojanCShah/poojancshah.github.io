@@ -1,0 +1,33 @@
+---
+layout: default
+---
+
+<div class="essay-topbar">
+  <a href="/essays" class="essay-back">&#8592; Essays</a>
+  {% if page.pdf %}
+  <a href="{{ page.pdf }}" class="essay-pdf-top" download>&#8595; PDF</a>
+  {% endif %}
+</div>
+
+<article class="essay-reader">
+  <header class="essay-header">
+    <h1 class="essay-title">{{ page.title }}</h1>
+    {% if page.date %}
+    <div class="essay-date">{{ page.date | date: "%B %Y" }}</div>
+    {% endif %}
+    {% if page.description %}
+    <div class="essay-desc">{{ page.description }}</div>
+    {% endif %}
+  </header>
+
+  <div class="essay-body">
+    {{ content }}
+  </div>
+
+  <div class="essay-footer">
+    {% if page.pdf %}
+    <a href="{{ page.pdf }}" class="essay-pdf-btn" download>&#8595; Download PDF</a>
+    {% endif %}
+    <a href="/essays" class="essay-back-footer">&#8592; All Essays</a>
+  </div>
+</article>

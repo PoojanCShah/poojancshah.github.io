@@ -33,7 +33,8 @@ Outside research, I am a percussionist with a particular interest in Indian clas
 
 <div class="pub-item">
 <div class="pub-title"><span class="pub-number">1.</span> Fast k-means seeding under the manifold hypothesis </div>
-<div class="pub-authors">Poojan Shah, Shashwat Agrawal and <a href="https://www.cse.iitd.ac.in/~rjaiswal/">Ragesh Jaiswal</a></div>
+<div class="pub-authors">Poojan Shah, <a href = "https://sites.google.com/view/shashwatagrawal
+"> Shashwat Agrawal </a> and <a href="https://www.cse.iitd.ac.in/~rjaiswal/">Ragesh Jaiswal</a></div>
 <div class="pub-venue"><strong>ICML 2026</strong> : The Forty Third International Conference on Machine Learning </div>
 <div class="pub-links">
 <details class="pub-abstract"><summary>short description</summary><div class="abstract-text">We study fast k-means++ seeding under the assumption that data lies near a low-dimensional manifold. Traditional algorithm design often focuses on worst case guarantees, but real world data is often not worst case. We identify key geometrical scaling laws for clustering dependent on the intrinsic data dimension under the manifold hypothesis and show how to algorithmically exploit this structure to obtain fast seeding algorithms. We also perform an extensive empirical study to show the practical advantages of our algorithms. Our method has an \(O(\rho^{-2} \log k)\) approximation guarantee and runs in time \(\tilde{O}(nD) + \tilde{O}(k^{1 + \epsilon + \rho})\) where \(\rho < 1\) is a tuning parameter and \(\epsilon = 2/d\) is the quantization exponent.</div></details>

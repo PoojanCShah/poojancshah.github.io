@@ -1,0 +1,320 @@
+// Essay e-reader layout and index styles
+
+// ── Top navigation bar ──────────────────────────────────────────────────────
+.essay-topbar {
+  max-width: 740px;
+  margin: 0 auto;
+  padding: 0.6rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(139, 26, 26, 0.18);
+  margin-bottom: 1.5rem;
+
+  .essay-back {
+    font-size: 0.9rem;
+    color: #8b1a1a;
+    text-decoration: none;
+    letter-spacing: 0.01em;
+    &:hover { text-decoration: underline; }
+  }
+
+  .essay-pdf-top {
+    font-size: 0.82rem;
+    padding: 0.22rem 0.8rem;
+    border: 1px solid #8b1a1a;
+    color: #8b1a1a;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: background 0.15s, color 0.15s;
+    &:hover { background: #8b1a1a; color: #faf8f3; }
+  }
+}
+
+// ── Main reading column ──────────────────────────────────────────────────────
+.essay-reader {
+  max-width: 700px;
+  margin: 0 auto 5rem;
+  padding: 0 1.5rem;
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 1.125rem;
+  line-height: 1.82;
+  color: #1c1008;
+
+  // ── Header ──
+  .essay-header {
+    margin-bottom: 2.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(139, 26, 26, 0.2);
+  }
+
+  .essay-title {
+    font-size: 2rem;
+    line-height: 1.2;
+    font-weight: normal;
+    margin: 0 0 0.5rem;
+    color: #1c1008;
+  }
+
+  .essay-date {
+    font-size: 0.88rem;
+    font-style: italic;
+    color: #6b5a4e;
+    margin-bottom: 0.6rem;
+  }
+
+  .essay-desc {
+    font-size: 1rem;
+    font-style: italic;
+    color: #4a3728;
+    border-left: 3px solid #8b1a1a;
+    padding-left: 1rem;
+    margin: 0.75rem 0 0;
+    line-height: 1.6;
+  }
+
+  // ── Body typography ──
+  .essay-body {
+    // Pandoc wraps sections in divs with class "section levelN"
+    .section { margin-top: 0.5rem; }
+
+    h1 { display: none; } // title already in header
+
+    h2 {
+      font-size: 1.35rem;
+      font-weight: normal;
+      margin-top: 2.75rem;
+      margin-bottom: 0.5rem;
+      padding-left: 0.85rem;
+      border-left: 3px solid #8b1a1a;
+      color: #1c1008;
+
+      &::before { content: "§\00a0"; color: #8b1a1a; }
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      font-weight: normal;
+      font-style: italic;
+      margin-top: 2rem;
+      margin-bottom: 0.4rem;
+      color: #1c1008;
+    }
+
+    h4, h5, h6 {
+      font-size: 1rem;
+      font-weight: normal;
+      font-style: italic;
+      margin-top: 1.5rem;
+      color: #3a2a1e;
+    }
+
+    p { margin: 0 0 1em; }
+
+    // Abstract (pandoc outputs \begin{abstract} as a div.abstract)
+    .abstract {
+      margin: 0 0 2rem;
+      padding: 0.75rem 1rem;
+      border-left: 3px solid #8b1a1a;
+      background: rgba(139, 26, 26, 0.04);
+      font-style: italic;
+      font-size: 1rem;
+      color: #3a2a1e;
+
+      p { margin: 0; }
+
+      // hide pandoc's "Abstract" heading
+      > p:first-child strong:only-child { display: none; }
+    }
+
+    // Theorem environments — pandoc renders amsthm envs as divs
+    .theorem, .lemma, .proposition, .corollary {
+      margin: 1.75rem 0;
+      padding: 0.75rem 1rem 0.75rem 1.1rem;
+      border-left: 3px solid #8b1a1a;
+      background: rgba(139, 26, 26, 0.04);
+
+      > p:first-child { margin-top: 0; }
+      > p:last-child  { margin-bottom: 0; }
+
+      // Italic body for theorems
+      > p { font-style: italic; }
+      // Bold label (e.g. "Theorem 1.")
+      > p:first-child > strong:first-child { font-style: normal; }
+    }
+
+    .definition, .remark, .example {
+      margin: 1.5rem 0;
+      padding: 0.6rem 1rem 0.6rem 1.1rem;
+      border-left: 3px solid rgba(139, 26, 26, 0.35);
+
+      > p:first-child { margin-top: 0; }
+      > p:last-child  { margin-bottom: 0; }
+    }
+
+    .proof {
+      margin: 1.25rem 0 1.75rem;
+      padding-left: 1.1rem;
+      color: #3a2a1e;
+
+      &::after {
+        content: "\25A1";
+        display: block;
+        text-align: right;
+        font-size: 1rem;
+        color: #8b1a1a;
+      }
+
+      > p:first-child { margin-top: 0; }
+      > p:last-child  { margin-bottom: 0; padding-right: 1.5rem; }
+    }
+
+    // Math display
+    .math.display {
+      overflow-x: auto;
+      padding: 0.4rem 0;
+      display: block;
+    }
+
+    // Figures
+    figure {
+      margin: 2rem auto;
+      text-align: center;
+
+      figcaption {
+        font-size: 0.88rem;
+        font-style: italic;
+        color: #6b5a4e;
+        margin-top: 0.4rem;
+      }
+    }
+
+    // Blockquotes
+    blockquote {
+      margin: 1.5rem 0;
+      padding: 0.4rem 0 0.4rem 1rem;
+      border-left: 3px solid #c8a882;
+      color: #4a3728;
+      font-style: italic;
+
+      > p:first-child { margin-top: 0; }
+      > p:last-child  { margin-bottom: 0; }
+    }
+
+    // Code
+    code {
+      font-size: 0.88em;
+      background: rgba(28, 16, 8, 0.07);
+      padding: 0.1em 0.3em;
+      border-radius: 2px;
+      font-family: 'SFMono-Regular', Consolas, monospace;
+    }
+
+    pre {
+      background: rgba(28, 16, 8, 0.05);
+      border-left: 3px solid #c8a882;
+      padding: 0.9rem 1rem;
+      overflow-x: auto;
+      font-size: 0.88rem;
+      line-height: 1.5;
+
+      code {
+        background: none;
+        padding: 0;
+        font-size: inherit;
+      }
+    }
+
+    // Bibliography / references
+    div#refs {
+      font-size: 0.92rem;
+      line-height: 1.55;
+
+      div[id^="ref-"] {
+        padding: 0.35rem 0;
+        border-bottom: 1px solid rgba(28, 16, 8, 0.08);
+
+        &:last-child { border-bottom: none; }
+      }
+    }
+
+    // Footnotes
+    section.footnotes {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(28, 16, 8, 0.15);
+      font-size: 0.88rem;
+      color: #4a3728;
+    }
+  }
+
+  // ── Footer ──
+  .essay-footer {
+    margin-top: 3.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(28, 16, 8, 0.15);
+    display: flex;
+    gap: 1.25rem;
+    align-items: center;
+
+    .essay-pdf-btn {
+      display: inline-block;
+      padding: 0.45rem 1.4rem;
+      border: 1px solid #8b1a1a;
+      color: #8b1a1a;
+      text-decoration: none;
+      font-size: 0.9rem;
+      border-radius: 2px;
+      transition: background 0.15s, color 0.15s;
+      &:hover { background: #8b1a1a; color: #faf8f3; }
+    }
+
+    .essay-back-footer {
+      font-size: 0.9rem;
+      color: #6b5a4e;
+      text-decoration: none;
+      &:hover { color: #8b1a1a; }
+    }
+  }
+}
+
+// ── Essay index (essays.md) ──────────────────────────────────────────────────
+.essay-list {
+  margin: 1.75rem 0;
+}
+
+.essay-item {
+  padding: 1.1rem 0;
+  border-bottom: 1px solid rgba(28, 16, 8, 0.1);
+
+  &:last-child { border-bottom: none; }
+
+  .essay-item-title {
+    font-size: 1.15rem;
+    margin: 0 0 0.2rem;
+
+    a {
+      color: #1c1008;
+      text-decoration: none;
+      &:hover { color: #8b1a1a; }
+    }
+  }
+
+  .essay-item-date {
+    font-size: 0.85rem;
+    font-style: italic;
+    color: #6b5a4e;
+    margin-bottom: 0.35rem;
+  }
+
+  .essay-item-desc {
+    font-size: 0.95rem;
+    color: #4a3728;
+    margin: 0.2rem 0 0.5rem;
+    line-height: 1.5;
+  }
+
+  .essay-item-links {
+    margin-top: 0.3rem;
+  }
+}
