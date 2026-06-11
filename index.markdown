@@ -7,28 +7,46 @@ layout: page
 <img src="menew.jpeg" class="circular-frame">
 </div>
 <div class="profile-info">
-<div class="profile-contact">
-<p>IITD e-mail : <code>cs1221594@iitd.ac.in</code></p>
-<p>Personal e-mail : <code>shahpoojan2004@gmail.com</code></p>
-<p>Phone : <code>+91 9924636975</code></p>
-</div>
 <div class="profile-links">
 <a href="me.JPEG">[Me]</a>
 <a href="cv.pdf">[CV]</a>
 <a href="https://scholar.google.ca/citations?hl=en&view_op=list_works&gmla=AOv-ny_OFkMHrWUMPNHQCyvv05avR8LXUHY6vYYfLZpDepuWzLy1DVgpFu_KIZzge24Ap-uclYsDnkziNSYbtu0dH-nr&user=uedBN20AAAAJ">[Google Scholar]</a>
 </div>
+<div class="profile-links">
+<a href="https://github.com/PoojanCShah/">[GitHub]</a>
+<a href="https://linkedin.com/in/poojan-shah-b077ab25b/">[LinkedIn]</a>
+<a href="https://x.com/PoojanShah6380">[X]</a>
 </div>
 </div>
+</div>
+
+<div class="about-news-row">
+<div class="about-col" markdown="1">
 
 ### About
 
-I am an upcoming AI Research Scientist at [Mistral](https://mistral.ai/). I recently graduated from the [Department of Computer Science & Engineering](https://www.cse.iitd.ac.in/) at [IIT Delhi](https://home.iitd.ac.in/), with a semester at the [Faculty of Mathematics](https://uwaterloo.ca/math/) at the [University of Waterloo](https://uwaterloo.ca/). 
+I am an upcoming AI Research Scientist at [Mistral](https://mistral.ai/). I recently graduated from the [Department of Computer Science & Engineering](https://www.cse.iitd.ac.in/) at [IIT Delhi](https://home.iitd.ac.in/), with a semester at the [Faculty of Mathematics](https://uwaterloo.ca/math/) at the [University of Waterloo](https://uwaterloo.ca/).
 
 I have worked on clustering algorithms and quantum-inspired classical algorithms at [IIT Delhi](https://home.iitd.ac.in/) advised by [Ragesh Jaiswal](https://www.cse.iitd.ac.in/~rjaiswal/) and [Rajendra Kumar](https://k-rajendra.github.io/), on quantum cryptographic primitives at the [Computer Science Group](https://cs.quantumlah.org/) of [Centre for Quantum Technologies, NUS](https://www.quantumlah.org/) hosted by [Rahul Jain](https://www.comp.nus.edu.sg/~rahul/), on self-supervised learning at [Wadhwani AI](https://www.wadhwaniai.org/) hosted by [Makarand Tapaswi](https://makarandtapaswi.github.io/), and as a quantitative research intern at [Atlas Research](https://www.atlasresearch.ai/).
 
-Outside research, I am a percussionist with a particular interest in Indian classical instruments, and write on my [personal blog](/blog) and [research blog](/research-blog).
+Outside research, I am a percussionist with a particular interest in Indian classical instruments, and write on my [expository writings](/expository-writings).
 
-
+</div>
+<div class="news-sidebar">
+<div class="news-sidebar-label">News</div>
+<div class="news-box">
+<ul>
+<li><span class="news-date">June 2026</span> Will be joining <a href="https://mistral.ai/">Mistral</a> as a research scientist!</li>
+<li><span class="news-date">May 2026</span> Our work on beyond worst case clustering algorithms under the manifold hypothesis is accepted to <a href="https://icml.cc/">ICML 2026</a>!</li>
+<li><span class="news-date">Feb 2026</span> Glad to be invited for a lightning talk at <a href="https://event.india.acm.org/arcs/home/#arcs_about_2026">ACM-ARCS 2026</a> and to attend the <a href="https://event.india.acm.org/annualevent/home/">ACM India Annual Event</a>.</li>
+<li><span class="news-date">Jan 2026</span> Starting as TA for <a href="https://k-rajendra.github.io/courses/QuantumComputing/quantum252601.html">COL7160: Quantum Computing</a>.</li>
+<li><span class="news-date">Dec 2025</span> Attending FSTTCS-2025 at BITS Goa.</li>
+<li><span class="news-date">Nov 2025</span> Starting a collaboration with <a href="https://www.wadhwaniai.org/">Wadhwani AI</a> on self-supervised learning for anthropometry, under <a href="https://makarandtapaswi.github.io/">Makarand Tapaswi</a>.</li>
+<li><span class="news-date">Oct 2025</span> Our work was featured by CSE-IITD's <a href="https://homecse.iitd.ac.in/students-research-shines-at-iclr-2025/">blogpost</a>.</li>
+</ul>
+</div>
+</div>
+</div>
 
 ### Publications
 
@@ -74,32 +92,6 @@ We designed a quantum algorithm for D²-sampling (and through this, the first qu
 <a href="https://arxiv.org/abs/2502.02085" class="btn-arxiv">arXiv</a>
 </div>
 </div>
-
-<div class="news-section">
-<h3>News</h3>
-<div class="news-box">
-<ul>
-
-<li> <span class="news-date">June 2026</span> Will be joining <a href = "https://mistral.ai/"> Mistral </a> as a research scientist !  </li>
-
-<li> <span class="news-date">May 2026</span> Our work on beyond worst case clustering algorithms under the manifold hypothesis is accepted to <a href = "https://icml.cc/"> ICML 2026 </a> !  </li>
-
-<li> <span class="news-date">Feb 2026</span> Glad to be invited for a lightning talk at <a href="https://event.india.acm.org/arcs/home/#arcs_about_2026">
-ACM-ARCS 2026</a> and to attend the <a href="https://event.india.acm.org/annualevent/home/"> ACM India Annual Event
-
- </a> </li>
- <li> <span class="news-date">Jan 2026</span> Starting as TA for <a href="https://k-rajendra.github.io/courses/QuantumComputing/quantum252601.html">
-COL7160 : Quantum Computing !</a>  </li>
-<li><span class="news-date">Dec 2025</span> I will be attending FSTTCS-2025 at BITS Goa !  </li>
-<li><span class="news-date">Nov 2025</span> Starting a collaboration with <a href="https://www.wadhwaniai.org/">Wadhwani AI</a>  for research on self supervised learning for anthropometry, under the guidance of <a href="https://makarandtapaswi.github.io/"> Makarand Tapaswi ! </a></li>
-<li><span class="news-date">Oct 2025</span> Our work was featured by CSE-IITD's blogpost ! Have a look at it <a href="https://homecse.iitd.ac.in/students-research-shines-at-iclr-2025/">here</a>. </li>
-</ul>
-</div>
-</div>
-
-### Research Interests
-
-Broadly speaking, I am interested in the study of the world from a theoretical perspective. Specific interests, which tend to grow as time goes on include data clustering, quantum computing, statistical learning and algorithm design for modern information processing.
 
 ### Talks
 

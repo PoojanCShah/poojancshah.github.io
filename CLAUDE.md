@@ -59,7 +59,8 @@ make deploy
 - `essays.md` - Essay index page (lists all essays from the `_essays/` collection)
 - `book-collection.md` - Static list of recommended books (plain markdown list)
 - `calendar.md` - Embeds Google Calendar via iframe
-- `_posts/` - Legacy blog posts (orphaned; no longer linked from navigation)
+- `expository-writings.md` - Index of expository writings; lists posts from `_posts/` that have `expository: true` in their front matter
+- `_posts/` - Post files; only those with `expository: true` appear on the expository writings page
 
 ### Adding Essays
 
@@ -104,9 +105,9 @@ To add a collapsible abstract inside `pub-links`, use:
 
 Available button classes: `btn-arxiv` (brick red), `btn-conf` (steel blue), `btn-code` (purple), `btn-poster` (teal), `btn-slides` (gray), `btn-pdf` (pink), `btn-video` (light red), `btn-blog` (teal).
 
-### Adding Blog Posts
+### Adding Expository Writings
 
-Create files in `_posts/` with naming: `YYYY-MM-DD-title.md`
+Create files in `_posts/` with naming: `YYYY-MM-DD-title.md`. Add `expository: true` to make a post appear on the `/expository-writings/` index page.
 
 Front matter:
 ```yaml
@@ -114,18 +115,17 @@ Front matter:
 layout: post
 title: "Post Title"
 date: YYYY-MM-DD
-category: personal  # or "research" for research blog
+description: "One-line summary shown in the index."
+expository: true
 ---
 ```
-
-Posts with `category: personal` appear on `/blog`, posts with `category: research` appear on `/research-blog`.
 
 ## Configuration (_config.yml)
 
 Key settings:
 - `enable_mathjax: true` - LaTeX support: inline `\( \)`, display `$$ $$`
 - `animated: true` - Page fade-in animations
-- `header_pages` - Navigation menu items (blog.md, research-blog.md, book-collection.md, calendar.md)
+- `header_pages` - Navigation menu items (currently: essays.md, expository-writings.md, book-collection.md, calendar.md)
 - `extended_fonts: true` - Extended Google Font character sets
 
 ## Deployment
