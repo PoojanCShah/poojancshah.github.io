@@ -36,6 +36,9 @@ Outside research, I am a percussionist with a particular interest in Indian clas
 <div class="news-sidebar-label">News</div>
 <div class="news-box">
 <ul>
+
+<li><span class="news-date">June 2026</span> Received the  <a href= "https://homecse.iitd.ac.in/cse-iit-delhi-ta-award" >Outstanding Teaching Assistant Award</a> for COL-7160 by the CSE dept @ IIT-D ! </li>
+
 <li><span class="news-date">June 2026</span> Will be joining <a href="https://mistral.ai/">Mistral</a> as a research scientist!</li>
 <li><span class="news-date">May 2026</span> Our work on beyond worst case clustering algorithms under the manifold hypothesis is accepted to <a href="https://icml.cc/">ICML 2026</a>!</li>
 <li><span class="news-date">Feb 2026</span> Glad to be invited for a lightning talk at <a href="https://event.india.acm.org/arcs/home/#arcs_about_2026">ACM-ARCS 2026</a> and to attend the <a href="https://event.india.acm.org/annualevent/home/">ACM India Annual Event</a>.</li>
@@ -113,4 +116,4 @@ We designed a quantum algorithm for D²-sampling (and through this, the first qu
 
 ### Teaching
 
-Teaching Assistant for [COL7160 : Quantum Computing](https://k-rajendra.github.io/courses/QuantumComputing/quantum252601.html), Winter 2026
+Teaching Assistant for [COL7160 : Quantum Computing](https://k-rajendra.github.io/courses/QuantumComputing/quantum252601.html), Winter 2026. Received the <a href="https://homecse.iitd.ac.in/cse-iit-delhi-ta-award" >Outstanding Teaching Assistant Award</a>. 
