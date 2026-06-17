@@ -63,6 +63,7 @@ Outside research, I am a percussionist with a particular interest in Indian clas
 <details class="pub-abstract"><summary>short description</summary><div class="abstract-text">What began as a conversation about whether D²-sampling could be used to estimate the intrinsic dimension of data eventually led to a sampling algorithm that is provably fast on data with low intrinsic dimension. This is particularly interesting in light of the growing empirical evidence that high-dimensional machine learning datasets often have low intrinsic dimension, consistent with the manifold hypothesis. Our variant of D²-sampling is provably fast for data satisfying certain scaling laws, which can be theoretically motivated by the manifold hypothesis. Interestingly, after extensive checks across a wide range of datasets, we found that these scaling laws appear to be remarkably prevalent!</div></details>
 <a href="https://arxiv.org/abs/2602.01104" class="btn-arxiv">arXiv</a>
 <a href="https://arxiv.org/abs/2602.01104" class="btn-conf">OpenReview</a>
+<a href="/ICML2026Poster.pdf" class="btn-poster">Poster</a>
 </div>
 </div>
 
@@ -78,7 +79,7 @@ We designed a quantum algorithm for D²-sampling (and through this, the first qu
 </div></details>
 <a href="https://arxiv.org/abs/2405.13351" class="btn-arxiv">arXiv</a>
 <a href="https://openreview.net/forum?id=tDIL7UXmSS" class="btn-conf">OpenReview</a>
-<a href="https://iclr.cc/virtual/2025/poster/28068" class="btn-poster">Poster</a>
+<a href="/ICLR2025Poster.png" class="btn-poster">Poster</a>
 </div>
 </div>
 
