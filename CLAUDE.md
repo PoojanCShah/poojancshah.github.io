@@ -64,7 +64,7 @@ make deploy
 
 ### Adding Essays
 
-Essays are written in LaTeX and compiled to HTML + PDF with a single command. The workflow:
+Essays are written in LaTeX and compiled to HTML + PDF with a single command. Requires `pandoc` and `pdflatex` installed locally (`brew install pandoc` + MacTeX). The workflow:
 
 1. Create `essays/src/my-essay.tex` (add `% date: YYYY-MM-DD` and `% description: ...` comments at the top)
 2. Run `make essays` — this calls `scripts/build-essays.sh`, which:

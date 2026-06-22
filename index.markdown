@@ -16,6 +16,7 @@ layout: page
 <a href="https://github.com/PoojanCShah/">[GitHub]</a>
 <a href="https://linkedin.com/in/poojan-shah-b077ab25b/">[LinkedIn]</a>
 <a href="https://x.com/PoojanShah6380">[X]</a>
+<a href="mailto:shahpoojan2004@gmail.com">[shahpoojan2004@gmail.com]</a>
 </div>
 </div>
 </div>
@@ -26,6 +27,8 @@ layout: page
 ### About
 
 I am an upcoming AI Research Scientist at [Mistral](https://mistral.ai/). I recently graduated from the [Department of Computer Science & Engineering](https://www.cse.iitd.ac.in/) at [IIT Delhi](https://home.iitd.ac.in/), with a semester at the [Faculty of Mathematics](https://uwaterloo.ca/math/) at the [University of Waterloo](https://uwaterloo.ca/).
+
+_I am interested in designing provably efficient algorithms for high-dimensional data, with a focus on clustering. Much of my work explores how structural assumptions can break through worst-case computational barriers._
 
 I have worked on clustering algorithms and quantum-inspired classical algorithms at [IIT Delhi](https://home.iitd.ac.in/) advised by [Ragesh Jaiswal](https://www.cse.iitd.ac.in/~rjaiswal/) and [Rajendra Kumar](https://k-rajendra.github.io/), on quantum cryptographic primitives at the [Computer Science Group](https://cs.quantumlah.org/) of [Centre for Quantum Technologies, NUS](https://www.quantumlah.org/) hosted by [Rahul Jain](https://www.comp.nus.edu.sg/~rahul/), on self-supervised learning at [Wadhwani AI](https://www.wadhwaniai.org/) hosted by [Makarand Tapaswi](https://makarandtapaswi.github.io/), and as a quantitative research intern at [Atlas Research](https://www.atlasresearch.ai/).
 
