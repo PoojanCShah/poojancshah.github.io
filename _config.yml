@@ -7,9 +7,8 @@ baseurl:     ""
 url:         ""
 header_pages:
   - essays.md
-  - expository-writings.md
+  - blog.md
   - book-collection.md
-  - calendar.md
 
 collections:
   essays:

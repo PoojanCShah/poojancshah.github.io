@@ -20,10 +20,10 @@
   font-variant: small-caps;
   font-size: 0.82rem;
   letter-spacing: 0.1em;
-  color: #8b1a1a;
+  color: #000000;
   margin-bottom: 0.5rem;
   padding-bottom: 0.3rem;
-  border-bottom: 1px solid rgba(139, 26, 26, 0.45);
+  border-bottom: 1px solid rgba(70, 130, 180, 0.45);
 }
 
 .news-box {
@@ -38,7 +38,7 @@
 
   li {
     padding: 0.4rem 0;
-    border-bottom: 1px solid rgba(168, 144, 112, 0.3);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     font-size: 0.85rem;
     line-height: 1.5;
 
@@ -47,7 +47,7 @@
 
   .news-date {
     display: block;
-    color: #8b1a1a;
+    color: #555555;
     font-size: 0.75rem;
     font-style: italic;
     margin-bottom: 0.1rem;

@@ -1,21 +1,20 @@
 // ─────────────────────────────────────────────────────────────
-// Mir Publishers Textbook Aesthetic
-// Издательство «Мир» — Moscow, 1960–1990s
+// LaTeX / Computer Modern Aesthetic
 // ─────────────────────────────────────────────────────────────
 
-// Section headings: § symbol in deep red, underlined with rule
+// Section headings: § symbol in steel blue, underlined with rule
 h2 {
-  color: #1c1008;
+  color: #000000;
   font-weight: 600;
   letter-spacing: 0.015em;
   margin-top: 2.5rem;
   margin-bottom: 0.65rem;
   padding-bottom: 0.3rem;
-  border-bottom: 1px solid rgba(139, 26, 26, 0.45);
+  border-bottom: 1px solid rgba(70, 130, 180, 0.45);
 
   &::before {
     content: '§\00a0';
-    color: #8b1a1a;
+    color: #4682B4;
     font-weight: 400;
     font-style: normal;
   }
@@ -29,19 +28,19 @@ h2 {
   padding-bottom: 0;
 }
 
-// Subsection headings: small caps, warm ink
+// Subsection headings: small caps
 h3 {
-  color: #1c1008;
+  color: #000000;
   font-weight: 600;
   font-variant: small-caps;
   letter-spacing: 0.04em;
   margin-top: 1.75rem;
 }
 
-// Horizontal rules — thin Mir red
+// Horizontal rules — thin steel blue
 hr {
   border: none;
-  border-top: 1px solid rgba(139, 26, 26, 0.35);
+  border-top: 1px solid rgba(70, 130, 180, 0.35);
   margin: 2rem 0;
 }
 
@@ -50,13 +49,13 @@ body,
 li,
 td,
 th {
-  color: #1c1008;
+  color: #000000;
 }
 
-// Blockquotes styled as "Remark" — left rule in red, no italic slab
+// Blockquotes styled as "Remark" — left rule in steel blue
 blockquote {
-  border-left: 3px solid #8b1a1a;
-  background: rgba(139, 26, 26, 0.04);
+  border-left: 3px solid #4682B4;
+  background: rgba(70, 130, 180, 0.04);
   padding: 0.75rem 1.25rem;
   margin-left: 0;
   margin-right: 0;
@@ -64,54 +63,41 @@ blockquote {
 
   p {
     font-style: italic;
-    color: #3a2a18;
+    color: #222222;
     margin-bottom: 0;
   }
 }
 
-// Post meta date — warm muted tone
+// Post meta date
 .post-meta,
 .meta {
-  color: #6b5040;
+  color: #555555;
 }
 
 // Post list title color
 .post-link .post-title {
-  color: #1c1008;
+  color: #000000;
 }
 
-// Footer colophon — small italic note
+// Footer colophon
 footer {
   font-style: italic;
   letter-spacing: 0.01em;
 }
 
-// Site title in header — dignified weight
+// Site title in header
 .site-header .site-title {
   font-weight: 500;
   letter-spacing: 0.02em;
 }
 
-// Nav toggle button square corners
-.nav-dropdown-toggle {
-  border-radius: 0;
-  border-color: #a89070;
-  color: #6b5040;
-
-  &:hover {
-    background: #8b1a1a;
-    border-color: #8b1a1a;
-    color: #f0e5c8;
-  }
-}
-
-// Code blocks — inset look on paper background
+// Code blocks
 code {
-  background: #e5d5a8;
+  background: #f5f5f5;
   padding: 0.1em 0.3em;
   border-radius: 0;
   font-size: 0.9em;
-  color: #1c1008;
+  color: #000000;
 }
 
 pre code {
@@ -120,7 +106,7 @@ pre code {
 }
 
 pre {
-  border-left: 3px solid #8b1a1a;
+  border-left: 3px solid #4682B4;
   padding-left: 1rem;
 }
 
@@ -130,21 +116,21 @@ table {
   width: 100%;
 
   th {
-    border-bottom: 2px solid #8b1a1a;
+    border-bottom: 2px solid #4682B4;
     padding: 0.4rem 0.75rem;
     font-variant: small-caps;
     letter-spacing: 0.04em;
-    color: #1c1008;
+    color: #000000;
     background: transparent;
     text-align: left;
   }
 
   td {
-    border-bottom: 1px solid rgba(168, 144, 112, 0.4);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
     padding: 0.35rem 0.75rem;
   }
 
   tr:last-child td {
-    border-bottom: 1px solid #8b1a1a;
+    border-bottom: 1px solid #4682B4;
   }
 }

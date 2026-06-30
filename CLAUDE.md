@@ -58,7 +58,6 @@ make deploy
 - `index.markdown` - Homepage with profile photo, about, news, publications, talks, teaching
 - `essays.md` - Essay index page (lists all essays from the `_essays/` collection)
 - `book-collection.md` - Static list of recommended books (plain markdown list)
-- `calendar.md` - Embeds Google Calendar via iframe
 - `expository-writings.md` - Index of expository writings; lists posts from `_posts/` that have `expository: true` in their front matter
 - `_posts/` - Post files; only those with `expository: true` appear on the expository writings page
 
@@ -125,7 +124,7 @@ expository: true
 Key settings:
 - `enable_mathjax: true` - LaTeX support: inline `\( \)`, display `$$ $$`
 - `animated: true` - Page fade-in animations
-- `header_pages` - Navigation menu items (currently: essays.md, expository-writings.md, book-collection.md, calendar.md)
+- `header_pages` - Navigation menu items (currently: essays.md, expository-writings.md, book-collection.md)
 - `extended_fonts: true` - Extended Google Font character sets
 
 ## Deployment
@@ -139,3 +138,4 @@ Push to `main` branch triggers automatic GitHub Pages deployment.
 - Images (profile photo, logos) are stored at the repo root (`me.JPEG`, `menew.jpeg`) and in `logos/`.
 - `cv.pdf` lives at the repo root and is linked directly from `index.markdown`. Replace it in-place to update the CV.
 - Poster PDFs/PNGs (e.g. `ICLR2025Poster.png`) are also stored at the repo root and linked via `btn-poster` buttons in publication entries.
+- `CNAME` at the repo root sets the custom domain for GitHub Pages. Edit it to change the domain.

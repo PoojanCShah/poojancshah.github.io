@@ -1,9 +1,9 @@
 // Typography
 $base-font-size: 16px !default;
 $bold-font-weight: 600 !default;
-$font-family: 'EB Garamond', Georgia, 'Times New Roman', serif !default;
+$font-family: 'Computer Modern Serif', Georgia, 'Times New Roman', serif !default;
 $line-height: 1.78 !default;
-$heading-font-family: 'EB Garamond', Georgia, 'Times New Roman', serif !default;
+$heading-font-family: 'Computer Modern Serif', Georgia, 'Times New Roman', serif !default;
 $heading-font-weight: 600 !default;
 $heading-line-height: 1.3 !default;
 $monospace-font-family: 'Source Code Pro', Consolas, monospace !default;
@@ -53,9 +53,9 @@ $darken-3: rgba(#000,.25) !default;
 $darken-4: rgba(#000,.5) !default;
 
 // Links
-$crimson: #8b1a1a;
-$link-color: $crimson;
-$link-hover-color: darken($crimson, 12%);
+$accent: #4682B4;
+$link-color: #0563BB;
+$link-hover-color: #033e87;
 
 // Breakpoints
 $breakpoint-md: '(min-width: 52em)';
@@ -94,7 +94,7 @@ $form-field-padding-x: .5rem;
 
 // Code
 $pre-border-radius: 0px;
-$pre-background-color: #e5d5a8;
+$pre-background-color: #f5f5f5;
 $hljs-comment: $mid-gray;
 $hljs-keyword: $dark-blue;
 $hljs-name: $dark-gray;
@@ -115,22 +115,22 @@ $hljs-chunk: $light-gray;
 
 // Header
 $header-border-top: none;
-$header-color: #1c1008;
-$header-bg-color: #f0e5c8;
+$header-color: #000000;
+$header-bg-color: #ffffff;
 $header-font-weight: 400;
 
 // Nav
-$nav-color: #6b5040;
-$nav-link-color: #1c1008;
+$nav-color: #555555;
+$nav-link-color: #000000;
 $nav-padding: $space-2;
 $nav-link-padding-x: $space-2;
-$nav-link-border-bottom: 1.5px solid #8b1a1a;
-$nav-active-border-bottom: 1px solid rgba(139, 26, 26, 0.3);
+$nav-link-border-bottom: 1.5px solid #4682B4;
+$nav-active-border-bottom: 1px solid rgba(70, 130, 180, 0.3);
 
 // Footer
-$footer-border-top: 2px solid #8b1a1a;
+$footer-border-top: 2px solid #4682B4;
 $footer-padding: $space-3;
-$footer-color: #4a3624;
-$footer-bg-color: #e8d9b5;
+$footer-color: #444444;
+$footer-bg-color: #ffffff;
 $footer-font-weight: 400;
 $footer-font-size: .85rem;
