@@ -9,7 +9,7 @@ layout: page
 <div class="profile-info">
 <div class="profile-links">
 <a href="me.JPEG">[Me]</a>
-<a href="cv.pdf">[CV]</a>
+<a href="poojan-shah-cv.pdf">[CV]</a>
 <a href="https://scholar.google.ca/citations?hl=en&view_op=list_works&gmla=AOv-ny_OFkMHrWUMPNHQCyvv05avR8LXUHY6vYYfLZpDepuWzLy1DVgpFu_KIZzge24Ap-uclYsDnkziNSYbtu0dH-nr&user=uedBN20AAAAJ">[Google Scholar]</a>
 </div>
 <div class="profile-links">
