@@ -79,21 +79,27 @@
 }
 
 details.pub-abstract {
-  &[open] {
-    flex-basis: 100%;
-  }
+  flex-basis: 100%;
 
   summary {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.2rem 0.65rem;
     list-style: none;
     cursor: pointer;
+
+    &::-webkit-details-marker { display: none; }
+    &::marker { display: none; }
+  }
+
+  .pub-abstract-label {
     font-family: $monospace-font-family;
     font-size: 0.9rem;
     font-weight: 500;
     color: $theme-accent;
     transition: opacity 0.15s ease;
 
-    &::-webkit-details-marker { display: none; }
-    &::marker { display: none; }
     &::before { content: '['; color: $theme-muted; }
     &::after  { content: ']'; color: $theme-muted; }
 

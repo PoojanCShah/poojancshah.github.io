@@ -61,10 +61,13 @@ Outside research, I am a percussionist with a particular interest in Indian clas
 <div class="pub-authors">Poojan Shah, <a href="https://sites.google.com/view/shashwatagrawal">Shashwat Agrawal</a>, and <a href="https://www.cse.iitd.ac.in/~rjaiswal/">Ragesh Jaiswal</a></div>
 <div class="pub-venue"><strong>ICML 2026</strong> — Forty-Third International Conference on Machine Learning</div>
 <div class="pub-links">
-<details class="pub-abstract"><summary>commentary</summary><div class="abstract-text">What began as a conversation about whether D²-sampling could be used to estimate the intrinsic dimension of data eventually led to a sampling algorithm that is provably fast on data with low intrinsic dimension. This is particularly interesting in light of the growing empirical evidence that high-dimensional machine learning datasets often have low intrinsic dimension, consistent with the manifold hypothesis. Our variant of D²-sampling is provably fast for data satisfying certain scaling laws, which can be theoretically motivated by the manifold hypothesis. Interestingly, after extensive checks across a wide range of datasets, we found that these scaling laws appear to be remarkably prevalent!</div></details>
+<details class="pub-abstract">
+<summary><span class="pub-abstract-label">commentary</span>
 <a href="https://arxiv.org/abs/2602.01104" class="btn-arxiv">arXiv</a>
 <a href="https://openreview.net/forum?id=lgsMOTIAYu" class="btn-conf">OpenReview</a>
-<a href="/ICML2026Poster.png" class="btn-poster">Poster</a>
+<a href="/ICML2026Poster.png" class="btn-poster">Poster</a></summary>
+<div class="abstract-text">What began as a conversation about whether D²-sampling could be used to estimate the intrinsic dimension of data eventually led to a sampling algorithm that is provably fast on data with low intrinsic dimension. This is particularly interesting in light of the growing empirical evidence that high-dimensional machine learning datasets often have low intrinsic dimension, consistent with the manifold hypothesis. Our variant of D²-sampling is provably fast for data satisfying certain scaling laws, which can be theoretically motivated by the manifold hypothesis. Interestingly, after extensive checks across a wide range of datasets, we found that these scaling laws appear to be remarkably prevalent!</div>
+</details>
 </div>
 </div>
 
@@ -73,14 +76,17 @@ Outside research, I am a percussionist with a particular interest in Indian clas
 <div class="pub-authors">Poojan Shah and <a href="https://www.cse.iitd.ac.in/~rjaiswal/">Ragesh Jaiswal</a></div>
 <div class="pub-venue"><strong>ICLR 2025</strong> — Thirteenth International Conference on Learning Representations</div>
 <div class="pub-links">
-<details class="pub-abstract"><summary>commentary</summary><div class="abstract-text">
+<details class="pub-abstract">
+<summary><span class="pub-abstract-label">commentary</span>
+<a href="https://arxiv.org/abs/2405.13351" class="btn-arxiv">arXiv</a>
+<a href="https://openreview.net/forum?id=tDIL7UXmSS" class="btn-conf">OpenReview</a>
+<a href="/ICLR2025Poster.png" class="btn-poster">Poster</a></summary>
+<div class="abstract-text">
 
 We designed a quantum algorithm for D²-sampling (and through this, the first quantum approximation scheme for k-means with polylogarithmic running time in the Quantum RAM (QRAM) model) only to realise that (to put it bluntly in the words of a reviewer-2) "there is not much quantum here". This made us realise that, as with so many other Quantum Machine Learning (QML) algorithms in the QRAM model, our D²-sampling-based quantum clustering algorithms can also be dequantized in the sample-query access model of Ewin Tang <a href = "https://ewintang.com/assets/tang_thesis.pdf"> (PhD Thesis) </a>  to obtain a classical algorithm without much loss in the running time (unlike other QML dequantization results where there is a significant loss). We then realised that the dequantization, results in a fast implementation of k-means++, which has a lot of practical value.
 
-</div></details>
-<a href="https://arxiv.org/abs/2405.13351" class="btn-arxiv">arXiv</a>
-<a href="https://openreview.net/forum?id=tDIL7UXmSS" class="btn-conf">OpenReview</a>
-<a href="/ICLR2025Poster.png" class="btn-poster">Poster</a>
+</div>
+</details>
 </div>
 </div>
 
@@ -94,8 +100,11 @@ We designed a quantum algorithm for D²-sampling (and through this, the first qu
 <div class="pub-authors">Poojan Shah, Shashwat Agrawal, and <a href="https://www.cse.iitd.ac.in/~rjaiswal/">Ragesh Jaiswal</a></div>
 <div class="pub-venue">Preprint, 2025</div>
 <div class="pub-links">
-<details class="pub-abstract"><summary>commentary</summary><div class="abstract-text">We propose a new rejection-sampling-based seeding algorithm for k-means++ that achieves improved trade-offs between running time and approximation quality, interpolating between the D²-sampling guarantee and a greedy optimum.</div></details>
-<a href="https://arxiv.org/abs/2502.02085" class="btn-arxiv">arXiv</a>
+<details class="pub-abstract">
+<summary><span class="pub-abstract-label">commentary</span>
+<a href="https://arxiv.org/abs/2502.02085" class="btn-arxiv">arXiv</a></summary>
+<div class="abstract-text">We propose a new rejection-sampling-based seeding algorithm for k-means++ that achieves improved trade-offs between running time and approximation quality, interpolating between the D²-sampling guarantee and a greedy optimum.</div>
+</details>
 </div>
 </div>
 
@@ -105,9 +114,12 @@ We designed a quantum algorithm for D²-sampling (and through this, the first qu
 <div class="pub-title">Amit and Deepali Sinha Foundation Fellowship</div>
 <div class="pub-venue">IIT Delhi, 2022</div>
 <div class="pub-links">
-<details class="pub-abstract"><summary>context</summary><div class="abstract-text">Selected as one of five incoming IIT Delhi undergraduates for a four-year full-ride fellowship awarded on the basis of JEE Advanced rank and continued academic standing.</div></details>
+<details class="pub-abstract">
+<summary><span class="pub-abstract-label">context</span>
 <a href="https://alumni.iitd.ac.in/scholarships-awards/722" class="btn-conf">Fellowship Record</a>
-<a href="https://home.iitd.ac.in/show.php?id=149&amp;in_sections=News" class="btn-blog">Full-Ride Announcement</a>
+<a href="https://home.iitd.ac.in/show.php?id=149&amp;in_sections=News" class="btn-blog">Full-Ride Announcement</a></summary>
+<div class="abstract-text">Selected as one of five incoming IIT Delhi undergraduates for a four-year full-ride fellowship awarded on the basis of JEE Advanced rank and continued academic standing.</div>
+</details>
 </div>
 </div>
 
@@ -115,8 +127,11 @@ We designed a quantum algorithm for D²-sampling (and through this, the first qu
 <div class="pub-title">JEE Advanced 2022 — All India Rank 67</div>
 <div class="pub-venue">2022</div>
 <div class="pub-links">
-<details class="pub-abstract"><summary>context</summary><div class="abstract-text">Placed 67th nationally in JEE Advanced 2022, the competitive examination used for undergraduate admission to the Indian Institutes of Technology.</div></details>
-<a href="https://en.wikipedia.org/wiki/Joint_Entrance_Examination_%E2%80%93_Advanced" class="btn-blog">About JEE Advanced</a>
+<details class="pub-abstract">
+<summary><span class="pub-abstract-label">context</span>
+<a href="https://en.wikipedia.org/wiki/Joint_Entrance_Examination_%E2%80%93_Advanced" class="btn-blog">About JEE Advanced</a></summary>
+<div class="abstract-text">Placed 67th nationally in JEE Advanced 2022, the competitive examination used for undergraduate admission to the Indian Institutes of Technology.</div>
+</details>
 </div>
 </div>
 
@@ -124,8 +139,11 @@ We designed a quantum algorithm for D²-sampling (and through this, the first qu
 <div class="pub-title">Outstanding Teaching Assistant Award</div>
 <div class="pub-venue">Department of Computer Science and Engineering, IIT Delhi, 2026</div>
 <div class="pub-links">
-<details class="pub-abstract"><summary>context</summary><div class="abstract-text">Recognized by the CSE department for my work as Head Teaching Assistant for COL7160: Quantum Computing in Winter 2026.</div></details>
-<a href="https://homecse.iitd.ac.in/cse-iit-delhi-ta-award" class="btn-conf">IIT Delhi CSE</a>
+<details class="pub-abstract">
+<summary><span class="pub-abstract-label">context</span>
+<a href="https://homecse.iitd.ac.in/cse-iit-delhi-ta-award" class="btn-conf">IIT Delhi CSE</a></summary>
+<div class="abstract-text">Recognized by the CSE department for my work as Head Teaching Assistant for COL7160: Quantum Computing in Winter 2026.</div>
+</details>
 </div>
 </div>
 
@@ -133,8 +151,11 @@ We designed a quantum algorithm for D²-sampling (and through this, the first qu
 <div class="pub-title">Cornell–Maryland–Max Planck Research School</div>
 <div class="pub-venue">Selected participant, Saarbrücken, Germany, 2025</div>
 <div class="pub-links">
-<details class="pub-abstract"><summary>context</summary><div class="abstract-text">Selected for a week-long pre-doctoral research school at the Max Planck Institute for Software Systems, with faculty from Cornell University, the University of Maryland, and the Max Planck Institutes.</div></details>
-<a href="https://cmmrs2025.mpi-sws.org/" class="btn-conf">CMMRS 2025</a>
+<details class="pub-abstract">
+<summary><span class="pub-abstract-label">context</span>
+<a href="https://cmmrs2025.mpi-sws.org/" class="btn-conf">CMMRS 2025</a></summary>
+<div class="abstract-text">Selected for a week-long pre-doctoral research school at the Max Planck Institute for Software Systems, with faculty from Cornell University, the University of Maryland, and the Max Planck Institutes.</div>
+</details>
 </div>
 </div>
 
