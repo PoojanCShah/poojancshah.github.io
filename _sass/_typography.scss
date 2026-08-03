@@ -2,6 +2,12 @@ html {
   font-size: $base-font-size;
 }
 
+body {
+  font-kerning: normal;
+  font-variant-ligatures: common-ligatures;
+  font-weight: 500;
+}
+
 :lang(gu) {
   font-family: 'Noto Sans Gujarati', sans-serif;
 }
@@ -12,7 +18,7 @@ abbr {
 }
 
 p {
-  color: #1c1008;
+  color: $theme-ink;
   line-height: $line-height;
 }
 

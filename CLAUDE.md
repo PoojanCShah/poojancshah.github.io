@@ -22,9 +22,6 @@ bundle exec jekyll serve --watch --port 4001
 # Build static site to _site/
 make build
 
-# Compile essays: LaTeX → HTML + PDF (run after editing any .tex file)
-make essays
-
 # Quick deploy (add, commit, push with generic "Update site" message)
 # Prefer manual git commits with descriptive messages instead
 make deploy
@@ -34,59 +31,36 @@ make deploy
 
 ### Styling System
 - `css/pixyll.scss` - Main entry point that imports all SCSS partials
-- `_sass/_variables.scss` - Design tokens: colors, typography, spacing
-- Custom academic components: `_profile.scss`, `_publications.scss`, `_news.scss`, `_research.scss`, `_experience.scss`
+- `_sass/_variables.scss` - Design tokens: site-wide CMU Typewriter typography, Prussian palette, and spacing
+- `_sass/_fonts.scss` - Self-hosted CMU Typewriter Text faces; licensed files live in `assets/fonts/cmu-typewriter/`
+- Custom academic components: `_profile.scss`, `_publications.scss`, `_news.scss`
   - These style the homepage sections (profile header, publication items with venue/links, news timeline)
-  - Publication links use colored badges defined in `_publications.scss` (arxiv=brick red, conf=steel blue, code=purple, etc.)
-  - `_experience.scss` provides `.experience-timeline` / `.exp-item` classes for a vertical timeline with a red accent line (unused currently, available for adding an experience section)
-- `_sass/_mir.scss` - Last import (highest specificity); applies a "Mir Publishers" textbook aesthetic: dark ink body color `#1c1008`, deep red `#8b1a1a` accents on `h2` borders/`§` prefix, `hr`, blockquotes, code blocks, and tables. Edit here when overriding base theme colors or typographic rules globally.
+  - Publication link classes use direct semantic colors: blue for conference records, red for papers/PDFs, green for code/posters/blogs, and purple for slides/video.
+- `_sass/_mir.scss` - Last import (highest specificity); applies the European-monograph treatment to `§` headings, rules, blockquotes, code, and tables.
 
 ### Layout System
-- `_layouts/default.html` - Base template (includes head, header, footer)
+- `_layouts/default.html` - Base template (includes the shared head and header)
 - `_layouts/page.html` - Standard page layout (used by homepage)
-- `_layouts/post.html` - Blog post template with reading time, date, sharing options
-- `_layouts/center.html` - Centered content layout
+- `_layouts/post.html` - Writing template with reading time and date
 
 ### Includes
-- `header.html`, `footer.html` - Site chrome
+- `header.html` - Site header and navigation wrapper
 - `navigation.html` - Nav menu (controlled by `header_pages` in config)
-- `social_links.html` - Social media icons
-- `head.html` - Meta tags, CSS, MathJax loading, Google Fonts (EB Garamond)
+- `head.html` - Meta tags, CSS, and MathJax loading; site fonts are self-hosted through `_fonts.scss`
 
 ## Content
 
 - `index.markdown` - Homepage with profile photo, about, news, publications, talks, teaching
-- `essays.md` - Essay index page (lists all essays from the `_essays/` collection)
+- `writing.md` - Writing index page; lists every post in `_posts/`
 - `book-collection.md` - Static list of recommended books (plain markdown list)
-- `expository-writings.md` - Index of expository writings; lists posts from `_posts/` that have `expository: true` in their front matter
-- `_posts/` - Post files; only those with `expository: true` appear on the expository writings page
-
-### Adding Essays
-
-Essays are written in LaTeX and compiled to HTML + PDF with a single command. Requires `pandoc` and `pdflatex` installed locally (`brew install pandoc` + MacTeX). The workflow:
-
-1. Create `essays/src/my-essay.tex` (add `% date: YYYY-MM-DD` and `% description: ...` comments at the top)
-2. Run `make essays` — this calls `scripts/build-essays.sh`, which:
-   - Extracts metadata from the `.tex` file
-   - Runs `pandoc` to produce `_essays/my-essay.html` (Jekyll collection file with front matter)
-   - Runs `pdflatex` twice to produce `essays/pdf/my-essay.pdf`
-3. Commit `_essays/` and `essays/pdf/` alongside the source `.tex` — GitHub Pages cannot run Pandoc, so generated files must be committed
-
-**Metadata in `.tex` files:**
-```latex
-% date: 2026-05-01
-% description: One-line summary shown in the essay index.
-\title{Essay Title Here}
-```
-
-The `_layouts/essay.html` layout provides the e-reader UI: sticky back/PDF bar, reading column (700px, EB Garamond), section headings with `§` prefix and red border. The `_sass/_essay_reader.scss` file styles both the reader and the index listing; it is imported just before `_mir.scss` so Mir overrides still apply globally.
+- `_posts/` - Markdown files rendered into individual writing pages
 
 ### Adding Publications
 
 Publications in `index.markdown` use this HTML structure:
 ```html
 <div class="pub-item">
-<div class="pub-title"><span class="pub-number">1.</span> Paper Title</div>
+<div class="pub-title"><span class="pub-number">[1]</span> Paper Title</div>
 <div class="pub-authors">Author Names</div>
 <div class="pub-venue">Venue — Full Conference Name</div>
 <div class="pub-links">
@@ -102,11 +76,11 @@ To add a collapsible abstract inside `pub-links`, use:
 <details class="pub-abstract"><summary>short description</summary><div class="abstract-text">Abstract text here. MathJax works: \(O(n \log k)\).</div></details>
 ```
 
-Available button classes: `btn-arxiv` (brick red), `btn-conf` (steel blue), `btn-code` (purple), `btn-poster` (teal), `btn-slides` (gray), `btn-pdf` (pink), `btn-video` (light red), `btn-blog` (teal).
+Available semantic classes: `btn-arxiv`, `btn-conf`, `btn-code`, `btn-poster`, `btn-slides`, `btn-pdf`, `btn-video`, and `btn-blog`. Keep their color meanings consistent when adding links.
 
-### Adding Expository Writings
+### Adding Writing
 
-Create files in `_posts/` with naming: `YYYY-MM-DD-title.md`. Add `expository: true` to make a post appear on the `/expository-writings/` index page.
+Create files in `_posts/` with the naming pattern `YYYY-MM-DD-title.md`. Every post appears on `/writing/`.
 
 Front matter:
 ```yaml
@@ -115,7 +89,6 @@ layout: post
 title: "Post Title"
 date: YYYY-MM-DD
 description: "One-line summary shown in the index."
-expository: true
 ---
 ```
 
@@ -123,9 +96,8 @@ expository: true
 
 Key settings:
 - `enable_mathjax: true` - LaTeX support: inline `\( \)`, display `$$ $$`
-- `animated: true` - Page fade-in animations
-- `header_pages` - Navigation menu items (currently: essays.md, expository-writings.md, book-collection.md)
-- `extended_fonts: true` - Extended Google Font character sets
+- `animated: true` - Page fade-in animation
+- `header_pages` - Navigation menu items (currently: writing.md, book-collection.md)
 
 ## Deployment
 
@@ -136,6 +108,6 @@ Push to `main` branch triggers automatic GitHub Pages deployment.
 - `CLAUDE.md` is in the `_config.yml` exclude list, so it won't appear in the built site.
 - The site uses `github-pages` gem (not standalone Jekyll), which pins Jekyll and plugin versions. Run `bundle update github-pages` to upgrade.
 - Images (profile photo, logos) are stored at the repo root (`me.JPEG`, `menew.jpeg`) and in `logos/`.
-- `cv.pdf` lives at the repo root and is linked directly from `index.markdown`. Replace it in-place to update the CV.
+- `poojan-shah-cv.pdf` lives at the repo root and is linked directly from `index.markdown`. Replace it in-place to update the CV.
 - Poster PDFs/PNGs (e.g. `ICLR2025Poster.png`) are also stored at the repo root and linked via `btn-poster` buttons in publication entries.
 - `CNAME` at the repo root sets the custom domain for GitHub Pages. Edit it to change the domain.

@@ -6,19 +6,12 @@ description: "Poojan Shah's Homepage"
 baseurl:     ""
 url:         ""
 header_pages:
-  - essays.md
-  - blog.md
+  - writing.md
   - book-collection.md
-
-collections:
-  essays:
-    output: true
-    permalink: /essays/:name/
 
 # Optional features
 animated:       true
 enable_mathjax: true
-extended_fonts: true
 
 # Build settings
 markdown: kramdown
@@ -31,7 +24,7 @@ exclude:
   - Gemfile.lock
   - README.md
   - Makefile
+  - AGENTS.md
   - CLAUDE.md
   - vendor
   - scripts
-  - essays/src

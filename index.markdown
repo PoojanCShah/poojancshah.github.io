@@ -24,15 +24,14 @@ layout: page
 <div class="about-news-row">
 <div class="about-col" markdown="1">
 
-### About
+## About
 
-I am an upcoming AI Research Scientist at [Mistral](https://mistral.ai/). I recently graduated from the [Department of Computer Science & Engineering](https://www.cse.iitd.ac.in/) at [IIT Delhi](https://home.iitd.ac.in/), with a semester at the [Faculty of Mathematics](https://uwaterloo.ca/math/) at the [University of Waterloo](https://uwaterloo.ca/).
+I am an upcoming AI Research Scientist at [Mistral](https://mistral.ai/). I recently graduated from the [Department of Computer Science & Engineering](https://www.cse.iitd.ac.in/) at [IIT Delhi](https://home.iitd.ac.in/), where I worked on algorithms for clustering problems with [Ragesh Jaiswal](https://www.cse.iitd.ac.in/~rjaiswal/).
 
 _I am interested in designing provably efficient algorithms for high-dimensional data, with a focus on clustering. Much of my work explores how structural assumptions can break through worst-case computational barriers._
 
-I have worked on clustering algorithms and quantum-inspired classical algorithms at [IIT Delhi](https://home.iitd.ac.in/) advised by [Ragesh Jaiswal](https://www.cse.iitd.ac.in/~rjaiswal/) and [Rajendra Kumar](https://k-rajendra.github.io/), on quantum cryptographic primitives at the [Computer Science Group](https://cs.quantumlah.org/) of [Centre for Quantum Technologies, NUS](https://www.quantumlah.org/) hosted by [Rahul Jain](https://www.comp.nus.edu.sg/~rahul/), on self-supervised learning at [Wadhwani AI](https://www.wadhwaniai.org/) hosted by [Makarand Tapaswi](https://makarandtapaswi.github.io/), and as a quantitative research intern at [Atlas Research](https://www.atlasresearch.ai/).
 
-Outside research, I am a percussionist with a particular interest in Indian classical instruments, and write on my [blog](/blog).
+Outside research, I am a percussionist with a particular interest in Indian classical instruments, and occasionally [write](/writing/).
 
 </div>
 <div class="news-sidebar">
@@ -54,28 +53,27 @@ Outside research, I am a percussionist with a particular interest in Indian clas
 </div>
 </div>
 
-### Publications
+## Publications
 
 
-<div class="pub-item">
-<div class="pub-title"><span class="pub-number">1.</span> Fast k-means seeding under the manifold hypothesis </div>
-<div class="pub-authors">Poojan Shah, <a href = "https://sites.google.com/view/shashwatagrawal
-"> Shashwat Agrawal </a> and <a href="https://www.cse.iitd.ac.in/~rjaiswal/">Ragesh Jaiswal</a></div>
-<div class="pub-venue"><strong>ICML 2026</strong> : The Forty Third International Conference on Machine Learning </div>
+<div class="pub-item numbered">
+<div class="pub-title"><span class="pub-number">[1]</span>Fast k-means seeding under the manifold hypothesis</div>
+<div class="pub-authors">Poojan Shah, <a href="https://sites.google.com/view/shashwatagrawal">Shashwat Agrawal</a>, and <a href="https://www.cse.iitd.ac.in/~rjaiswal/">Ragesh Jaiswal</a></div>
+<div class="pub-venue"><strong>ICML 2026</strong> — Forty-Third International Conference on Machine Learning</div>
 <div class="pub-links">
-<details class="pub-abstract"><summary>short description</summary><div class="abstract-text">What began as a conversation about whether D²-sampling could be used to estimate the intrinsic dimension of data eventually led to a sampling algorithm that is provably fast on data with low intrinsic dimension. This is particularly interesting in light of the growing empirical evidence that high-dimensional machine learning datasets often have low intrinsic dimension, consistent with the manifold hypothesis. Our variant of D²-sampling is provably fast for data satisfying certain scaling laws, which can be theoretically motivated by the manifold hypothesis. Interestingly, after extensive checks across a wide range of datasets, we found that these scaling laws appear to be remarkably prevalent!</div></details>
+<details class="pub-abstract"><summary>commentary</summary><div class="abstract-text">What began as a conversation about whether D²-sampling could be used to estimate the intrinsic dimension of data eventually led to a sampling algorithm that is provably fast on data with low intrinsic dimension. This is particularly interesting in light of the growing empirical evidence that high-dimensional machine learning datasets often have low intrinsic dimension, consistent with the manifold hypothesis. Our variant of D²-sampling is provably fast for data satisfying certain scaling laws, which can be theoretically motivated by the manifold hypothesis. Interestingly, after extensive checks across a wide range of datasets, we found that these scaling laws appear to be remarkably prevalent!</div></details>
 <a href="https://arxiv.org/abs/2602.01104" class="btn-arxiv">arXiv</a>
 <a href="https://openreview.net/forum?id=lgsMOTIAYu" class="btn-conf">OpenReview</a>
 <a href="/ICML2026Poster.png" class="btn-poster">Poster</a>
 </div>
 </div>
 
-<div class="pub-item">
-<div class="pub-title"><span class="pub-number">2.</span> Quantum (inspired) D²-sampling with applications</div>
+<div class="pub-item numbered">
+<div class="pub-title"><span class="pub-number">[2]</span>Quantum (inspired) D²-sampling with applications</div>
 <div class="pub-authors">Poojan Shah and <a href="https://www.cse.iitd.ac.in/~rjaiswal/">Ragesh Jaiswal</a></div>
-<div class="pub-venue"><strong>ICLR 2025</strong> : The Thirteenth International Conference on Learning Representations</div>
+<div class="pub-venue"><strong>ICLR 2025</strong> — Thirteenth International Conference on Learning Representations</div>
 <div class="pub-links">
-<details class="pub-abstract"><summary>short description</summary><div class="abstract-text">
+<details class="pub-abstract"><summary>commentary</summary><div class="abstract-text">
 
 We designed a quantum algorithm for D²-sampling (and through this, the first quantum approximation scheme for k-means with polylogarithmic running time in the Quantum RAM (QRAM) model) only to realise that (to put it bluntly in the words of a reviewer-2) "there is not much quantum here". This made us realise that, as with so many other Quantum Machine Learning (QML) algorithms in the QRAM model, our D²-sampling-based quantum clustering algorithms can also be dequantized in the sample-query access model of Ewin Tang <a href = "https://ewintang.com/assets/tang_thesis.pdf"> (PhD Thesis) </a>  to obtain a classical algorithm without much loss in the running time (unlike other QML dequantization results where there is a significant loss). We then realised that the dequantization, results in a fast implementation of k-means++, which has a lot of practical value.
 
@@ -88,36 +86,76 @@ We designed a quantum algorithm for D²-sampling (and through this, the first qu
 
 
 
-### Preprints
+## Preprints
 
 
-<div class="pub-item">
-<div class="pub-title"><span class="pub-number">1.</span> A new rejection sampling approach to k-means++ with improved trade-offs</div>
-<div class="pub-authors">Poojan Shah, Shashwat Agrawal and <a href="https://www.cse.iitd.ac.in/~rjaiswal/">Ragesh Jaiswal</a>, 2025</div>
+<div class="pub-item numbered">
+<div class="pub-title"><span class="pub-number">[1]</span>A new rejection sampling approach to k-means++ with improved trade-offs</div>
+<div class="pub-authors">Poojan Shah, Shashwat Agrawal, and <a href="https://www.cse.iitd.ac.in/~rjaiswal/">Ragesh Jaiswal</a></div>
+<div class="pub-venue">Preprint, 2025</div>
 <div class="pub-links">
-<details class="pub-abstract"><summary>short description</summary><div class="abstract-text">We propose a new rejection-sampling-based seeding algorithm for k-means++ that achieves improved trade-offs between running time and approximation quality, interpolating between the D²-sampling guarantee and a greedy optimum.</div></details>
+<details class="pub-abstract"><summary>commentary</summary><div class="abstract-text">We propose a new rejection-sampling-based seeding algorithm for k-means++ that achieves improved trade-offs between running time and approximation quality, interpolating between the D²-sampling guarantee and a greedy optimum.</div></details>
 <a href="https://arxiv.org/abs/2502.02085" class="btn-arxiv">arXiv</a>
 </div>
 </div>
 
-### Talks
+## Selected Distinctions
 
 <div class="pub-item">
-<div class="pub-title"><span class="pub-number">1.</span> Quantum and Quantum Inspired Classical Algorithms for Clustering</div>
+<div class="pub-title">Amit and Deepali Sinha Foundation Fellowship</div>
+<div class="pub-venue">IIT Delhi, 2022</div>
+<div class="pub-links">
+<details class="pub-abstract"><summary>context</summary><div class="abstract-text">Selected as one of five incoming IIT Delhi undergraduates for a four-year full-ride fellowship awarded on the basis of JEE Advanced rank and continued academic standing.</div></details>
+<a href="https://alumni.iitd.ac.in/scholarships-awards/722" class="btn-conf">Fellowship Record</a>
+<a href="https://home.iitd.ac.in/show.php?id=149&amp;in_sections=News" class="btn-blog">Full-Ride Announcement</a>
+</div>
+</div>
+
+<div class="pub-item">
+<div class="pub-title">JEE Advanced 2022 — All India Rank 67</div>
+<div class="pub-venue">2022</div>
+<div class="pub-links">
+<details class="pub-abstract"><summary>context</summary><div class="abstract-text">Placed 67th nationally in JEE Advanced 2022, the competitive examination used for undergraduate admission to the Indian Institutes of Technology.</div></details>
+<a href="https://en.wikipedia.org/wiki/Joint_Entrance_Examination_%E2%80%93_Advanced" class="btn-blog">About JEE Advanced</a>
+</div>
+</div>
+
+<div class="pub-item">
+<div class="pub-title">Outstanding Teaching Assistant Award</div>
+<div class="pub-venue">Department of Computer Science and Engineering, IIT Delhi, 2026</div>
+<div class="pub-links">
+<details class="pub-abstract"><summary>context</summary><div class="abstract-text">Recognized by the CSE department for my work as Head Teaching Assistant for COL7160: Quantum Computing in Winter 2026.</div></details>
+<a href="https://homecse.iitd.ac.in/cse-iit-delhi-ta-award" class="btn-conf">IIT Delhi CSE</a>
+</div>
+</div>
+
+<div class="pub-item">
+<div class="pub-title">Cornell–Maryland–Max Planck Research School</div>
+<div class="pub-venue">Selected participant, Saarbrücken, Germany, 2025</div>
+<div class="pub-links">
+<details class="pub-abstract"><summary>context</summary><div class="abstract-text">Selected for a week-long pre-doctoral research school at the Max Planck Institute for Software Systems, with faculty from Cornell University, the University of Maryland, and the Max Planck Institutes.</div></details>
+<a href="https://cmmrs2025.mpi-sws.org/" class="btn-conf">CMMRS 2025</a>
+</div>
+</div>
+
+## Talks
+
+<div class="pub-item numbered">
+<div class="pub-title"><span class="pub-number">[1]</span>Quantum and Quantum Inspired Classical Algorithms for Clustering</div>
 <div class="pub-venue">CS Group Meeting CQT - NUS, April 20, 2025</div>
 <div class="pub-links">
 <a href="https://iclr.cc/virtual/2025/poster/28068" class="btn-poster">Poster</a>
 </div>
 </div>
 
-<div class="pub-item">
-<div class="pub-title"><span class="pub-number">2.</span> Quantum Machine Learning without any Quantum</div>
+<div class="pub-item numbered">
+<div class="pub-title"><span class="pub-number">[2]</span>Quantum Machine Learning without any Quantum</div>
 <div class="pub-venue">TCS Seminar, IIT Delhi — Bharti 501, November 4, 2024</div>
 <div class="pub-links">
 <a href="https://drive.google.com/file/d/10hbt5_6Pd_qbcC5O_FxOspqenUsylO2V/view?usp=sharing" class="btn-slides">Slides</a>
 </div>
 </div>
 
-### Teaching
+## Teaching
 
-Teaching Assistant for [COL7160 : Quantum Computing](https://k-rajendra.github.io/courses/QuantumComputing/quantum252601.html), Winter 2026. Received the <a href="https://homecse.iitd.ac.in/cse-iit-delhi-ta-award" >Outstanding Teaching Assistant Award</a>. 
+Head Teaching Assistant for [COL7160 : Quantum Computing](https://k-rajendra.github.io/courses/QuantumComputing/quantum252601.html), Winter 2026. Received the <a href="https://homecse.iitd.ac.in/cse-iit-delhi-ta-award" >Outstanding Teaching Assistant Award</a>.

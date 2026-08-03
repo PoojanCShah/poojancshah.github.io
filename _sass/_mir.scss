@@ -1,21 +1,21 @@
 // ─────────────────────────────────────────────────────────────
-// LaTeX / Computer Modern Aesthetic
+// European monograph aesthetic
 // ─────────────────────────────────────────────────────────────
 
-// Section headings: § symbol in steel blue, underlined with rule
+// Section headings: § symbol in Prussian blue, underlined with rule
 h2 {
-  color: #000000;
-  font-weight: 600;
+  color: $theme-ink;
+  font-weight: 700;
   letter-spacing: 0.015em;
   margin-top: 2.5rem;
   margin-bottom: 0.65rem;
   padding-bottom: 0.3rem;
-  border-bottom: 1px solid rgba(70, 130, 180, 0.45);
+  border-bottom: 1px solid $theme-rule;
 
   &::before {
     content: '§\00a0';
-    color: #4682B4;
-    font-weight: 400;
+    color: $theme-accent;
+    font-weight: 500;
     font-style: normal;
   }
 }
@@ -28,17 +28,17 @@ h2 {
   padding-bottom: 0;
 }
 
-// Subsection headings: small caps
+// Subsection headings
 h3 {
-  color: #000000;
-  font-weight: 600;
+  color: $theme-ink;
+  font-weight: 700;
   margin-top: 1.75rem;
 }
 
-// Horizontal rules — thin steel blue
+// Horizontal rules — thin Prussian blue
 hr {
   border: none;
-  border-top: 1px solid rgba(70, 130, 180, 0.35);
+  border-top: 1px solid $theme-rule;
   margin: 2rem 0;
 }
 
@@ -47,13 +47,13 @@ body,
 li,
 td,
 th {
-  color: #000000;
+  color: $theme-ink;
 }
 
-// Blockquotes styled as "Remark" — left rule in steel blue
+// Blockquotes styled as "Remark" — left rule in Prussian blue
 blockquote {
-  border-left: 3px solid #4682B4;
-  background: rgba(70, 130, 180, 0.04);
+  border-left: 3px solid $theme-accent;
+  background: $theme-white;
   padding: 0.75rem 1.25rem;
   margin-left: 0;
   margin-right: 0;
@@ -61,7 +61,7 @@ blockquote {
 
   p {
     font-style: italic;
-    color: #222222;
+    color: $theme-ink;
     margin-bottom: 0;
   }
 }
@@ -69,33 +69,27 @@ blockquote {
 // Post meta date
 .post-meta,
 .meta {
-  color: #555555;
+  color: $theme-muted;
 }
 
 // Post list title color
 .post-link .post-title {
-  color: #000000;
-}
-
-// Footer colophon
-footer {
-  font-style: italic;
-  letter-spacing: 0.01em;
+  color: $theme-ink;
 }
 
 // Site title in header
 .site-header .site-title {
-  font-weight: 500;
+  font-weight: 700;
   letter-spacing: 0.02em;
 }
 
 // Code blocks
 code {
-  background: #f5f5f5;
+  background: $theme-white;
   padding: 0.1em 0.3em;
   border-radius: 0;
   font-size: 0.9em;
-  color: #000000;
+  color: $theme-ink;
 }
 
 pre code {
@@ -104,7 +98,7 @@ pre code {
 }
 
 pre {
-  border-left: 3px solid #4682B4;
+  border-left: 3px solid $theme-accent;
   padding-left: 1rem;
 }
 
@@ -114,19 +108,19 @@ table {
   width: 100%;
 
   th {
-    border-bottom: 2px solid #4682B4;
+    border-bottom: 2px solid $theme-accent;
     padding: 0.4rem 0.75rem;
-    color: #000000;
+    color: $theme-ink;
     background: transparent;
     text-align: left;
   }
 
   td {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    border-bottom: 1px solid $theme-rule;
     padding: 0.35rem 0.75rem;
   }
 
   tr:last-child td {
-    border-bottom: 1px solid #4682B4;
+    border-bottom: 1px solid $theme-accent;
   }
 }

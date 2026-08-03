@@ -3,7 +3,7 @@ layout: page
 title: Book Collection
 ---
 
-This is where I keep a list of books that I have liked very much. 
+This is where I keep a list of books that I have liked very much.
 
 <!-- Add your books here -->
 

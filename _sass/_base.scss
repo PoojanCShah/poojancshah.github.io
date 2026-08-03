@@ -16,13 +16,19 @@ MIT License https://opensource.org/licenses/MIT
 html, body {
   height: auto;
   min-height: 100%;
+  background-color: $theme-white;
 }
 
 body {
-  background-color: #ffffff;
+  background-color: $theme-white;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+}
+
+.site-wrap,
+.site-header {
+  background-color: $theme-white;
 }
 
 img {
@@ -41,7 +47,6 @@ em img {
   object-fit: cover;
   display: block;
   margin: 0 auto;
-  border: 1px solid #cccccc;
-  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.08);
+  border: 1px solid $theme-rule;
+  box-shadow: none;
 }
-
