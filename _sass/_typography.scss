@@ -5,7 +5,8 @@ html {
 body {
   font-kerning: normal;
   font-variant-ligatures: common-ligatures;
-  font-weight: 500;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
 }
 
 :lang(gu) {
