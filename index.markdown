@@ -57,7 +57,20 @@ Outside research, I am a percussionist with a particular interest in Indian clas
 
 
 <div class="pub-item numbered">
-<div class="pub-title"><span class="pub-number">[1]</span>Fast k-means seeding under the manifold hypothesis</div>
+<div class="pub-title"><span class="pub-number">[1]</span>Noisy k-means++ is Not _too_ Noisy</div>
+<div class="pub-authors">Poojan Shah</div>
+<div class="pub-venue"><strong>Preprint</strong> - In submission.</div>
+<div class="pub-links">
+<details class="pub-abstract">
+<summary><span class="pub-abstract-label">commentary</span>
+<a href="https://arxiv.org/abs/2608.02318" class="btn-arxiv">arXiv</a></summary>
+<div class="abstract-text">What began as a question about whether k-means++ is genuinely robust to small errors in its sampling probabilities turned out to have a rather surprising history: the best previous analysis either lost an extra \(\log k\) factor or a constant of approximately 147,638, even as the noise went to zero. I realised that the obstruction becomes much cleaner if, instead of trying to control the average cost directly, one studies the entire cumulative distribution of cluster costs. A high-low statistic at every threshold forms a supermartingale, and integrating these inequalities recovers the average. This gives a \(1+O(\varepsilon)\) loss over classical k-means++, which I also show is asymptotically necessary. Interestingly, if pointwise multiplicative error is weakened to total-variation closeness, no finite guarantee is possible even for \(k=2\).</div>
+</details>
+</div>
+</div>
+
+<div class="pub-item numbered">
+<div class="pub-title"><span class="pub-number">[2]</span>Fast k-means seeding under the manifold hypothesis</div>
 <div class="pub-authors">Poojan Shah, <a href="https://sites.google.com/view/shashwatagrawal">Shashwat Agrawal</a>, and <a href="https://www.cse.iitd.ac.in/~rjaiswal/">Ragesh Jaiswal</a></div>
 <div class="pub-venue"><strong>ICML 2026</strong> — Forty-Third International Conference on Machine Learning</div>
 <div class="pub-links">
@@ -72,7 +85,7 @@ Outside research, I am a percussionist with a particular interest in Indian clas
 </div>
 
 <div class="pub-item numbered">
-<div class="pub-title"><span class="pub-number">[2]</span>Quantum (inspired) D²-sampling with applications</div>
+<div class="pub-title"><span class="pub-number">[3]</span>Quantum (inspired) D²-sampling with applications</div>
 <div class="pub-authors">Poojan Shah and <a href="https://www.cse.iitd.ac.in/~rjaiswal/">Ragesh Jaiswal</a></div>
 <div class="pub-venue"><strong>ICLR 2025</strong> — Thirteenth International Conference on Learning Representations</div>
 <div class="pub-links">
@@ -89,25 +102,6 @@ We designed a quantum algorithm for D²-sampling (and through this, the first qu
 </details>
 </div>
 </div>
-
-
-
-## Preprints
-
-
-<div class="pub-item numbered">
-<div class="pub-title"><span class="pub-number">[1]</span>A new rejection sampling approach to k-means++ with improved trade-offs</div>
-<div class="pub-authors">Poojan Shah, Shashwat Agrawal, and <a href="https://www.cse.iitd.ac.in/~rjaiswal/">Ragesh Jaiswal</a></div>
-<div class="pub-venue">Preprint, 2025</div>
-<div class="pub-links">
-<details class="pub-abstract">
-<summary><span class="pub-abstract-label">commentary</span>
-<a href="https://arxiv.org/abs/2502.02085" class="btn-arxiv">arXiv</a></summary>
-<div class="abstract-text">We propose a new rejection-sampling-based seeding algorithm for k-means++ that achieves improved trade-offs between running time and approximation quality, interpolating between the D²-sampling guarantee and a greedy optimum.</div>
-</details>
-</div>
-</div>
-
 ## Selected Distinctions
 
 <div class="pub-item">

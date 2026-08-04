@@ -1,0 +1,1283 @@
+                                                                 Noisy k-means++ is Not too Noisy
+                                                                                         Poojan Shah
+                                                                    Department of Computer Science and Engineering
+                                                                          Indian Institute of Technology Delhi
+                                                                              shahpoojan2004@gmail.com
+
+
+
+                                                                                              Abstract
+                                              The celebrated k-means++ algorithm of Arthur and Vassilvitskii (SODA 2007) achieves an
+                                             O(log k) expected approximation guarantee for the classical k-means problem using a technique
+                                             called D2 -sampling, which has become ubiquitous in the design of clustering algorithms. Bhat-
+                                             tacharya et al. (ESA 2020) introduced ε-noisy k-means++, in which the sampling probabilities
+
+
+
+
+arXiv:2608.02318v1 [cs.DS] 3 Aug 2026
+                                             may incur an adversarial multiplicative error of (1 ± ε), but were only able to recover an O(log2 k)
+                                             approximation guarantee. Recently, Grunau et al. (ESA 2023a) recovered the asymptotic O(log k)
+                                             approximation, but their analysis loses a constant factor of approximately 147,638 even as ε → 0,
+                                             leaving open the possibility that k-means++ may be highly sensitive to even small amounts
+                                             of adversarial noise. They asked whether one can instead obtain a bound within a 1 + O(ε)
+                                             factor of the classical guarantee. We resolve this question affirmatively, proving an expected
+                                             approximation guarantee of
+                                                                                             4
+                                                                                        1+ε
+                                                                      8(ln k + 2)                  = (1 + O(ε)) 8(ln k + 2).
+                                                                                        1−ε
+
+                                             The main technical obstacle is controlling the average cost of the uncovered clusters in the
+                                             potential-based framework of Dasgupta (2013). The proof goes through the analysis of a simple
+                                             to state adversarial sampling game; where the goal is to obtain a tight bound on the average
+                                             weights of elements as the game progresses. We overcome this obstacle with a short and elemen-
+                                             tary argument by considering the complete cumulative distribution function of the weights and
+                                             showing that a certain high-low statistic related to the average weight is a super-martingale.
+
+                                             We complement the upper bound with two separations. First, a noisy version of the Arthur and
+                                             Vassilvitskii (2007) lower-bound instance incurs a 1 + Ω(ε) loss over exact k-means++, showing
+                                             that linear dependence on the noise is necessary. Second, pointwise multiplicative control is
+                                             qualitatively essential: if it is replaced by per-round total variation closeness, then no finite
+                                             approximation guarantee is possible, even for k = 2.
+
+
+                                        1   Introduction
+                                        The k-means problem is a classical problem in computer science. Given a set of n points X ⊂ Rd
+                                        and an integer k ≥ 1, the goal is to output k centers C ⊂ Rd minimizing the cost function
+                                                                                       X
+                                                                            φ(X, C) =      min ∥x − c∥2 .
+                                                                                                       c∈C
+                                                                                               x∈X
+
+                                        We write OPTk (X) = minC⊂Rd : |C|=k φ(X, C) for the optimal k-means cost. The celebrated k-
+                                        means++ algorithm of Arthur and Vassilvitskii (2007) uses D2 -sampling to obtain an O(log k)
+
+
+                                                                                                   1
+approximation in expectation. It samples the first center uniformly from X. Thereafter, given the
+centers Cj already chosen, it samples x ∈ X with probability
+
+                                                     φ(x, Cj )
+                                         pCj (x) =             ,
+                                                     φ(X, Cj )
+
+where φ(x, Cj ) := φ({x}, Cj ), and adds x to Cj : Cj+1 = Cj ∪ {x}.
+
+The practical influence of this idea extends beyond its theoretical applications: for example, the
+KMeans implementation in scikit-learn (Pedregosa et al., 2011; The scikit-learn developers, 2026) uses
+a greedy variant of k-means++ as its default initialization. The classical analysis, however, assumes
+that every D2 -sampling probability is computed and sampled exactly. This assumption is stronger
+than what an implementation can generally guarantee. Squared distances, their sum, and the
+resulting normalized probabilities are evaluated using finite-precision arithmetic and are therefore
+subject to rounding error (Goldberg, 1991). Approximate distance computations, reduced-precision
+arithmetic, and other performance-oriented implementations may introduce further perturbations.
+Thus, even when the intended distribution is the D2 -distribution, the distribution used by an
+implementation may only approximate it.
+
+Motivated by this discrepancy, Bhattacharya et al. (2020) initiated the study of ε-noisy k-means++;
+see Algorithm 1. At each step j, an adaptive adversary chooses a normalized distribution qj
+satisfying
+                    (1 − ε)pCj (x) ≤ qj (x) ≤ (1 + ε)pCj (x)    for every x ∈ X.
+from which the next center is then sampled from. Intriguingly, the classical analysis of Arthur and
+Vassilvitskii (2007) does not extend directly to this scenario even for a small constant amount of
+noise such as ε = 0.01. Using a much more involved analysis, Bhattacharya et al. (2020) obtained an
+O(log2 k) guarantee. Subsequently, Grunau et al. (2023a) recovered an asymptotic O(log k) guarantee.
+                                                                           90
+The latter analysis, however, loses a constant factor of approximately (1−e−1/40 )2
+                                                                                    ≈ 147,638 even as
+ε → 0. Thus, Grunau et al. (2023a) ask whether the approximation ratio can be brought within a
+1 + O(ε) factor of the classical k-means++ analysis, or whether a counterexample rules this out. In
+this work, we answer this question in the affirmative with our main result:
+
+Theorem 1.1 (Main Theorem). For every nonempty finite set X ⊂ Rd , integer 1 ≤ k ≤ |X|, and
+noise parameter 0 ≤ ε < 1, let C be the centers returned by Algorithm 1. Against every adaptive
+adversary satisfying the noisy sampling rule,
+                                                                  4
+                                                             1+ε
+                           E[φ(X, C)] ≤ 8(ln k + 2)                     OPTk (X).
+                                                             1−ε
+
+For 0 ≤ ε < 1/2, the additional multiplicative factor is at most 1 + 160ε.
+
+Remark on the leading constant. We state and prove Theorem 1.1 using the classical covered-
+cluster bound of Arthur and Vassilvitskii (2007), as presented in the potential analysis of Dasgupta
+(2013). Later, the leading constant in the approximation guarantee was sharpened from 8 to 5 by
+Makarychev et al. (2020). Their refinement is orthogonal to our new argument: conditioned on
+sampling from a fixed uncovered optimal cluster, the noisy conditional distribution is pointwise
+within a factor (1 + ε)/(1 − ε) of the corresponding exact D2 -distribution. Consequently, substituting
+their covered-cluster lemma into our analysis gives
+
+
+                                                     2
+                                                               4
+                                                          1+ε
+                           E[φ(X, C)] ≤ 5(ln k + 2)                  OPTk (X).
+                                                          1−ε
+We retain the constant 8 in the remainder of the paper to keep the exposition aligned with the
+preceding analyses and to isolate the new ingredient controlling the uncovered clusters.
+
+1.1   Discussion on our techniques and related work
+The analysis of noisy k-means++ in prior work usually goes through a related adversarial sampling
+game the details of which we discuss in Section 2. Indeed, our improved bounds for noisy k-means++
+are also a consequence of a more refined analysis of this sampling game in Section 3. A high
+level description of the game is as follows: initially, there is a set of elements, with each being
+assigned a non-negative weight value. The game then proceeds in successive rounds. In each round,
+an adversary can either sample an element according to a distribution which is close to being
+proportional to its weight and delete it from the set of elements, followed by decreasing the weights
+of all surviving elements. Our goal is to study how the expected weight of the surviving elements
+evolves over the rounds. Ideally, we want the average to grow in a bounded manner as compared
+to the average at the start of the game. A tighter upper bound on the expected average through
+the rounds with respect to the initial average corresponds to a better approximation guarantee for
+Algorithm 1.
+
+Bhattacharya et al. (2020) bound the average via a two-stage probabilistic argument - a Chernoff
+bound to show that most deletions behave like proportional sampling, followed by a union bound over
+all surviving elements to control the maximum surviving value, which yields a bound with a residual
+O(log k) factor. Grunau et al. (2023a) instead partition elements into fixed big/medium/small
+weight classes and analyze the transitions between these classes directly, which removes the log k
+dependence but at the cost of an enormous, non-vanishing constant. Our key insight is to study
+the cumulative distribution function of the weights as a whole instead of directly attacking the
+average itself. Instead of a coarse and fixed partitioning of the weights, we consider a high-mid-low
+partition at every threshold t ≥ 0 simultaneously (Definition 3.2). We then show that a high–low
+ratio statistic related to the CDF is a bounded supermartingale (Lemma 3.4), a fact that follows
+from one direct pairwise probability comparison (Lemma 3.3) rather than concentration inequalities
+or case analysis. Integrating this one inequality over all thresholds via the layer-cake identity
+(Lemma 3.5) then recovers the average cost directly. Because the argument is a martingale inequal-
+ity rather than a probabilistic tail bound, it holds exactly for every k with no need for k to be
+large, and because it uses a continuum of thresholds rather than a fixed partition, it avoids both
+the log-factor loss of Bhattacharya et al. (2020) and the non-vanishing constant of Grunau et al.
+(2023a), yielding the clean dependence that converges to the noiseless bound as ε → 0 in Theorem 3.1.
+
+Theorems 5.1 and 5.6 clarify the role of the noise model. The first adapts the lower-bound instance
+of Arthur and Vassilvitskii (2007) and proves that a 1 + Ω(ε) loss relative to exact k-means++ is
+unavoidable. The second shows that pointwise multiplicative control is qualitatively essential: under
+per-round total variation closeness, no finite approximation guarantee is possible even for k = 2.
+It is worth noting that there are several algorithms which speed up k-means++ in practice using
+approximate sampling techniques such as MCMC sampling (Bachem et al., 2016a,b) or rejection
+sampling (Cohen-Addad et al., 2020; Shah et al., 2026) which usually have an additive guarantee
+related to the variance of the dataset stemming from using weaker notion of closeness of distributions
+
+
+
+                                                  3
+Algorithm 1 ε-noisy k-means++
+Require: X ⊂ Rd , k ≥ 2, and 0 ≤ ε < 1
+ 1: Choose a normalized distribution q1 on X satisfying q1 (x) ∈ [(1 − ε)/n, (1 + ε)/n] for every
+    x ∈ X; sample x ∼ q1 and set C1 = {x}.
+ 2: for j ← 1, . . . , k − 1 do
+ 3:    Choose a normalized distribution qj+1 on X satisfying
+                                                                           
+                                              φ(x, Cj )           φ(x, Cj )
+                           qj+1 (x) ∈ (1 − ε)           , (1 + ε)             ∀x ∈ X
+                                              φ(X, Cj )           φ(X, Cj )
+
+ 4:       Sample x ∼ qj+1 and set Cj+1 = Cj ∪ {x}.
+ 5: return C := Ck
+
+
+(such as TV distance) instead of the stronger pointwise error. This is usually not a problem in
+              OPT1 (X)
+practice when OPTk (X)
+                       is bounded, and hence Theorem 5.6 may be seen as exploiting this weakness.
+
+
+2       The Sampling Game
+The analysis of Bhattacharya et al. (2020) passes through an abstract adversarial deletion experiment.
+Motivated by this abstraction, we isolate a closely related β-sampling game that captures precisely
+the property of noisy D2 -sampling needed here. We first analyse this game without using any
+k-means terminology and then apply the resulting theorem in Section 4.
+Definition 2.1 (β-sampling game). Let β ≥ 1. Initially, there is a set S0 of m elements. Each
+A ∈ S0 has a nonnegative weight w0 (A). Write
+                                    X                         w0 (S0 )
+                        w0 (S0 ) :=    w0 (A) and       ρ0 :=          .
+                                                                |S0 |
+                                          A∈S0
+
+The game proceeds in rounds during which elements may be deleted and their weights may decrease.
+In round j, let Sj be the set of surviving elements and let wj : Sj → R≥0 be their weight function.
+Their average weight is
+                                                  wj (Sj )
+                                            ρj :=          .
+                                                   |Sj |
+After observing the state through round j, the adversary chooses an Ej -measurable deletion
+probability dj+1 ∈ [0, 1]. A fresh Bernoulli random variable Dj+1 is then drawn with Pr(Dj+1 = 1 |
+Ej ) = dj+1 .
+
+      1. If Dj+1 = 0, no element is deleted: Sj+1 = Sj . The adversary chooses a new weight function
+         satisfying
+                                 0 ≤ wj+1 (A) ≤ wj (A)      for every A ∈ Sj .
+
+      2. If Dj+1 = 1, the adversary chooses a normalized probability distribution πj on Sj satisfying
+                                    wj (A)                  wj (A)
+                           β −1 ·            ≤ πj (A) ≤ β ·            for every A ∈ Sj .
+                                    wj (Sj )                wj (Sj )
+        It samples A∗ ∼ πj , deletes A∗ , and sets Sj+1 = Sj \ {A∗ }. Finally, it chooses a new weight
+        function satisfying
+                                0 ≤ wj+1 (A) ≤ wj (A)      for every A ∈ Sj+1 .
+
+                                                         4
+Let Ej denote the σ-algebra generated by the complete history through round j, including the
+adversary’s past decisions and randomness. The choice of dj+1 , and of πj when Dj+1 = 1, is made
+from this revealed history and is therefore Ej -measurable; any internal randomness used to make
+these choices is included before A∗ is sampled. In particular, Sj , wj , and ρj are Ej -measurable. If
+Sj = ∅ or wj (Sj ) = 0, the game stops and we set ρℓ = 0 for every ℓ ≥ j.
+We first analyse the noiseless case β = 1 as done by Dasgupta (2013). This calculation identifies the
+precise obstruction that appears when β > 1.
+
+2.1   Analyzing β = 1
+We recall the definition properties of a supermartingale; see, for example, Williams (1991).
+Definition 2.2 (Supermartingale). Let (Ω, F, P) be a probability space with a filtration (Ej )j≥0 ,
+that is, an increasing sequence of σ-algebras E0 ⊆ E1 ⊆ · · · ⊆ F. A sequence of random variables
+(ρj )j≥0 is a supermartingale with respect to this filtration if, for every j ≥ 0,
+  (i) ρj is Ej -measurable;
+
+ (ii) E[|ρj |] < ∞;
+
+ (iii) E[ρj+1 | Ej ] ≤ ρj almost surely.
+The sequence is bounded if there exists M < ∞ such that |ρj | ≤ M almost surely for all j.
+Lemma 2.3 (Tower property of bounded supermartingales). Let (ρj )j≥0 be a bounded supermartin-
+gale with respect to (Ej )j≥0 . Then, for every 0 ≤ s < k,
+
+                                            E[ρk | Es ] ≤ ρs .
+
+For the case of β = 1, it is easy to see that the expected average weight cannot increase from one
+round to the next.
+Lemma 2.4. In the β-sampling game with β = 1, (ρj )j≥0 is a bounded supermartingale with respect
+to (Ej )j≥0 . Consequently, for every 0 ≤ s < k,
+
+                                            E[ρk | Es ] ≤ ρs .
+
+Proof. Condition on Dj+1 . If Dj+1 = 0, then Sj+1 = Sj and the weights can only decrease, so
+
+                                      E[ρj+1 | Ej , Dj+1 = 0] ≤ ρj .
+
+Now suppose Dj+1 = 1. Exactly one element A∗ ∈ Sj is deleted. If |Sj | = 0, both ρj and ρj+1 are 0
+by definition. If |Sj | = 1, then ρj+1 = 0 ≤ ρj . We may therefore assume that |Sj | > 1.
+Let ρej+1 be the average immediately after the deletion and before the remaining weights decrease.
+Then ρj+1 ≤ ρej+1 , and
+
+                        E[ρj+1 |Ej , Dj+1 = 1] ≤ E[e   ρj+1 |Ej , Dj+1 = 1]
+                          "P                                   #
+                             A∈Sj+1 wj (A)
+                       =E                      Ej , Dj+1 = 1
+                                 |Sj+1 |
+                                                     ∗
+                          "P                                           #
+                             A∈Sj wj (A) − wj (A )
+                       =E                                Ej , Dj+1 = 1
+                                     |Sj | − 1
+
+                                                    5
+                                                     
+                                               1                   1
+                           =ρj         1+                 −             E[wj (A∗ )|Ej , Dj+1 = 1].
+                                          |Sj | − 1           |Sj | − 1
+
+Let us compute the remaining expectation:
+                                                                                                             2
+                                                                                             P
+                               ∗
+                                                                X                              A∈Sj wj (A)
+                      E[wj (A ) | Ej , Dj+1 = 1] =                     wj (A)πj (A) =                            .
+                                                                                                 wj (Sj )
+                                                               A∈Sj
+
+
+By Cauchy–Schwarz,1
+                                                  X                      wj (Sj )2
+                                                          wj (A)2 ≥                .
+                                                                           |Sj |
+                                                 A∈Sj
+
+Therefore,
+                                                                              wj (Sj )
+                                       E[wj (A∗ ) | Ej , Dj+1 = 1] ≥                   = ρj ,
+                                                                               |Sj |
+and hence                                                                           
+                                                                              1                 ρj
+                        E[ρj+1 | Ej , Dj+1 = 1] ≤ ρj 1 +                                 −             = ρj .
+                                                                         |Sj | − 1           |Sj | − 1
+
+
+   E[ρj+1 |Ej ] = E[ρj+1 |Ej , Dj+1 = 0] · Pr[Dj+1 = 0|Ej ] + E[ρj+1 |Ej , Dj+1 = 1] · Pr[Dj+1 = 1|Ej ]
+                 ≤ ρj (Pr[Dj+1 = 0|Ej ] + Pr[Dj+1 = 1|Ej ]) = ρj .
+
+
+
+2.2      What goes wrong when β > 1?
+Let us try to repeat the calculation in Lemma 2.4 for β > 1. Fix a round j, condition on Ej , and write
+nj := |Sj |. Let A⋆ denote the element removed when Dj+1 = 1. Whenever Pr(Dj+1 = 1 | Ej ) > 0,
+we have
+                                        X                             1       X              1         wj (Sj )2  ρj
+ E[wj (A⋆ ) | Ej , Dj+1 = 1] =                πj (A)wj (A) ≥                    wj (A)2 ≥            ·           = .
+                                                                   β wj (Sj )             β wj (Sj )      nj      β
+                                       A∈Sj                                    A∈Sj
+
+The second inequality follows from Cauchy–Schwarz. Suppose first that nj ≥ 2. Since the weights
+of the surviving elements can only decrease, on the event Dj+1 = 1 we have
+
+                                                              wj (Sj ) − wj (A⋆ )
+                                                 ρj+1 ≤                           .
+                                                                    nj − 1
+
+Taking conditional expectations and using wj (Sj ) = nj ρj , we obtain
+
+                           wj (Sj ) − E[wj (A⋆ ) | Ej , Dj+1 = 1]                                                   1 − β −1
+                                                                                                                            
+                                                                    nj ρj − ρj /β
+ E[ρj+1 | Ej , Dj+1 = 1] ≤                                        ≤               =                              1+            ρj .
+                                          nj − 1                       nj − 1                                        nj − 1
+
+If Dj+1 = 0, then Sj remains unchanged and its weights can only decrease. Hence, ρj+1 ≤ ρj . The
+case nj = 1 is immediate: if the unique element is removed, the new average is 0, and otherwise the
+  1
+      Apply ( A∈Sj wj (A))2 ≤ |Sj | A∈Sj wj (A)2 .
+             P                     P
+
+
+
+
+                                                                   6
+average cannot increase. This calculation shows exactly where the proof for β = 1 breaks. When
+β = 1, the multiplier above is 1, and (ρj )j≥0 is a supermartingale. When β > 1, however,
+                                                1 − β −1
+                                           1+            > 1,
+                                                 nj − 1
+so the same argument no longer shows that the average weight is non-increasing in expectation. Let
+α := 1 − β −1 and define
+                                                        n−1
+                                                        Y              α
+                     G(0) = G(1) := 1,        G(n) :=          1+            for n ≥ 2.
+                                                                        m
+                                                        m=1
+
+We claim that (G(nj )ρj )j≥0 is a supermartingale. To see this, fix j, condition on Ej , and let
+
+                                      pj := Pr(Dj+1 = 1 | Ej ).
+
+When nj ≥ 2, the preceding bounds give
+
+            E[G(nj+1 )ρj+1 | Ej ]
+            = pj G(nj − 1)E[ρj+1 | Ej , Dj+1 = 1] + (1 − pj )G(nj )E[ρj+1 | Ej , Dj+1 = 0]
+                                       
+                                   α
+            ≤ pj G(nj − 1) 1 +            ρj + (1 − pj )G(nj )ρj
+                                nj − 1
+            = pj G(nj )ρj + (1 − pj )G(nj )ρj = G(nj )ρj .
+
+The same conclusion is immediate when nj ≤ 1. Thus G(nj )ρj is indeed a supermartingale.
+Applying the tower property from round s to round k, we obtain
+
+                                     E[G(nk )ρk | Es ] ≤ G(ns )ρs .
+
+Since G(nk ) ≥ 1, it follows that
+                                         E[ρk | Es ] ≤ G(ns )ρs .
+It remains to bound G(ns ). Using 1 + x ≤ ex , we have
+                       ns −1                  ns −1
+                                                       !
+                        Y         α           X     1
+              G(ns ) =         1+    ≤ exp α             ≤ exp (α(1 + ln ns )) = eα nαs .
+                                  m                  m
+                       m=1                        m=1
+
+Since ns ≤ k and α = 1 − β −1 , this proves
+                                                        −1         −1
+                                    E[ρk | Es ] ≤ e1−β k 1−β ρs .
+
+Thus, a more careful version of the direct argument gives a polynomial dependence on k. Nevertheless,
+this bound still grows with k for every fixed β > 1. Bhattacharya et al. (2020) obtained the stronger
+bound
+                                        E[ρk | Es ] ≤ O(log k)ρs
+for sufficiently large k, while Grunau et al. (2023a) obtained a constant bound of approximately
+
+                                       E[ρk | Es ] ≲ 147,638 ρs .
+
+Neither bound recovers the noiseless guarantee as β → 1. Our main technical contribution, stated
+in the next section, removes the dependence on k while retaining the correct limiting behavior:
+
+                                          E[ρk | Es ] ≤ β 2 ρs .
+
+                                                    7
+3      Improved Analysis of the Sampling Game
+We now present our improved analysis of the β-sampling game.
+Theorem 3.1. Consider the β-sampling game of Section 2, and let ρj be the average weight in
+round j. For every adversary and every 0 ≤ s < k,
+                                                 E[ρk | Es ] ≤ β 2 ρs .
+
+Proof idea. For β > 1, the sequence (ρj ) need not be a supermartingale. Instead, for every
+continuous threshold t ≥ 0, we partition the elements into low, middle, and high classes. We
+show that the fraction Zj (t) of high elements among the low and high elements is a bounded
+supermartingale. We then compare this statistic with the tails of the empirical weight distribution
+and integrate the comparison to recover the average weight.
+
+3.1    Dynamic threshold classes
+Our first step is to show that the fraction of high-weight elements among the high-weight and
+low-weight elements cannot increase in expectation.
+Definition 3.2. Consider the elements Sj in any round j ≥ 0 of the β-sampling game, with weights
+wj : Sj → R≥0 . For every threshold t ≥ 0, define
+                                 Ahigh
+                                  j    (t) := {A ∈ Sj : wj (A) ≥ β 2 t},
+                                  Amid
+                                   j (t) := {A ∈ Sj : t ≤ wj (A) < β t},
+                                                                    2
+
+                                  Alow
+                                   j (t) := {A ∈ Sj : 0 ≤ wj (A) < t}.
+
+Let
+                   hj (t) := |Ahigh
+                               j    (t)|,        mj (t) := |Amid
+                                                             j (t)|,           ℓj (t) := |Alow
+                                                                                           j (t)|.
+Define the high-low statistic
+                                                 hj (t)
+                                            
+                                                           , hj (t) + ℓj (t) > 0,
+                               Zj (t) :=   h j (t) + ℓj (t)
+                                          0,                  hj (t) + ℓj (t) = 0.
+                                         
+
+
+Why omit the middle class? The sampling rule permits a reliable pairwise comparison only
+when two weights differ by a factor of at least β 2 . Thus, Zj (t) compares elements above β 2 t with
+elements below t, leaving the ambiguous interval [t, β 2 t) aside. The gap β 2 ensures that every high
+element is at least as likely to be deleted as every low element.
+Lemma 3.3. Fix a completed round j and suppose Dj+1 = 1, so the adversary chooses πj and
+                                                                              high
+samples an element A∗ ∼ πj to delete. For every t ≥ 0, A1 ∈ Alow
+                                                             j (t), and A2 ∈ Aj    (t),
+                                                  πj (A1 ) ≤ πj (A2 ).
+Moreover, define
+                                                                                
+                       θj (t) := Pr A∗ ∈ Ahigh
+                                          j    (t) E j , Dj+1 = 1, A ∗
+                                                                       ∈
+                                                                       / Amid
+                                                                          j   (t)  .
+
+Then
+                                                                hj (t)
+                                                θj (t) ≥                   .
+                                                           hj (t) + ℓj (t)
+When the event conditioned on has probability 0, set θj (t) := 0.
+
+                                                             8
+                                 high
+Proof. For A1 ∈ Alow
+                 j (t) and A2 ∈ Aj    (t),
+
+                                    1 wj (A2 )       t        wj (A1 )
+                       πj (A2 ) ≥              ≥β          ≥β          ≥ πj (A1 ).
+                                    β wj (Sj )    wj (Sj )    wj (Sj )
+The desired bound is immediate if hj (t) = 0 or ℓj (t) = 0, so assume both are positive. Averaging
+the pairwise comparison gives
+                                                   P
+                                                                 π (A)
+                              P
+                               A∈Alow    πj (A)       A∈Ahigh (t) j
+                                  j (t)                   j
+                                                ≤                      .
+                                  ℓj (t)                  hj (t)
+Consequently,
+                                                    P
+                                                         A∈Ahigh (t)
+                                                                     πj (A)
+                                                            j
+                            θj (t) = P                              P
+                                           A∈Ahigh
+                                                         πj (A) +      A∈Alow   πj (A)
+                                              j    (t)                    j (t)
+
+                                             hj (t)
+                                    ≥                   .
+                                        hj (t) + ℓj (t)
+When hj (t) = ℓj (t) = 0, both sides are zero by definition.
+
+3.2   A supermartingale for the high-low statistic
+We next show that (Zj (t))j≥0 is a bounded supermartingale for every t ≥ 0.
+Lemma 3.4. In every β-sampling game, for every j ≥ 0 and t ≥ 0,
+
+                                           E[Zj+1 (t) | Ej ] ≤ Zj (t).
+
+Consequently, for every 0 ≤ s < k,
+
+                                             E[Zk (t) | Es ] ≤ Zs (t).
+
+Proof. We consider Dj+1 = 0 and Dj+1 = 1 separately. First suppose Dj+1 = 0. No element is
+deleted, and every weight can only decrease. Hence, only the following transitions are possible:
+
+                           high → mid,              high → low,           mid → low.
+
+Let
+
+                                         aj (t) := |Ahigh
+                                                     j    (t) ∩ Amid
+                                                                 j+1 (t)|
+
+                                         bj (t) := |Ahigh
+                                                     j    (t) ∩ Alow
+                                                                 j+1 (t)|
+
+                                                     j (t) ∩ Aj+1 (t)|
+                                         cj (t) := |Amid      low
+
+
+and, for brevity, write a, b, c, h, ℓ for their values at round j and threshold t. Then
+
+                            hj+1 (t) = h − a − b,               ℓj+1 (t) = ℓ + b + c,
+
+so hj+1 (t) + ℓj+1 (t) = h + ℓ + c − a.
+If h + ℓ = 0, then no element can enter the high class, so Zj (t) = Zj+1 (t) = 0. If h + ℓ > 0 but
+h + ℓ + c − a = 0, then Zj+1 (t) = 0 ≤ Zj (t). Otherwise,
+                                                       aℓ + b(h + ℓ) + ch
+                            Zj (t) − Zj+1 (t) =                             ≥ 0.
+                                                     (h + ℓ)(h + ℓ + c − a)
+
+                                                            9
+Therefore,
+                                   E[Zj+1 (t) | Ej , Dj+1 = 0] ≤ Zj (t).
+Now suppose Dj+1 = 1. Let Z  ej+1 (t) denote the statistic immediately after A∗ is deleted and before
+the surviving weights decrease. The preceding argument shows that
+
+                                            Zj+1 (t) ≤ Z
+                                                       ej+1 (t).
+
+If A∗ ∈ Amid
+          j (t), then deletion changes neither h nor ℓ, and hence Zj+1 (t) = Zj (t).
+                                                                    e
+It remains to consider A∗ ∈   / Amid
+                                   j (t). If h = 0, then no element can enter the high class, so
+Zj+1 (t) = Zj (t) = 0. If ℓ = 0, then Zj (t) = 1, and the desired inequality is immediate. We may
+therefore assume that h, ℓ > 0, so h + ℓ − 1 ≥ 1. With θ := θj (t), Lemma 3.3 gives
+                  h                                      i
+                 E Zej+1 (t) Ej , Dj+1 = 1, A∗ ∈
+                                               / Amid (t)
+                                                  j
+
+                           h−1       h              h−θ     h
+                      =         θ+       (1 − θ) =       ≤     = Zj (t).
+                          h+ℓ−1    h+ℓ−1           h+ℓ−1   h+ℓ
+Writing
+                               pmid := Pr(A∗ ∈ Amid
+                                                j (t) | Ej , Dj+1 = 1),
+
+and recombining the two subcases,
+
+          E[Zej+1 (t) | Ej , Dj+1 = 1] = pmid Zj (t)
+                                         + (1 − pmid )E[Zej+1 (t) | Ej , Dj+1 = 1, A∗ ∈
+                                                                                      / Amid
+                                                                                         j (t)]
+                                      ≤ Zj (t).
+
+Since Zj+1 (t) ≤ Z
+                 ej+1 (t), the same bound holds for Zj+1 (t). Recombining the cases Dj+1 = 0
+and Dj+1 = 1 proves the one-step inequality. Since 0 ≤ Zj (t) ≤ 1, the process is a bounded
+supermartingale, and the final claim follows from Lemma 2.3.
+
+3.3   Tail integration
+For the final part of the proof, define the normalized tail function of the weights on Sj :
+
+                                       |{A ∈ Sj : wj (A) ≥ t}| , |S | > 0,
+                                      
+                                                                    j
+                            Nj (t) :=            |Sj |
+                                        0,                        |Sj | = 0.
+                                      
+
+The average weight is related to Nj (t) by the layer-cake identity.
+
+Lemma 3.5.                                         Z ∞
+                                            ρj =         Nj (t) dt.
+                                                   0
+
+Proof. Recall that ρj denotes the average weight over Sj , i.e.
+                                                   1 X
+                                          ρj =          wj (A),
+                                                  |Sj |
+                                                       A∈Sj
+
+with the convention ρj = 0 when |Sj | = 0 (matching the convention used to define Nj (t)).
+Case |Sj | = 0. Both sides are 0 by convention, so the identity holds trivially.
+
+                                                       10
+Case |Sj | > 0. We use the standard tail-integral (layer-cake) identity: for any x ≥ 0,
+                                            Z ∞
+                                      x=        1[x ≥ t] dt.
+                                                        0
+Applying this to each wj (A) for A ∈ Sj and summing,
+                               X           XZ ∞
+                                  wj (A) =        1[wj (A) ≥ t] dt.
+                                     A∈Sj              A∈Sj    0
+
+Since Sj is finite, we may exchange the (finite) sum and the integral:
+        XZ ∞                         Z ∞ X                     Z ∞
+                  1[wj (A) ≥ t] dt =        1[wj (A) ≥ t] dt =     |{A ∈ Sj : wj (A) ≥ t}| dt.
+          A∈Sj   0                          0   A∈Sj                       0
+
+Dividing both sides by |Sj | and pulling the constant inside the integral,
+                                            |{A ∈ Sj : wj (A) ≥ t}|
+                                       Z ∞                               Z ∞
+                     1 X
+              ρj =            wj (A) =                              dt =     Nj (t) dt,
+                    |Sj |               0            |Sj |                 0
+                              A∈Sj
+
+using the definition of Nj (t) in the last step. This completes the proof.
+Let us relate this to the high-low statistic defined earlier. Fix 0 ≤ s < k. We have2
+
+                             ms (t) + hs (t)        hs (t) + ms (t)            hs (t)
+                  Ns (t) =                   =                          ≥                 = Zs (t).
+                                  |Ss |        hs (t) + ms (t) + ℓs (t)   hs (t) + ℓs (t)
+Similarly,
+
+                        hk (t)             hk (t)                 hk (t)
+                     Nk (β 2 t) =
+                               =                           ≤                 = Zk (t).
+                         |Sk |    hk (t) + mk (t) + ℓk (t)   hk (t) + ℓk (t)
+Using Lemma 3.4 we have E[Zk (t)|Es ] ≤ Zs (t) so that
+
+                                E[Nk (β 2 t) | Es ] ≤ E[Zk (t) | Es ] ≤ Zs (t) ≤ Ns (t).
+Integrating both sides over t ∈ [0, ∞) gives
+                              Z ∞                          Z ∞
+                                    E[Nk (β t) | Es ] dt ≤
+                                           2
+                                                               Ns (t) dt.
+                                      0                              0
+
+By Lemma 3.5, the right-hand side is exactly ρs . For the left-hand side, since Nk (β 2 t) ≥ 0, we may
+swap the (conditional) expectation and the integral over t by Tonelli’s theorem, and then substitute
+x = β 2 t (so dt = dx/β 2 ):
+  Z ∞                             Z ∞                     Z ∞                 
+                                                            1                           1
+       E[Nk (β 2 t) | Es ] dt = E      Nk (β 2 t) dt Es = E 2     Nk (x) dx Es = 2 E[ρk | Es ],
+   0                                0                       β   0                     β
+where the last equality uses Lemma 3.5 applied to round k. Combining the two displays,
+                                                1
+                                                   E[ρk | Es ] ≤ ρs ,
+                                                β2
+and multiplying both sides by β 2 gives
+                                                E[ρk | Es ] ≤ β 2 ρs ,
+for every 0 ≤ s < k, as required.
+  2
+      When the denominators are zero both sides are zero by definition.
+
+
+                                                              11
+4    Potential Analysis for Noisy k-Means++
+We recall the potential-based analysis of Dasgupta (2013) and Bhattacharya et al. (2020). For
+0 ≤ ε < 1, write
+                                                    1+ε
+                                               r :=      .
+                                                    1−ε
+                                                       S
+Let A1 , . . . , Ak be optimal clusters of X, so X = ν∈[k] Aν . Up to an arbitrary assignment of
+                                                                   ∗     ∗           ∗           ∗
+boundary points, this
+                    −1
+                       P partition corresponds to optimal centers C = {c1 , . . . , ck }, where cν = µ(Aν )
+and µ(A) := |A|          a∈A a. Thus,
+                                          X                X
+                            OPTk (X) =       OPT1 (Aν ) =      φ(Aν , µ(Aν )).
+                                        ν∈[k]                    ν∈[k]
+
+For every set of centers C, the same partition gives
+                                                 X
+                                    φ(X, C) =        φ(Aν , C).
+                                                     ν∈[k]
+
+Algorithm 1 proceeds in k rounds. Let Yj be the center sampled in round j, and let Cj = {Y1 , . . . , Yj }.
+Once some sampled center belongs to an optimal cluster, that cluster’s expected contribution is
+bounded by an Oε (1) factor of its optimum contribution. We use the following standard lemmas.
+Lemma 4.1. (Bhattacharya et al. (2020, Lemma 4), adapted from Dasgupta (2013, Lemma 5)) Let
+C1 = {Y1 } denote the first center chosen by Algorithm 1 . Then for any optimal cluster Aν ,
+
+                                E[φ(Aν , C1 )|Y1 ∈ Aν ] ≤ 2r · OPT1 (Aν )
+
+Lemma 4.2. (Bhattacharya et al. (2020, Lemma 5), adapted from Dasgupta (2013, Lemma 6))
+Consider an iteration 1 ≤ j < k of Algorithm 1 after the first one and suppose Cj ̸= ∅ are the
+centers chosen until now. Let the center chosen in the considered iteration be Yj+1 . Then for any
+optimal cluster Aν
+                         E[φ(Aν , Cj+1 )|Fj , Yj+1 ∈ Aν ] ≤ 8r · OPT1 (Aν )
+This does not yield an Oε (1) guarantee because several sampled centers may belong to the same
+optimal cluster. We therefore distinguish covered and uncovered optimal clusters.
+Definition 4.3. Let 1 ≤ j ≤ k. An optimal cluster Aν is said to be covered after round j if at least
+one of the first j sampled centers belongs to it. We have the following definitions:
+
+                  Hj = {Aν : Cj ∩ Aν ̸= ∅}      Uj = {Aν : Cj ∩ Aν = ∅}        uj = |Uj |
+
+                                            [                      [
+                                    Hj =            Aν    Uj =            Aν
+                                           Aν ∈Hj                Aν ∈Uj
+
+After round j, the dataset is partitioned as X = Hj ∪ Uj . Since at most j optimal clusters can be
+covered, uj ≥ k − j. Define
+                                        Ij := 1{Yj ∈ Hj−1 },
+so Ij = 1 exactly when round j is wasted.
+We use Hj , Uj for sets of points and the calligraphic notation Hj , Uj for sets of clusters. We also
+record the sampling history.
+
+                                                     12
+Definition 4.4. Let Yj ∈ X denote the point sampled in round j, with the initial sample regarded
+as round 1, and let
+                                     Cj := {Y1 , . . . , Yj }.
+We write
+                       F0 := {∅, Ω},          Fj := σ(Y1 , . . . , Yj ),   j = 1, . . . , k,
+for the natural filtration generated by the sampling process. Here, Ω is the set of all possible
+executions of the algorithm. Thus, Fj represents the complete history of the algorithm up to and
+including round j. In particular, the random variables Cj , Hj , Uj , uj , and Ij are Fj -measurable.
+Lemmas 4.1 and 4.2 imply the following bound.
+Lemma 4.5. (Bhattacharya et al. (2020, Corollary 6)) For each j we have
+
+                                      E[φ(Hj , Cj )] ≤ 8r · OPTk (X)
+
+The main technical challenge is to bound the uncovered clusters. Following Bhattacharya et al.
+(2020), define
+                               φ(Uj , Cj ) , u > 0,
+                              
+                                                               k
+                                               j             X
+                        ρj :=       uj                Ψk :=      Ij ρj ,
+                                0,            uj = 0,
+                              
+                                                             j=2
+
+We use the following bound from Bhattacharya et al. (2020, Lemma 7).
+Lemma 4.6.
+                                    E[Ψk ] ≤ 8r2 (ln k + 1)OPTk (X).
+
+Proof sketch. Fix 2 ≤ j ≤ k and condition on Fj−1 . If round j is wasted, then Uj = Uj−1 ,
+uj = uj−1 , and adding a center cannot increase the cost of any uncovered cluster. Hence,
+
+                                 E[Ij ρj | Fj−1 ] ≤ Pr(Ij = 1 | Fj−1 )ρj−1 .
+
+If φ(Uj−1 , Cj−1 ) = 0, this conditional contribution is zero and there is nothing to prove. Otherwise,
+the noisy sampling inequalities imply
+                                                             φ(Hj−1 , Cj−1 )
+                                 Pr(Ij = 1 | Fj−1 ) ≤ r                      .
+                                                             φ(Uj−1 , Cj−1 )
+
+Indeed, the numerator is at most 1 + ε times its exact D2 -mass, the uncovered mass is at least 1 − ε
+times its exact mass, and the probability of a wasted round is at most the ratio of these two noisy
+masses. Since ρj−1 = φ(Uj−1 , Cj−1 )/uj−1 and uj−1 ≥ k − j + 1,
+
+                                 r                           8r2
+                   E[Ij ρj ] ≤        E[φ(Hj−1 , Cj−1 )] ≤             OPTk (X),
+                              k−j+1                        k−j+1
+
+where the last inequality is Lemma 4.5. Summing over j = 2, . . . , k and using k−1   −1 ≤ ln k + 1
+                                                                               P
+                                                                                 h=1 h
+proves the claim.
+The following consequence of Theorem 3.1 is the main new ingredient in our analysis.
+Lemma 4.7. Fix a round 2 ≤ s ≤ k and condition on the complete history Fs . Then
+                                                                      1+ε
+                                    E[ρk | Fs ] ≤ r2 ρs ,       r=        .
+                                                                      1−ε
+
+                                                       13
+Proof. We show that, after conditioning on Fs , the evolution of the uncovered optimal clusters is an
+instance of the β-sampling game with β = r.
+For s ≤ j ≤ k and A ∈ Uj , define
+                                       wj (A) := φ(A, Cj ).
+The total weight of the uncovered clusters is
+                                           X
+                               wj (Uj ) :=    wj (A) = φ(Uj , Cj ).
+                                              A∈Uj
+
+Consequently,
+                                              wj (Uj ) , u > 0,
+                                             
+                                                           j
+                                        ρj =     uj
+                                              0,          uj = 0,
+                                             
+
+is precisely their average weight.
+If us = 0, then all optimal clusters are already covered and both sides of the desired inequality are
+0. Similarly, if ws (Us ) = 0, then the weights remain 0 in every subsequent round because centers
+are only added. We may therefore assume that
+                                     us > 0     and       ws (Us ) > 0.
+Fix s ≤ j < k and condition on Fj . Let
+                               qj+1 (x) := Pr(Yj+1 = x | Fj ),      x ∈ X,
+be the noisy distribution used to sample the next center. By the noisy D2 -sampling rule,
+                                     φ(x, Cj )                      φ(x, Cj )
+                           (1 − ε)             ≤ qj+1 (x) ≤ (1 + ε)
+                                     φ(X, Cj )                      φ(X, Cj )
+for every x ∈ X.
+Suppose that
+                                          Pr(Ij+1 = 0 | Fj ) > 0.
+For each A ∈ Uj , define
+                                 πj (A) := Pr(Yj+1 ∈ A | Fj , Ij+1 = 0).
+Thus, πj (A) is the probability that A is the newly covered cluster, conditioned on the round being
+non-wasted. Summing the noisy D2 -sampling inequalities over all points in A gives
+                                wj (A)                                   wj (A)
+                     (1 − ε)             ≤ Pr(Yj+1 ∈ A | Fj ) ≤ (1 + ε)           .
+                               φ(X, Cj )                                φ(X, Cj )
+Moreover, the event Ij+1 = 0 is exactly the event that the sampled center belongs to one of the
+uncovered clusters. Therefore, summing over A ∈ Uj gives
+                                wj (Uj )                                 wj (Uj )
+                     (1 − ε)             ≤ Pr(Ij+1 = 0 | Fj ) ≤ (1 + ε)           .
+                               φ(X, Cj )                                φ(X, Cj )
+Since the conditioning event has positive probability, we may divide the two bounds. Hence, for
+every A ∈ Uj ,
+                                        Pr(Yj+1 ∈ A | Fj )
+                               πj (A) =
+                                         Pr(Ij+1 = 0 | Fj )
+                                        1 − ε wj (A)     1 wj (A)
+                                      ≥                =            .
+                                        1 + ε wj (Uj )   r wj (Uj )
+
+                                                     14
+Similarly,
+                                             1 + ε wj (A)      wj (A)
+                                  πj (A) ≤                  =r          .
+                                             1 − ε wj (Uj )    wj (Uj )
+Thus,
+                                    1 wj (A)                wj (A)
+                                               ≤ πj (A) ≤ r          .                             (1)
+                                    r wj (Uj )              wj (Uj )
+We now verify the remaining rules of the sampling game. After conditioning on Fs , take Us as
+the initial set and assign each A ∈ Us its actual weight ws (A) = φ(A, Cs ). We identify round τ of
+the sampling game with round s + τ of noisy D2 -sampling. Under this identification, the game’s
+deletion event Dτ +1 = 1 corresponds exactly to the non-wasted event Is+τ +1 = 0.
+Consider the transition from round j to round j + 1. There are two possibilities.
+
+  1. If Ij+1 = 1, then the round is wasted: Yj+1 ∈ Hj , and no new optimal cluster is covered.
+     Hence,
+                                            Uj+1 = Uj .
+        Since Cj ⊆ Cj+1 , the weight of every uncovered cluster can only decrease:
+                               0 ≤ wj+1 (A) = φ(A, Cj+1 ) ≤ φ(A, Cj ) = wj (A)
+        for every A ∈ Uj .
+  2. If Ij+1 = 0, then Yj+1 ∈ Uj . Because the optimal clusters form a partition, there is a unique
+     cluster A⋆ ∈ Uj containing Yj+1 . This cluster becomes covered and is removed:
+                                              Uj+1 = Uj \ {A⋆ }.
+        Conditioned on Ij+1 = 0, the cluster A⋆ is chosen according to πj , which satisfies (1).
+        Furthermore, the weights of all surviving clusters can only decrease:
+                                             0 ≤ wj+1 (A) ≤ wj (A)
+        for every A ∈ Uj+1 .
+
+If Pr(Ij+1 = 0 | Fj ) = 0, only the first possibility occurs, which is also allowed by the sampling
+game. Thus, conditional on Fs , the entire evolution from round s to round k is an instance of the
+β-sampling game with β = r.
+Applying Theorem 3.1 to this conditional process gives
+                                       E[ρk | Fs ] ≤ β 2 ρs = r2 ρs ,
+as claimed.
+
+Discussion. The lemma shows that the expected average cost of uncovered clusters increases by
+at most B(k, ε) = r2 . Bhattacharya et al. (2020) proved the weaker bound B1 (k, ε) = 4r ln k + 2 for
+                                                                               90
+sufficiently large k, and Grunau et al. (2023a) later obtained B2 (k, ε) ≤ (1−e−1/40 )2
+                                                                                        ≈ 147,638. Our
+dynamic-threshold argument yields r2 = 1 + O(ε).
+The potential bound and Lemma 4.7 combine through the following standard consequence of the
+potential analysis.
+Lemma 4.8. (Bhattacharya et al. (2020, Lemma 8)) For B(k, ε) = r2 as in Lemma 4.7,
+                                     E[φ(Uk , Ck )] ≤ B(k, ε)E[Ψk ].
+
+                                                    15
+Proof of Theorem 1.1.                Because Hk and Uk partition X,
+
+                                          φ(X, Ck ) = φ(Hk , Ck ) + φ(Uk , Ck ).
+
+Applying Lemmas 4.5, 4.8, and 4.6 gives
+
+                            E[φ(X, Ck )] ≤ 8r · OPTk (X) + B(k, ε) · E[Ψk ]
+                                            ≤ 8r · OPTk (X) + 8r4 · (ln k + 1) · OPTk (X)
+                                                            1+ε 4
+                                                               
+                                            ≤ 8(ln k + 2)          OPTk (X).
+                                                            1−ε
+
+Finally,
+                                               4
+                                          1+ε                                   1
+                                                     ≤ 1 + 160ε      for 0 ≤ ε ≤ ,
+                                          1−ε                                   2
+which follows, for example, by convexity and comparison with the chord joining the endpoints. This
+completes the proof.
+
+
+5        Lower Bounds
+We complement the upper bound with two lower bounds. The first shows that a linear loss
+in the multiplicative-noise parameter is unavoidable. The second shows that replacing pointwise
+multiplicative control by total variation closeness destroys every instance-independent approximation
+guarantee, already for k = 2.
+
+5.1        Linear dependence on ε is necessary
+Let Hk = km=1 1/m. We consider the lower bound family of well-separated high-dimensional sim-
+           P
+plices of Arthur and Vassilvitskii (2007)3 and construct an adversary that multiplies the probability
+of a round being wasted by a factor of (1 + ε). We denote expectation under this adversary by Eε [·]
+and for exact k-means++ by E0 [·]. Our lower bound result is as follows:
+
+Theorem 5.1. For every k ≥ 2 and 0 ≤ ε < 1, there exists a family X := Xδ,∆ of Euclidean
+k-means instances and a valid ε-noisy adversary such that:
+
+                                          Eε [φ(X, C)]     Hk − 1      ε
+                                      lim              ≥1+        ε≥1+
+                                    ∆/δ→∞ E0 [φ(X, C)]      Hk         3
+
+Consequently, a multiplicative loss of 1 + Ω(ε) with respect to exact k-means++ is unavoidable.
+
+Construction. Fix the number of clusters k ≥ 2. Let the number of points be n := km so that
+each cluster A1 , . . . , Ak has exactly m = n/k points in a simplex of side length δ. Place the
+simplices in mutually orthogonal subspaces and choose their centroids c1 , . . . , ck separated by
+pairwise squared distance ∆2 − m−1          2
+                                       m δ . For sufficiently large ∆/δ, the optimal clusters are indeed
+A1 , . . . , Ak . Moreover, this construction satisfies the following property:
+                                              (
+                                          2     δ 2 : x, y ∈ Ai , x ̸= y
+                                  ∥x − y∥ =
+                                                ∆2 : x ∈ Ai , y ∈ Aj , i ̸= j
+    3
+        See also the simplified analysis of this lower bound instance by Aggarwal et al. (2009).
+
+
+                                                             16
+Adversary. The adversary leaves the first sample (which is sampled uniformly at random) unchanged.
+Suppose the set of centers sampled until now is C. Recall that C will partition the optimal clusters
+into covered or hit clusters H and uncovered clustersP  U such that X = H ∪ U . Suppose p is the
+        2
+exact D distribution with respect to C. Let p(H) := x∈H p(x). The adversary chooses the noisy
+distribution q as follows:
+                                    
+                                    (1 + ε) · p(x)            :x∈H
+                                    
+                                    
+                              q(x) :=                    
+                                        
+                                         1−ε·    p(H)
+                                                              · p(x)   :x∈U
+                                        
+                                                 1−p(H)
+
+Let us see under which conditions the above distribution is valid. Since there is at least one
+uncovered cluster before the last center is chosen, we have p(H) < 1. Since H ⊂ X and each point
+x ∈ H can contribute at most δ 2 to the cost, we have φ(H, C) ≤ nδ 2 . Similarly since there is at
+least one uncovered cluster, each point x ∈ U contributes ∆2 cost, we have φ(U, C) ≥ m∆2 . Hence
+                               φ(H, C)      φ(H, C)      nδ 2        δ2    1
+                         p(H) =           ≤           ≤      2
+                                                               = k ·   2
+                                                                         ≤
+                               φ(X, C)       φ(U, C)    m∆           ∆     2
+                                                                       
+                                     p(H)                         p(H)
+whenever ∆2 /δ 2 ≥ 2k. This implies 1−p(H)  ≤ 1 so that 1 − ε · 1−p(H)    ≥ 1 − ε. So indeed for each
+x ∈ X we have q(x) ∈ (1 ± ε)p(x). We assume that this condition holds for the rest of the proof.
+
+To analyse the behaviour of D2 -sampling, it is crucial to see that the state of the algorithm can be
+adequately described by two parameters: the total number of centers sampled by the algorithm
+until now: t and the total number of optimal clusters hit until now: h.
+Lemma 5.2. Suppose that during the execution of Algorithm 1 on the instance described above, the
+current set of centers C has t centers and h out of the k optimal clusters have been hit until now.
+Then, the k-means cost of X with respect to C is given by:
+                           φ(X, C) = Φ[h, t] := (mh − t)δ 2 + (k − h)m∆2
+Proof. Recall that the optimal clusters are A1 , . . . , Ak . Suppose that the set of centers C has hit h
+optimal clusters Ai1 , . . . , Aih . Also suppose that each hit cluster iℓ has exactly sℓ centers from C
+belonging to it i.e., |C ∩ Aiℓ | = sℓ so that hℓ=1 sℓ = t. Now consider Aiℓ , which has m points, out of
+                                              P
+which m−sℓ contribute δ 2 cost while sℓ of them contribute zero. Hence we have φ(Aiℓ , C) = (m−sℓ )δ 2
+so that φ(H, C) = hℓ=1 φ(Aiℓ , C) = hℓ=1 (m − sℓ )δ 2 = (mh − t)δ 2 . Now consider the uncovered
+                      P                     P
+clusters U : each point x ∈ U contributes ∆2 to the cost. Hence φ(U, C) = (k − h) · m · ∆2 , This
+finally gives Φ[h, t] = φ(X, C) = φ(H, C) + φ(U, C) = (mh − t)δ 2 + (k − h)m∆2 .
+
+To compute the expected cost of D2 -sampling on this instance, we introduce the dynamic program-
+ming table F such that Fσ [h, t] is the expected k-means cost, starting from a set of centers having t
+total centers which have hit exactly h optimal clusters, and sampling the remaining k − t centers;
+σ = 0 corresponds to using exact D2 sampling and σ = ε corresponds to sampling according to the
+ε-noisy adversarial distribution which we had defined earlier. Observe that the first center chosen
+corresponds to h = 1, t = 1 and hence we can write Eσ [φ(X, C)] = Fσ [1, 1] where C is the set of
+centers output by Algorithm 1. We get the following dynamic programming recurrence for Fσ [h, t]:
+Lemma 5.3. For σ ∈ {0, ε} let Fσ [h, t] be the expected final cost conditioned on having already
+chosen t centers all of which lie in h distinct optimal clusters. For every state (h, t) with t < k, we
+have:
+          Fσ [h, t] = (1 + σ) · w[h, t] · Fσ [h, t + 1] + (1 − (1 + σ) · w[h, t]) · Fσ [h + 1, t + 1]
+
+                                                   17
+where
+                                                     (mh − t)δ 2
+                                 w[h, t] :=
+                                              (mh − t)δ 2 + (k − h)m∆2
+with the terminal condition
+
+                                 Fσ [h, k] = (hm − k)δ 2 + (k − h)m∆2
+
+Proof. Fix a state (h, t) with t < k, and let H and U denote the unions of the hit and unhit optimal
+clusters, respectively. By Lemma 5.2,
+
+                     φ(H, C) = (mh − t)δ 2         and     φ(U, C) = (k − h)m∆2 .
+
+Hence, under exact D2 -sampling, the probability that the next center lies in a hit cluster is
+
+                                φ(H, C)          (mh − t)δ 2
+                      p(H) =            =                          = w[h, t].
+                                φ(X, C)   (mh − t)δ 2 + (k − h)m∆2
+
+For σ = 0, this probability is w[h, t]. For σ = ε, the adversary multiplies it by 1 + ε. Thus, in either
+case, the probability of sampling from a hit cluster is
+
+                                              (1 + σ)w[h, t],
+
+and the probability of sampling from an unhit cluster is
+
+                                           1 − (1 + σ)w[h, t].
+
+If the next center lies in H, then the number of hit clusters remains h, while the number of sampled
+centers increases to t + 1. The resulting state is therefore (h, t + 1). If the next center lies in U ,
+then exactly one previously unhit optimal cluster is hit, and the resulting state is (h + 1, t + 1).
+Conditioning on these two events yields
+
+             Fσ [h, t] = (1 + σ)w[h, t]Fσ [h, t + 1] + (1 − (1 + σ)w[h, t]) Fσ [h + 1, t + 1].
+
+Finally, when t = k, no further centers are sampled. Lemma 5.2 therefore gives
+
+                           Fσ [h, k] = Φ[h, k] = (hm − k)δ 2 + (k − h)m∆2 ,
+
+which proves the recurrence and the terminal condition.
+
+To prove Theorem 5.1, we require a lower bound on Fε [1, 1] = Eε [φ(X, C)] and an upper bound
+on F0 [1, 1] = E0 [φ(X, C)]. For obtaining this, we first introduce the random variable I, which is
+the number of wasted rounds in an execution of Algorithm 1, so that at the end of the algorithm,
+there are exactly I uncovered clusters and k − I covered clusters. Using Lemma 5.2 we can directly
+write φ(X, C) = (m(k − I) − k)δ 2 + Im∆2 = k(m − 1)δ 2 + mI(∆2 − δ 2 ) by substituting t = k and
+h = k − I. Hence, the quantity which we want a bound on can be written as:
+
+Lemma 5.4.
+                              Fσ [1, 1] = k(m − 1)δ 2 + m(∆2 − δ 2 ) · Eσ [I]
+
+So, it remains to show a lower bound on Eε [I] and an upper bound on E0 [I]:
+                                  kδ 2 Pk
+Lemma 5.5. Putting B := m−1  m · ∆2 ·
+                                             1
+                                        ℓ=2 ℓ we have the following bounds:
+
+
+                                                    18
+     1.
+                                                                 E0 [I] ≤ B
+
+     2.
+                                                                         e−εB
+                                                         Eε [I] ≥ 1 −
+                                                                         1+B
+Proof. It will help to define the random variable I formally first. Define the indicator random
+variable It so that
+                 P It = 0 when a new cluster is hit in the (t + 1)st round and 1 otherwise. Hence we
+may write I = k−1  t=1 It . Suppose that after round t, h clusters have already been hit. We have
+
+                                                     (mh − t)δ 2          (mh − t)δ 2     t m − 1 δ2
+         E0 [It ] = Pr[It = 1] = w[h, t] =                             ≤              ≤
+                                              (mh − t)δ 2 + (k − h)m∆2   (k − h)m∆2     k − t m ∆2
+
+where we used h ≤ t and t ≤ k. Now
+                                              k−1                             k−1
+                                              X                  m − 1 δ2 X t
+                                   E0 [I] =         E0 [It ] ≤                 =B
+                                                                  m ∆2     k−t
+                                              t=1                             t=1
+
+Now consider the lower bound for the noisy case. Markov’s inequality gives
+
+                                         Eε [I] ≥ Pr[I ≥ 1] = 1 − Pr[I = 0]
+
+Note that I = 0 corresponds to each new center being sampled being from a previously uncovered
+cluster. Under the adversary, this happens at round t with probability 1 − (1 + ε)w[t, t]; here h = t,
+which holds on the event I = 0. Now consider:
+
+                                                                          b[t]     1 − εb[t]
+                                 1 − (1 + ε)w[t, t] = 1 − (1 + ε)                =
+                                                                        1 + b[t]   1 + b[t]
+                             2
+where b[t] := m−1 t δ                                          4
+               m k−t ∆2 . Multiplying these probabilities gives :
+
+                                     k−1                  k−1 −εb[t]                Pk−1
+                                     Y   1 − εb[t]        Y   e   e−ε t=1 b[t]   e−εB
+                       Pr[I = 0] =              ≤              ≤     Pk−1      =
+                                       1 + b[t]       1 + b[t]   1 + t=1 b[t]    1+B
+                                   t=1            t=1
+
+This completes the proof.
+                                                                                                          2
+Now we have all the ingredients for the proof of Theorem 5.1. Note that as m → ∞ and ∆
+                                                                                     δ2
+                                                                                        → ∞,
+B → 0. So we have from Lemma 5.4:
+                                                                                                −εB
+                                                                                                   
+                                                                                            1− e1+B
+                                                                          2   2
+              Fε [1, 1]   k(m − 1)δ 2 + m(∆2 − δ 2 ) · Eε [I]   1 + (1 − δ /∆ )(Hk − 1)        B
+                        =                                     ≥
+              F0 [1, 1]   k(m − 1)δ 2 + m(∆2 − δ 2 ) · E0 [I]        1 + (1 − δ 2 /∆2 )(Hk − 1)
+Taking the limit ∆2 /δ 2 → ∞ we obtain:
+
+                                          Fε [1, 1]      Hk − 1     ε
+                                                    ≥1+ε        ≥1+
+                                          F0 [1, 1]       Hk        3
+This completes the proof.
+                                                                                                         Pℓ
+   We use the fact that 1 − x ≤ e−x for 0 ≤ x ≤ 1 and for positive numbers x1 , . . . , xℓ we have 1 +
+     4
+                                                                                                          t=1 xt ≤
+Qℓ
+ t=1 (1 + xt ).
+
+
+
+
+                                                                  19
+5.2   Total variation closeness gives no guarantee
+For distributions p, q on a finite set X, recall that
+                                                  1X
+                                   ∥p − q∥TV :=       |p(x) − q(x)|.
+                                                  2
+                                                       x∈X
+
+Consider the relaxation of noisy k-means++ in which the distribution qj used in every round is
+only required to satisfy ∥qj − pCj ∥TV ≤ η.
+Theorem 5.6. For every 0 < η < 1 and every M < ∞, there is a Euclidean 2-means instance
+and a support-preserving sampling rule whose nontrivial sampling round is within total variation
+distance η of exact D2 -sampling, but whose expected approximation ratio is greater than M . Thus
+no finite approximation guarantee depending only on k and η is possible under this relaxation.
+Proof. Let
+                                   A = {a1 , a2 },           B = {b1 , b2 },
+where the squared distance within each pair is δ 2 , while every cross-pair squared distance is ∆2 .
+Four such points exist in R3 : for L2 = ∆2 − δ 2 /2, take
+             a1 = (−δ/2, 0, 0),   a2 = (δ/2, 0, 0),         b1 = (0, −δ/2, L),    b2 = (0, δ/2, L).
+The centers at the midpoints of A and B have total cost δ 2 , and hence
+                                              OPT2 (X) ≤ δ 2 .
+Choose the first center uniformly, exactly as in k-means++. Suppose without loss of generality that
+it is a1 . On the three remaining points, exact D2 -sampling uses
+                                             δ2                                  1−t
+                         p(a2 ) = t :=             ,         p(b1 ) = p(b2 ) =       .
+                                         δ 2 + 2∆2                                2
+Choose ∆/δ large enough that η < 1 − t, and define
+                                                                        1−t−η
+                            q(a2 ) = t + η,       q(b1 ) = q(b2 ) =           .
+                                                                          2
+Define the rule symmetrically for every possible first center. It is a normalized, support-preserving
+distribution, and
+                                               1      η η
+                                 ∥p − q∥TV =      η+ +          = η.
+                                               2       2 2
+With probability q(a2 ) = t + η ≥ η, both selected centers lie in A. On this event both points of B
+are at squared distance ∆2 from the selected centers, so the final cost is 2∆2 . It follows that
+                                          Eq [φ(X, C)]     ∆2
+                                                       ≥ 2η 2 .
+                                           OPT2 (X)        δ
+The right-hand side exceeds M for a sufficiently large ∆/δ.
+
+Corollary 5.7. There is a sequence of 2-means instances and support-preserving sampling distribu-
+tions qR such that
+                                                EqR [φ(XR , C)]
+                        ∥qR − pR ∥TV −→ 0,                      −→ ∞.
+                                                  OPT2 (XR )
+Proof. In the construction of Theorem 5.6, put R = ∆/δ and ηR = 1/R. Then the TV distance
+tends to zero, whereas the expected approximation ratio is at least 2R.
+
+                                                       20
+6    Conclusion and Discussion
+In this work, we studied the robustness of the k-means++ algorithm and resolved an open question
+posed by Grunau et al. (2023a). It would be very interesting to see if our techniques extend to
+noisy variants of other algorithms which use D2 -sampling such as greedy k-means++ (Bhattacharya
+et al., 2020; Grunau et al., 2023b) or k-means∥(Bahmani et al., 2012).
+
+
+Acknowledgments
+The author gratefully thanks Ragesh Jaiswal for his guidance and mentorship. The author thanks
+Sandeep Silwal for discussions and comments on an earlier draft which helped improve the paper.
+
+Declaration of AI use. The dynamic-threshold reformulation underlying this paper - replacing
+the fixed big/medium/small classes of Grunau et al. (2023a) with threshold classes defined at
+every scale, and recovering the average uncovered cost via integration was conceived by the author.
+During the exploratory stage, the author used OpenAI’s GPT-5.6-Sol to develop this idea into a
+concrete argument, including the supermartingale formulation and layer-cake integration step, and
+to generate a preliminary proof sketch. All model output was treated as unverified: the author
+independently reconstructed, verified, and wrote every lemma, proof, and line of exposition in the
+final manuscript. Anthropic’s Claude Opus 5 was used afterward only as an editorial reviewer of
+the completed draft. No text from either system was copied into the manuscript, no AI tool was
+used for citations, and the author assumes full responsibility for all content.
+
+
+References
+Ankit Aggarwal, Amit Deshpande, and Ravi Kannan. Adaptive sampling for k-means clustering. In
+ Proceedings of the 12th International Workshop and 13th International Workshop on Approxima-
+ tion, Randomization, and Combinatorial Optimization. Algorithms and Techniques, APPROX ’09
+ / RANDOM ’09, page 15–28, Berlin, Heidelberg, 2009. Springer-Verlag. ISBN 9783642036842.
+ doi: 10.1007/978-3-642-03685-9 2. URL https://doi.org/10.1007/978-3-642-03685-9_2.
+
+David Arthur and Sergei Vassilvitskii. k-means++: The advantages of careful seeding. In Proceedings
+ of the Eighteenth Annual ACM-SIAM Symposium on Discrete Algorithms, SODA ’07, pages 1027–
+ 1035, Philadelphia, PA, USA, 2007. Society for Industrial and Applied Mathematics. URL
+  https://theory.stanford.edu/~sergei/papers/kMeansPP-soda.pdf.
+
+Olivier Bachem, Mario Lucic, Hamed Hassani, and Andreas Krause. Fast and provably good
+  seedings for k-means. In Daniel Lee, Masashi Sugiyama, Ulrike Luxburg, Isabelle Guyon, and
+  Roman Garnett, editors, Advances in Neural Information Processing Systems, volume 29. Curran
+  Associates, Inc., 2016a. URL https://proceedings.neurips.cc/paper_files/paper/2016/
+  hash/d67d8ab4f4c10bf22aa353e27879133c-Abstract.html.
+
+Olivier Bachem, Mario Lucic, S. Hamed Hassani, and Andreas Krause. Approximate k-means++ in
+  sublinear time. In Proceedings of the Thirtieth AAAI Conference on Artificial Intelligence, pages
+  1459–1467. AAAI Press, 2016b. doi: 10.1609/aaai.v30i1.10259. URL https://ojs.aaai.org/
+  index.php/AAAI/article/view/10259.
+
+
+
+
+                                                21
+Bahman Bahmani, Benjamin Moseley, Andrea Vattani, Ravi Kumar, and Sergei Vassilvitskii.
+  Scalable k-means++. Proc. VLDB Endow., 5(7):622–633, March 2012. ISSN 2150-8097. doi:
+ 10.14778/2180912.2180915. URL https://doi.org/10.14778/2180912.2180915.
+Anup Bhattacharya, Jan Eube, Heiko Röglin, and Melanie Schmidt. Noisy, greedy and not so
+ greedy k-means++. In 28th Annual European Symposium on Algorithms (ESA 2020), volume
+ 173 of Leibniz International Proceedings in Informatics (LIPIcs), pages 18:1–18:21. Schloss
+ Dagstuhl–Leibniz-Zentrum für Informatik, 2020. doi: 10.4230/LIPIcs.ESA.2020.18.
+Vincent Cohen-Addad, Silvio Lattanzi, Ashkan Norouzi-Fard, Christian Sohler, and Ola
+  Svensson. Fast and accurate k-means++ via rejection sampling. In Hugo Larochelle,
+  Marc’Aurelio Ranzato, Raia Hadsell, Maria-Florina Balcan, and Hsuan-Tien Lin, editors,
+  Advances in Neural Information Processing Systems, volume 33, pages 16235–16245. Cur-
+  ran Associates, Inc., 2020.  URL https://proceedings.neurips.cc/paper/2020/hash/
+  babcff88f8be8c4795bd6f0f8cccca61-Abstract.html.
+Sanjoy Dasgupta. Lecture 3: Algorithms for k-means clustering. Course notes, University of
+  California, San Diego, 2013. URL https://cseweb.ucsd.edu/~dasgupta/291-geom/kmeans.
+  pdf.
+David Goldberg. What every computer scientist should know about floating-point arithmetic. ACM
+ Computing Surveys, 23(1):5–48, 1991. doi: 10.1145/103162.103163.
+Christoph Grunau, Ahmet Alper Özüdoğru, and Václav Rozhoň. Noisy k-means++ revisited. In
+ 31st Annual European Symposium on Algorithms (ESA 2023), volume 274 of Leibniz International
+ Proceedings in Informatics (LIPIcs), pages 55:1–55:7. Schloss Dagstuhl–Leibniz-Zentrum für
+ Informatik, 2023a. doi: 10.4230/LIPIcs.ESA.2023.55.
+Christoph Grunau, Ahmet Alper Özüdoğru, Václav Rozhoň, and Jakub Tětek. A nearly tight analysis
+  of greedy k-means++. In Proceedings of the 2023 Annual ACM-SIAM Symposium on Discrete
+ Algorithms (SODA 2023), pages 1012–1070. Society for Industrial and Applied Mathematics,
+ 2023b. doi: 10.1137/1.9781611977554.ch39.
+Konstantin Makarychev, Aravind Reddy, and Liren Shan. Improved guarantees for k-means++
+ and k-means++ parallel. In H. Larochelle, M. Ranzato, R. Hadsell, M.F. Balcan, and H. Lin,
+ editors, Advances in Neural Information Processing Systems, volume 33, pages 16142–16152.
+ Curran Associates, Inc., 2020. URL https://proceedings.neurips.cc/paper_files/paper/
+ 2020/file/ba304f3809ed31d0ad97b5a2b5df2a39-Paper.pdf.
+Fabian Pedregosa, Gaël Varoquaux, Alexandre Gramfort, Vincent Michel, Bertrand Thirion, Olivier
+  Grisel, Mathieu Blondel, Peter Prettenhofer, Ron Weiss, Vincent Dubourg, Jake Vanderplas,
+  Alexandre Passos, David Cournapeau, Matthieu Brucher, Matthieu Perrot, and Édouard Duches-
+  nay. Scikit-learn: Machine learning in python. Journal of Machine Learning Research, 12(85):
+  2825–2830, 2011. URL https://www.jmlr.org/papers/v12/pedregosa11a.html.
+Poojan Chetan Shah, Shashwat Agrawal, and Ragesh Jaiswal. Fast k-means seeding under the
+  manifold hypothesis. In Forty-third International Conference on Machine Learning, 2026. URL
+  https://openreview.net/forum?id=lgsMOTIAYu.
+The scikit-learn developers.     sklearn.cluster.KMeans. scikit-learn documentation,
+ 2026.     URL https://scikit-learn.org/stable/modules/generated/sklearn.cluster.
+ KMeans.html. Accessed July 27, 2026.
+
+                                                 22
+David Williams. Martingales. In Probability with Martingales, chapter 10, pages 93–121. Cambridge
+  University Press, Cambridge, 1991. ISBN 978-0-521-40605-5.
+
+
+
+
+                                               23
+
