@@ -104,6 +104,8 @@ We designed a quantum algorithm for D²-sampling (and through this, the first qu
 </div>
 ## Selected Distinctions
 
+<div class="distinctions-grid">
+
 <div class="pub-item">
 <div class="pub-title">Amit and Deepali Sinha Foundation Fellowship</div>
 <div class="pub-venue">IIT Delhi, 2022</div>
@@ -151,6 +153,8 @@ We designed a quantum algorithm for D²-sampling (and through this, the first qu
 <div class="abstract-text">Selected for a week-long pre-doctoral research school at the Max Planck Institute for Software Systems, with faculty from Cornell University, the University of Maryland, and the Max Planck Institutes.</div>
 </details>
 </div>
+</div>
+
 </div>
 
 ## Talks

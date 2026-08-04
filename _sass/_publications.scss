@@ -43,6 +43,18 @@
   }
 }
 
+.distinctions-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.65rem 2rem;
+  margin-bottom: 1.65rem;
+
+  .pub-item {
+    min-width: 0;
+    margin-bottom: 0;
+  }
+}
+
 .pub-links {
   display: flex;
   flex-wrap: wrap;
@@ -119,6 +131,10 @@ details.pub-abstract {
 }
 
 @media (max-width: 480px) {
+  .distinctions-grid {
+    grid-template-columns: 1fr;
+  }
+
   .pub-item.numbered {
     padding-left: 2.35rem;
   }
