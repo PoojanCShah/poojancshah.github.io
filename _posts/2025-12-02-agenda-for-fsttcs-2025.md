@@ -3,6 +3,7 @@ layout: post
 title: "Insights from FSTTCS2025"
 date: 2025-12-02
 category: research
+description: "Research topics and questions inspired by FSTTCS 2025, from approximation theory to cryptography."
 ---
 
 Here are some interesting topics I discovered during FSTTCS which I want to learn about : \
@@ -19,4 +20,4 @@ Here are some interesting topics I discovered during FSTTCS which I want to lear
 10. Sariel Har Peled's geometric algorithms
 11. Matroids anf their applications
 12. Quantum error correction codes 
-13. Exploiting specific structure to come up with better algorithms  
+13. Exploiting specific structure to come up with better algorithms

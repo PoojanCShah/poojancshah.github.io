@@ -3,6 +3,7 @@ layout: post
 title: "On complexity, specialisation, and simplicity"
 date: 2025-11-27
 category: personal
+description: "A reflection on complexity, specialisation, and the value of becoming a complete person."
 ---
 
 One of my friends said to me, "Poojan, there should be a single sentence which defined what you do and what you can offer to the world". As an example, he told of Andrej Karpathy, who uses "I like to train large scale deep neural nets" or something of that sort. This strikes me as particularly reductionist. Why must I be reduced down to a single sentence?

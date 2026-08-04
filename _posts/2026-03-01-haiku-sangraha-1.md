@@ -4,6 +4,7 @@ title: "Haiku Sangraha 1"
 date: 2026-03-01
 category: personal
 lang: gu
+description: "A short Gujarati haiku about sunrise, bees, and a lotus."
 ---
 
 ઊગ્યો સૂરજ
@@ -63,4 +64,3 @@ lang: gu
 મન ખેંચાતા
 પ્રભાત કલરવે
 આજ આથમ્યો
-

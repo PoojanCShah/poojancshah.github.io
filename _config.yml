@@ -2,9 +2,16 @@
 title:       Poojan Shah
 email:       shahpoojan2004@gmail.com
 author:      Poojan Shah
-description: "Poojan Shah's Homepage"
+description: "Poojan Shah is an AI research scientist working on efficient algorithms for high-dimensional data, clustering, and quantum-inspired computation."
 baseurl:     ""
-url:         ""
+url:         "https://poojancshah.github.io"
+lang:        en
+default_image: "/menew.jpeg"
+social_links:
+  - "https://scholar.google.ca/citations?user=uedBN20AAAAJ"
+  - "https://github.com/PoojanCShah/"
+  - "https://www.linkedin.com/in/poojan-shah-b077ab25b/"
+  - "https://x.com/PoojanShah6380"
 header_pages:
   - writing.md
   - book-collection.md
@@ -28,3 +35,4 @@ exclude:
   - CLAUDE.md
   - vendor
   - scripts
+  - tmp

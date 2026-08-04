@@ -1,5 +1,7 @@
 ---
 layout: page
+seo_title: "Poojan Shah | AI Research and Efficient Algorithms"
+description: "Poojan Shah is an AI research scientist working on efficient algorithms for clustering, high-dimensional data, and quantum-inspired computation."
 ---
 
 <div class="profile-header">

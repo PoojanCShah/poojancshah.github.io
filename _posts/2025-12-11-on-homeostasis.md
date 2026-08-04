@@ -3,6 +3,7 @@ layout: post
 title: "On homeostasis"
 date: 2025-12-11
 category: personal
+description: "A reflection on homeostasis, stress, and the balance that sustains living systems."
 ---
 
 I remember looking at one of the dogs which stays with us in Shivalik enjoying a cozy afternoon tan from the sun during a particularly harsh winter and thinking "that's the life!". The dog seemed quite relaxed, fulfilled and content with its life - resting as its body required and "working" (burrowing through the trash bin near my room), say a couple of hours per day to get some food as and when required. If it gets bored it goes out for a walk or plays with other dogs. Turns out, there is a particular word describing this state of the dog - homeostasis.

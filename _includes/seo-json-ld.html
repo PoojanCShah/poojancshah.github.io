@@ -1,0 +1,45 @@
+{% assign site_url = '/' | absolute_url %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": {{ site_url | append: '#person' | jsonify }},
+      "name": {{ site.author | jsonify }},
+      "url": {{ site_url | jsonify }},
+      "image": {{ site.default_image | absolute_url | jsonify }},
+      "email": {{ site.email | jsonify }},
+      "jobTitle": "AI Research Scientist",
+      "sameAs": [
+        {% for link in site.social_links %}{{ link | jsonify }}{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": {{ site_url | append: '#website' | jsonify }},
+      "url": {{ site_url | jsonify }},
+      "name": {{ site.title | jsonify }},
+      "description": {{ site.description | jsonify }},
+      "publisher": { "@id": {{ site_url | append: '#person' | jsonify }} }
+    }
+  ]
+}
+</script>
+{% if page.layout == 'post' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": { "@type": "WebPage", "@id": {{ seo_url | jsonify }} },
+  "headline": {{ seo_title | jsonify }},
+  "description": {{ seo_description | jsonify }},
+  "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
+  "dateModified": {{ page.last_modified_at | default: page.date | date_to_xmlschema | jsonify }},
+  "author": { "@id": {{ site_url | append: '#person' | jsonify }} },
+  "publisher": { "@id": {{ site_url | append: '#person' | jsonify }} },
+  "inLanguage": {{ page.lang | default: site.lang | jsonify }}
+}
+</script>
+{% endif %}
