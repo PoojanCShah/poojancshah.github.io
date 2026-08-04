@@ -10,7 +10,7 @@ permalink: /writing/
     <a class="post-link" href="{{ post.url | relative_url }}">
       <h3 class="post-title">{{ post.title }}</h3>
     </a>
-    <p class="post-meta">{{ post.date | date: "%B %-d, %Y" }}</p>
+    <p class="post-meta"><a class="post-pdf" href="{{ '/assets/writing/pdfs/' | append: post.slug | append: '.pdf' | relative_url }}">[pdf]</a></p>
     {% if post.description %}
       <p class="post-summary">{{ post.description }}</p>
     {% endif %}

@@ -1,6 +1,8 @@
 {% assign default_paths = site.pages | map: "path" %}
 {% assign page_paths = site.header_pages | default: default_paths %}
 
+<a class="nav-link{% if page.url == '/' %} nav-active{% endif %}" href="{{ '/' | relative_url }}">Home</a>
+
 {% for path in page_paths %}
     {% assign item = site.pages | where: "path", path | first %}
     {% if item.title and page.title == item.title %}

@@ -1,0 +1,11 @@
+% Shared typography for PDFs generated from _posts/*.md.
+\usepackage{fontspec}
+
+% Switch automatically for Gujarati text while retaining the Latin article face.
+\usepackage[Latin,Gujarati]{ucharclasses}
+\newfontfamily\gujaratifont[
+  Path=assets/fonts/noto-gujarati/,
+  UprightFont=NotoSansGujarati-Variable.ttf
+]{Noto Sans Gujarati}
+\setTransitionTo{Gujarati}{\gujaratifont}
+\setTransitionFrom{Gujarati}{\rmfamily}
