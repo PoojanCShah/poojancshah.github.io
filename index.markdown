@@ -57,7 +57,7 @@ Outside research, I am a percussionist with a particular interest in Indian clas
 
 
 <div class="pub-item numbered">
-<div class="pub-title"><span class="pub-number">[1]</span>Noisy k-means++ is Not _too_ Noisy</div>
+<div class="pub-title"><span class="pub-number">[1]</span>Noisy k-means++ is Not <em>too</em> Noisy</div>
 <div class="pub-authors">Poojan Shah</div>
 <div class="pub-venue"><strong>Preprint</strong> - In submission.</div>
 <div class="pub-links">
