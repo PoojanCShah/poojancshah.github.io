@@ -1,7 +1,7 @@
 ---
 layout: page
-seo_title: "Poojan Shah | AI Research and Efficient Algorithms"
-description: "Poojan Shah is an AI research scientist working on efficient algorithms for clustering, high-dimensional data, and quantum-inspired computation."
+seo_title: "Poojan Shah | Research Scientist"
+description: "Poojan Shah is an AI research scientist joining Mistral. He designs provably efficient clustering algorithms for high-dimensional data, with manifold-based and quantum-inspired work published at top ML conferences, including ICLR and ICML."
 ---
 
 <div class="profile-header">

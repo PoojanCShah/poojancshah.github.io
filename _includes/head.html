@@ -9,7 +9,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     {% assign seo_title = page.seo_title | default: page.title | default: site.title %}
-    {% assign seo_description = page.description | default: page.meta_description | default: page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 %}
+    {% assign seo_description = page.description | default: page.meta_description | default: page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 240 %}
     {% assign seo_image = page.image | default: site.default_image %}
     {% assign seo_url = page.url | absolute_url %}
     <title>{% if page.seo_title %}{{ seo_title | strip_html }}{% elsif page.title %}{{ seo_title | strip_html }} &#8211; {{ site.title | strip_html }}{% else %}{{ site.title | strip_html }}{% endif %}</title>
