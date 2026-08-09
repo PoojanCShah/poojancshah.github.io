@@ -41,6 +41,9 @@ Outside research, I am a percussionist with a particular interest in Indian clas
 <div class="news-box">
 <ul>
 
+<li><span class="news-date">August 2026</span> Finally received my Bachelor's degree from CSE@IITD along with being a recepient of the Suresh Chandra Memorial Trust Award for best B.Tech Project! </li>
+
+
 <li><span class="news-date">June 2026</span> Received the  <a href= "https://homecse.iitd.ac.in/cse-iit-delhi-ta-award" >Outstanding Teaching Assistant Award</a> for COL-7160 by the CSE dept @ IIT-D ! </li>
 
 <li><span class="news-date">June 2026</span> Will be joining <a href="https://mistral.ai/">Mistral</a> as a research scientist!</li>
@@ -107,6 +110,19 @@ We designed a quantum algorithm for D²-sampling (and through this, the first qu
 ## Selected Distinctions
 
 <div class="distinctions-grid">
+
+<div class="pub-item">
+<div class="pub-title">Suresh Chandra Memorial Trust Award</div>
+<div class="pub-venue">Department of Computer Science and Engineering, IIT Delhi, 2026</div>
+<div class="pub-links">
+<details class="pub-abstract">
+<summary><span class="pub-abstract-label">context</span>
+<a href="https://alumni.iitd.ac.in/scholarships-awards/586" class="btn-conf">Award Record</a>
+<a href="https://convocation.iitd.ac.in/api/uploadsNews/1786106054960-Convocation%20Brochure%202026%20%28English%29.pdf" class="btn-pdf">Convocation Brochure</a></summary>
+<div class="abstract-text">Received for the best B.Tech. software project in IIT Delhi's graduating Computer Science and Engineering class of 2026.</div>
+</details>
+</div>
+</div>
 
 <div class="pub-item">
 <div class="pub-title">Amit and Deepali Sinha Foundation Fellowship</div>
