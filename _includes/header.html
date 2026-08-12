@@ -1,11 +1,8 @@
-<header class="site-header px2 px-responsive">
-  <div class="mt2 wrap">
-    <div class="measure">
-      <a href="{{ "/" | relative_url }}" class="site-title">{{ site.title }}</a>
-      <nav class="site-nav">
-        {% include navigation.html %}
-      </nav>
-      <div class="clearfix"></div>
-    </div>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="{{ "/" | relative_url }}" class="site-title">{{ site.title }}</a>
+    <nav class="site-nav" aria-label="Primary navigation">
+      {% include navigation.html %}
+    </nav>
   </div>
 </header>

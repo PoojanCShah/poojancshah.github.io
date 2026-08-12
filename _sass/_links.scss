@@ -3,11 +3,23 @@ a {
   text-decoration: none;
 }
 
+a:visited {
+  color: #0b0080;
+}
+
 a:hover,
-a:focus,
+a:focus {
+  color: #0066ee;
+  text-decoration: underline;
+}
+
 a:active {
-  color: $link-hover-color;
-  text-decoration: none;
+  color: #faa700;
+}
+
+a:focus-visible {
+  outline: 1px dotted currentColor;
+  outline-offset: 2px;
 }
 
 // Correct issues with buttons

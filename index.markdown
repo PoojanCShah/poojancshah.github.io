@@ -5,56 +5,22 @@ description: "Poojan Shah is an AI research scientist joining Mistral. He design
 ---
 
 <div class="profile-header">
-<div class="profile-photo">
-<img src="menew.jpeg" class="circular-frame">
-</div>
 <div class="profile-info">
-<div class="profile-links">
-<a href="me.JPEG">[Me]</a>
-<a href="poojan-shah-cv.pdf">[CV]</a>
-<a href="https://scholar.google.ca/citations?hl=en&view_op=list_works&gmla=AOv-ny_OFkMHrWUMPNHQCyvv05avR8LXUHY6vYYfLZpDepuWzLy1DVgpFu_KIZzge24Ap-uclYsDnkziNSYbtu0dH-nr&user=uedBN20AAAAJ">[Google Scholar]</a>
-</div>
-<div class="profile-links">
-<a href="https://github.com/PoojanCShah/">[GitHub]</a>
-<a href="https://linkedin.com/in/poojan-shah-b077ab25b/">[LinkedIn]</a>
-<a href="https://x.com/PoojanShah6380">[X]</a>
-<a href="mailto:shahpoojan2004@gmail.com">[shahpoojan2004@gmail.com]</a>
-</div>
-</div>
-</div>
+<p>I am an upcoming AI Research Scientist at <a href="https://mistral.ai/">Mistral</a>. I recently graduated from the <a href="https://www.cse.iitd.ac.in/">Department of Computer Science &amp; Engineering</a> at <a href="https://home.iitd.ac.in/">IIT Delhi</a>, where I worked on algorithms for clustering problems with <a href="https://www.cse.iitd.ac.in/~rjaiswal/">Ragesh Jaiswal</a>.</p>
 
-<div class="about-news-row">
-<div class="about-col" markdown="1">
+<p>I am interested in designing provably efficient algorithms for high-dimensional data, with a focus on clustering. Much of my work explores how structural assumptions can break through worst-case computational barriers.</p>
 
-## About
+<p>Outside research, I am a percussionist with a particular interest in Indian classical instruments, and occasionally <a href="/writing/">write</a>.</p>
 
-I am an upcoming AI Research Scientist at [Mistral](https://mistral.ai/). I recently graduated from the [Department of Computer Science & Engineering](https://www.cse.iitd.ac.in/) at [IIT Delhi](https://home.iitd.ac.in/), where I worked on algorithms for clustering problems with [Ragesh Jaiswal](https://www.cse.iitd.ac.in/~rjaiswal/).
-
-_I am interested in designing provably efficient algorithms for high-dimensional data, with a focus on clustering. Much of my work explores how structural assumptions can break through worst-case computational barriers._
-
-
-Outside research, I am a percussionist with a particular interest in Indian classical instruments, and occasionally [write](/writing/).
-
-</div>
-<div class="news-sidebar">
-<div class="news-sidebar-label">News</div>
-<div class="news-box">
-<ul>
-
-<li><span class="news-date">August 2026</span> Finally received my Bachelor's degree from CSE@IITD along with being a recepient of the Suresh Chandra Memorial Trust Award for best B.Tech Project! </li>
-
-
-<li><span class="news-date">June 2026</span> Received the  <a href= "https://homecse.iitd.ac.in/cse-iit-delhi-ta-award" >Outstanding Teaching Assistant Award</a> for COL-7160 by the CSE dept @ IIT-D ! </li>
-
-<li><span class="news-date">June 2026</span> Will be joining <a href="https://mistral.ai/">Mistral</a> as a research scientist!</li>
-<li><span class="news-date">May 2026</span> Our work on beyond worst case clustering algorithms under the manifold hypothesis is accepted to <a href="https://icml.cc/">ICML 2026</a>!</li>
-<li><span class="news-date">Feb 2026</span> Glad to be invited for a lightning talk at <a href="https://event.india.acm.org/arcs/home/#arcs_about_2026">ACM-ARCS 2026</a> and to attend the <a href="https://event.india.acm.org/annualevent/home/">ACM India Annual Event</a>.</li>
-<li><span class="news-date">Jan 2026</span> Starting as TA for <a href="https://k-rajendra.github.io/courses/QuantumComputing/quantum252601.html">COL7160: Quantum Computing</a>.</li>
-<li><span class="news-date">Dec 2025</span> Attending FSTTCS-2025 at BITS Goa.</li>
-<li><span class="news-date">Nov 2025</span> Starting a collaboration with <a href="https://www.wadhwaniai.org/">Wadhwani AI</a> on self-supervised learning for anthropometry, under <a href="https://makarandtapaswi.github.io/">Makarand Tapaswi</a>.</li>
-<li><span class="news-date">Oct 2025</span> Our work was featured by CSE-IITD's <a href="https://homecse.iitd.ac.in/students-research-shines-at-iclr-2025/">blogpost</a>.</li>
+<ul class="profile-links">
+<li><a href="poojan-shah-cv.pdf">Curriculum vitae</a></li>
+<li><a href="https://scholar.google.ca/citations?hl=en&amp;view_op=list_works&amp;gmla=AOv-ny_OFkMHrWUMPNHQCyvv05avR8LXUHY6vYYfLZpDepuWzLy1DVgpFu_KIZzge24Ap-uclYsDnkziNSYbtu0dH-nr&amp;user=uedBN20AAAAJ">Google Scholar</a></li>
+<li><a href="https://github.com/PoojanCShah/">GitHub</a> · <a href="https://linkedin.com/in/poojan-shah-b077ab25b/">LinkedIn</a> · <a href="https://x.com/PoojanShah6380">X</a></li>
+<li><a href="mailto:shahpoojan2004@gmail.com">shahpoojan2004@gmail.com</a></li>
 </ul>
 </div>
+<div class="profile-photo">
+<a href="me.JPEG"><img src="menew.jpeg" alt="Poojan Shah"></a>
 </div>
 </div>
 
@@ -124,6 +90,19 @@ We designed a quantum algorithm for D²-sampling (and through this, the first qu
 </div>
 </div>
 
+
+<div class="pub-item">
+<div class="pub-title">Outstanding Teaching Assistant Award</div>
+<div class="pub-venue">Department of Computer Science and Engineering, IIT Delhi, 2026</div>
+<div class="pub-links">
+<details class="pub-abstract">
+<summary><span class="pub-abstract-label">context</span>
+<a href="https://homecse.iitd.ac.in/cse-iit-delhi-ta-award" class="btn-conf">IIT Delhi CSE</a></summary>
+<div class="abstract-text">Recognized by the CSE department for my work as Head Teaching Assistant for COL7160: Quantum Computing in Winter 2026.</div>
+</details>
+</div>
+</div>
+
 <div class="pub-item">
 <div class="pub-title">Amit and Deepali Sinha Foundation Fellowship</div>
 <div class="pub-venue">IIT Delhi, 2022</div>
@@ -137,6 +116,8 @@ We designed a quantum algorithm for D²-sampling (and through this, the first qu
 </div>
 </div>
 
+
+
 <div class="pub-item">
 <div class="pub-title">JEE Advanced 2022 — All India Rank 67</div>
 <div class="pub-venue">2022</div>
@@ -149,17 +130,7 @@ We designed a quantum algorithm for D²-sampling (and through this, the first qu
 </div>
 </div>
 
-<div class="pub-item">
-<div class="pub-title">Outstanding Teaching Assistant Award</div>
-<div class="pub-venue">Department of Computer Science and Engineering, IIT Delhi, 2026</div>
-<div class="pub-links">
-<details class="pub-abstract">
-<summary><span class="pub-abstract-label">context</span>
-<a href="https://homecse.iitd.ac.in/cse-iit-delhi-ta-award" class="btn-conf">IIT Delhi CSE</a></summary>
-<div class="abstract-text">Recognized by the CSE department for my work as Head Teaching Assistant for COL7160: Quantum Computing in Winter 2026.</div>
-</details>
-</div>
-</div>
+
 
 <div class="pub-item">
 <div class="pub-title">Cornell–Maryland–Max Planck Research School</div>

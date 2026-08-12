@@ -1,48 +1,5 @@
-// ─────────────────────────────────────────────────────────────
-// European monograph aesthetic
-// ─────────────────────────────────────────────────────────────
+// Plain academic treatment, inspired by the directness of early personal webpages.
 
-// Section headings: § symbol in Prussian blue, underlined with rule
-h2 {
-  color: $theme-ink;
-  font-weight: 600;
-  letter-spacing: 0.015em;
-  margin-top: 2.5rem;
-  margin-bottom: 0.65rem;
-  padding-bottom: 0.3rem;
-  border-bottom: 1px solid $theme-rule;
-
-  &::before {
-    content: '§\00a0';
-    color: $theme-accent;
-    font-weight: 400;
-    font-style: normal;
-  }
-}
-
-// Suppress § on post-page title headings and profile name
-.post-title,
-.profile-info h1 {
-  &::before { content: none; }
-  border-bottom: none;
-  padding-bottom: 0;
-}
-
-// Subsection headings
-h3 {
-  color: $theme-ink;
-  font-weight: 600;
-  margin-top: 1.75rem;
-}
-
-// Horizontal rules — thin Prussian blue
-hr {
-  border: none;
-  border-top: 1px solid $theme-rule;
-  margin: 2rem 0;
-}
-
-// Body text color
 body,
 li,
 td,
@@ -50,77 +7,145 @@ th {
   color: $theme-ink;
 }
 
-// Blockquotes styled as "Remark" — left rule in Prussian blue
-blockquote {
-  border-left: 3px solid $theme-accent;
-  background: $theme-white;
-  padding: 0.75rem 1.25rem;
-  margin-left: 0;
-  margin-right: 0;
-  font-style: normal;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $theme-heading;
+  font-weight: 400;
+  letter-spacing: 0;
+}
 
-  p {
-    font-style: italic;
-    color: $theme-ink;
-    margin-bottom: 0;
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  margin: 1.4em 0 0.45em;
+  padding: 0;
+  border: 0;
+  font-size: 2rem;
+
+  &::before {
+    content: none;
   }
 }
 
-// Post meta date
+h3 {
+  margin-top: 1.5em;
+  font-size: 1.5rem;
+}
+
+.post-header h1 {
+  margin-top: 0.25rem;
+  margin-bottom: 0.65rem;
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+.post-header .page-title {
+  font-size: 2rem;
+}
+
+hr {
+  display: block;
+  height: 2px;
+  margin: 1rem 0;
+  padding: 0;
+  border: 0;
+  border-top: 1px solid #aaaaaa;
+  border-bottom: 1px solid #eeeeee;
+}
+
+blockquote {
+  margin: 1rem 0;
+  padding: 0 0 0 2rem;
+  border-left: 0.5rem solid #eeeeee;
+  background: transparent;
+  color: #666666;
+
+  p {
+    margin-bottom: 0;
+    color: #666666;
+    font-size: 1rem;
+    font-style: normal;
+  }
+}
+
 .post-meta,
 .meta {
   color: $theme-muted;
 }
 
-// Post list title color
 .post-link .post-title {
-  color: $theme-ink;
+  color: $theme-heading;
 }
 
-// Site title in header
+.site-header,
+.site-wrap .site-header {
+  background: #333333;
+}
+
 .site-header .site-title {
-  font-weight: 600;
-  letter-spacing: 0.02em;
+  font-weight: 400;
+  letter-spacing: 0;
 }
 
-// Code blocks
 code {
-  background: $theme-white;
-  padding: 0.1em 0.3em;
+  padding: 0.05em 0.2em;
   border-radius: 0;
-  font-size: 0.9em;
-  color: $theme-ink;
-}
-
-pre code {
-  background: transparent;
-  padding: 0;
+  background: #f4f4f4;
+  color: #000000;
+  font-size: 0.95em;
 }
 
 pre {
-  border-left: 3px solid $theme-accent;
-  padding-left: 1rem;
+  padding: 0.75rem 1rem;
+  border-left: 0.35rem solid #eeeeee;
+  background: #fafafa;
 }
 
-// Tables — clean ruled lines, no box
+pre code {
+  padding: 0;
+  background: transparent;
+}
+
 table {
-  border-collapse: collapse;
   width: 100%;
+  margin-bottom: 2rem;
+  border-right: 1px solid #dddddd;
+  border-bottom: 1px solid #dddddd;
+  border-collapse: collapse;
+
+  th,
+  td {
+    padding: 0.25rem 0.75rem;
+    border-top: 1px solid #dddddd;
+    border-left: 1px solid #dddddd;
+  }
 
   th {
-    border-bottom: 2px solid $theme-accent;
-    padding: 0.4rem 0.75rem;
-    color: $theme-ink;
-    background: transparent;
+    border-bottom: 0;
+    background: #eeeeee;
+    color: $theme-heading;
     text-align: left;
   }
 
-  td {
-    border-bottom: 1px solid $theme-rule;
-    padding: 0.35rem 0.75rem;
+  tr:last-child td {
+    border-bottom: 0;
+  }
+}
+
+@media print {
+  .site-header {
+    background: transparent;
+    border-bottom: 1px solid #000000;
   }
 
-  tr:last-child td {
-    border-bottom: 1px solid $theme-accent;
+  .site-header a,
+  .site-header a:visited {
+    color: #000000;
   }
 }

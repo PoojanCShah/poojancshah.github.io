@@ -1,49 +1,55 @@
 .site-header {
-  padding-top: $space-1;
-  padding-bottom: $space-2;
-  border-top: none;
-  border-bottom: 2px solid $theme-accent;
+  padding: 0;
+  border: 0;
+  background: #333333;
 }
 
-.site-header a {
-  color: $header-color;
-  font-size: $h3;
-  font-weight: $header-font-weight;
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-header a,
+.site-header a:visited {
+  color: #f2f2f2;
   background-image: none;
+  text-decoration: none;
 }
 
 .site-header .site-title {
-  font-size: $h2;
-}
-
-.site-nav {
-  padding-top: $nav-padding;
+  padding: 0.78rem 1rem;
+  font-size: 1rem;
+  font-weight: 400;
 }
 
 .site-header nav a.nav-link {
-  color: $nav-color;
-  font-family: $monospace-font-family;
-  font-size: 0.8rem;
-  font-weight: 500;
-  letter-spacing: 0.025em;
+  display: inline-block;
+  padding: 0.82rem 0.72rem;
+  color: #f2f2f2;
+  font-family: $font-family;
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: 0;
   text-decoration: none;
 }
 
 .site-header nav a.nav-link + a.nav-link {
-  margin-left: $nav-link-padding-x;
+  margin-left: 0;
 }
 
 .site-header nav a.nav-link:hover,
 .site-header nav a.nav-link:focus,
 .site-header nav a.nav-link:active {
-  color: $nav-link-color;
-  opacity: 1;
-  border-bottom: $nav-link-border-bottom;
+  color: #ffffff;
+  background: #222222;
+  border: 0;
 }
 
 .site-header nav a.nav-link.nav-active {
-  color: $nav-link-color;
-  border-bottom: $nav-link-border-bottom;
+  color: #ffffff;
+  background: #222222;
+  border: 0;
 }
 
 .site-header a:hover,
@@ -53,10 +59,23 @@
   opacity: 0.88;
 }
 
-.site-header {
-  text-align: center;
-}
+@media (max-width: 600px) {
+  .header-inner {
+    display: block;
+  }
 
-.site-header .site-nav {
-  text-align: right;
+  .site-header .site-title {
+    display: block;
+  }
+
+  .site-header .site-nav {
+    display: flex;
+    border-top: 1px solid #555555;
+  }
+
+  .site-header nav a.nav-link {
+    flex: 1;
+    padding: 0.68rem 0.45rem;
+    text-align: center;
+  }
 }

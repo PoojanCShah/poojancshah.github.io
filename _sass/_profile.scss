@@ -1,25 +1,28 @@
 .profile-header {
   display: flex;
   align-items: flex-start;
-  gap: 2rem;
-  margin-bottom: 1.5rem;
+  justify-content: space-between;
+  gap: 5%;
+  margin: 0 0 1.5rem;
 }
 
 .profile-photo {
+  width: 30%;
   flex-shrink: 0;
 }
 
 .profile-photo img {
-  width: 180px;
-  height: 180px;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
   border-radius: 0;
-  border: 1px solid $theme-rule;
+  border: 0;
   box-shadow: none;
 }
 
 .profile-info {
-  flex: 1;
+  width: 65%;
 
   h1 {
     margin: 0 0 0.5rem 0;
@@ -36,25 +39,23 @@
   }
 
   .profile-links {
-    margin-top: 0.75rem;
-
-    a {
-      font-family: $monospace-font-family;
-      font-size: 0.82rem;
-      font-weight: 500;
-      margin-right: 1rem;
-    }
+    margin: 1rem 0;
+    padding-left: 2rem;
   }
 }
 
 @media (max-width: 600px) {
   .profile-header {
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    gap: 1rem;
   }
 
-  .profile-info {
-    text-align: center;
+  .profile-info,
+  .profile-photo {
+    width: 100%;
+  }
+
+  .profile-photo {
+    max-width: 22rem;
   }
 }

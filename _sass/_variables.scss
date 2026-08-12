@@ -1,13 +1,13 @@
 // Typography
-$base-font-size: 17px !default;
+$base-font-size: 15px !default;
 $bold-font-weight: 700 !default;
-$font-family: 'IBM Plex Serif', Georgia, 'Times New Roman', serif !default;
-$line-height: 1.65 !default;
-$heading-font-family: 'IBM Plex Serif', Georgia, 'Times New Roman', serif !default;
-$heading-font-weight: 600 !default;
-$heading-line-height: 1.3 !default;
-$utility-font-family: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif !default;
-$monospace-font-family: 'CMU Typewriter Text', 'Courier New', monospace !default;
+$font-family: Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif !default;
+$line-height: 1.45 !default;
+$heading-font-family: $font-family !default;
+$heading-font-weight: 400 !default;
+$heading-line-height: 1.25 !default;
+$utility-font-family: $font-family !default;
+$monospace-font-family: 'Courier New', Courier, monospace !default;
 $h1: 2.5rem !default;
 $h2: 1.75rem !default;
 $h3: 1.4rem !default;
@@ -25,7 +25,7 @@ $h1-responsive-max: 3.84rem !default;
 $abbr-border-bottom: 1px #071E2A dotted;
 
 // Page width
-$measure-width: 52rem !default;
+$measure-width: 60rem !default;
 
 // Viewport widths
 $viewport-small: 32em;
@@ -33,15 +33,16 @@ $viewport-medium: 48em;
 $viewport-large: 64em;
 
 // Colors
-$theme-white: #ffffff;
-$theme-ink: #071E2A;
-$theme-accent: #164B61;
-$theme-muted: rgba($theme-ink, 0.68);
-$theme-rule: rgba($theme-ink, 0.24);
-$action-blue: #0047AB;
-$action-red: #B00020;
-$action-green: #00703C;
-$action-purple: #5A2A83;
+$theme-white: #fefefe;
+$theme-ink: #111111;
+$theme-heading: #111111;
+$theme-accent: #0645ad;
+$theme-muted: #111111;
+$theme-rule: #dddddd;
+$action-black: #111111;
+$action-red: #c1121f;
+$action-green: #087830;
+$action-purple: #6f2da8;
 
 $blue: $theme-accent !default;
 $red: $theme-accent !default;

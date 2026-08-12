@@ -1,33 +1,11 @@
-@media screen and (min-width: $viewport-small) {
+@media screen and (min-width: 30em) {
   html {
-    font-size: 17px;
+    font-size: 15px;
   }
 
   h1,
   .h1 {
     font-size: $h1;
-  }
-
-  .site-header {
-    text-align: left;
-  }
-
-  .site-nav {
-    margin-top: 0;
-  }
-
-  .site-header a {
-    font-size: $h4;
-  }
-
-  .site-header .site-title {
-    font-size: $h3;
-    float: left;
-  }
-
-  .site-header .site-nav {
-    float: right;
-    margin-top: .25rem;
   }
 
   blockquote {
@@ -39,13 +17,13 @@
 
 @media screen and (min-width: $viewport-medium) {
   html {
-    font-size: 17px;
+    font-size: 16px;
   }
 }
 
 @media screen and (min-width: $viewport-large) {
   html {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 

@@ -4,16 +4,15 @@ title: Writing
 permalink: /writing/
 ---
 
-<div class="posts">
+<ul class="writing-list">
 {% for post in site.posts %}
-  <div class="post">
-    <a class="post-link" href="{{ post.url | relative_url }}">
-      <h3 class="post-title">{{ post.title }}</h3>
-    </a>
-    <p class="post-meta"><a class="post-pdf" href="{{ '/assets/writing/pdfs/' | append: post.slug | append: '.pdf' | relative_url }}">[pdf]</a></p>
+  <li>
+    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    <span class="writing-date">({{ post.date | date: "%Y/%m/%d" }})</span>
+    / <a class="post-pdf" href="{{ '/assets/writing/pdfs/' | append: post.slug | append: '.pdf' | relative_url }}">PDF</a>
     {% if post.description %}
-      <p class="post-summary">{{ post.description }}</p>
+      <div class="writing-summary">{{ post.description }}</div>
     {% endif %}
-  </div>
+  </li>
 {% endfor %}
-</div>
+</ul>

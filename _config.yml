@@ -13,11 +13,12 @@ social_links:
   - "https://www.linkedin.com/in/poojan-shah-b077ab25b/"
   - "https://x.com/PoojanShah6380"
 header_pages:
+  - news.md
   - writing.md
   - book-collection.md
 
 # Optional features
-animated:       true
+animated:       false
 enable_mathjax: true
 
 # Build settings

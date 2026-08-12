@@ -26,6 +26,16 @@ body {
   -webkit-box-sizing: border-box;
 }
 
+.site-wrap {
+  max-width: $measure-width;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.site-main {
+  padding: 1rem 0 3rem;
+}
+
 .site-wrap,
 .site-header {
   background-color: $theme-white;
@@ -49,4 +59,9 @@ em img {
   margin: 0 auto;
   border: 1px solid $theme-rule;
   box-shadow: none;
+}
+
+::selection {
+  color: #000;
+  background: rgba(255, 255, 0, 0.3);
 }
