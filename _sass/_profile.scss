@@ -2,27 +2,26 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 5%;
+  gap: 2rem;
   margin: 0 0 1.5rem;
 }
 
 .profile-photo {
-  width: 30%;
+  width: 11rem;
   flex-shrink: 0;
 }
 
 .profile-photo img {
   width: 100%;
   height: auto;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
   border-radius: 0;
   border: 0;
   box-shadow: none;
 }
 
 .profile-info {
-  width: 65%;
+  flex: 1;
+  min-width: 0;
 
   h1 {
     margin: 0 0 0.5rem 0;
@@ -56,6 +55,6 @@
   }
 
   .profile-photo {
-    max-width: 22rem;
+    max-width: 11rem;
   }
 }

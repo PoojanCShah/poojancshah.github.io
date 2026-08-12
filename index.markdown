@@ -20,7 +20,7 @@ description: "Poojan Shah is an AI research scientist joining Mistral. He design
 </ul>
 </div>
 <div class="profile-photo">
-<a href="me.JPEG"><img src="menew.jpeg" alt="Poojan Shah"></a>
+<a href="poojan.jpg"><img src="poojan.jpg" alt="Poojan Shah"></a>
 </div>
 </div>
 
