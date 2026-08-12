@@ -85,7 +85,7 @@ We designed a quantum algorithm for D²-sampling (and through this, the first qu
 <details class="pub-abstract">
 <summary><span class="pub-abstract-label">context</span>
 <a href="https://alumni.iitd.ac.in/scholarships-awards/586" class="btn-conf">Award Record</a>
-<a href="https://convocation.iitd.ac.in/api/uploadsNews/1786106054960-Convocation%20Brochure%202026%20%28English%29.pdf" class="btn-pdf">Convocation Brochure</a></summary>
+<a href="https://convocation.iitd.ac.in/api/uploadsNews/1786106054960-Convocation%20Brochure%202026%20%28English%29.pdf" class="btn-blog">Convocation Brochure</a></summary>
 <div class="abstract-text">Received for the best B.Tech. software project in IIT Delhi's graduating Computer Science and Engineering class of 2026.</div>
 </details>
 </div>
