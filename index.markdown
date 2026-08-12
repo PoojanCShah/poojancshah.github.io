@@ -6,12 +6,12 @@ description: "Poojan Shah is an AI research scientist joining Mistral. He design
 
 <div class="profile-header">
 <div class="profile-info">
-<p> Hi Stanger! Welcome to my corner of the internet.</p>
+<p> Hi, Stranger! Welcome to my corner of the internet.</p>
 <p>I am an upcoming AI Research Scientist at <a href="https://mistral.ai/">Mistral</a>. I recently graduated from the <a href="https://www.cse.iitd.ac.in/">Department of Computer Science &amp; Engineering</a> at <a href="https://home.iitd.ac.in/">IIT Delhi</a>, where I worked on algorithms for clustering problems with <a href="https://www.cse.iitd.ac.in/~rjaiswal/">Ragesh Jaiswal</a>.</p>
 
 <p>I enjoy thinking about the design and analysis of algorithms related (and unrelated) to the practice of modern information processing. Much of my work explores how structural assumptions can break through worst-case computational barriers.</p>
 
-<p>During my undergraduate years, I have spent memorable summers hosted by <a href="https://www.comp.nus.edu.sg/~rahul/"> Rahul Jain </a> at the <a href="https://www.cqt.sg/groups/computer-science/"> Computer Science Group </a> at the <a href="https://www.cqt.sg/"> Centre for Quantum Technologies, Singapore </a> where I studied cryptographic primitives based on pseudorandom quantum states; hosted by <a href="https://makarandtapaswi.github.io/"> Makarand Tapaswi </a>  at <a href="https://www.wadhwaniai.org/"> Wadhwani AI </a> where I  worked on training VAEs for self-supervised learning from unlabeled data for newborn anthropometry and at <a href="https://www.linkedin.com/company/atlas-research-ai/"> Atlas Research </a> as a quantitative trading and research intern. </p>
+<p>During my undergraduate years, I spent many memorable summers with <a href="https://www.comp.nus.edu.sg/~rahul/">Rahul Jain</a> in the <a href="https://www.cqt.sg/groups/computer-science/">Computer Science Group</a> at the <a href="https://www.cqt.sg/">Centre for Quantum Technologies, Singapore</a>, where I studied cryptographic primitives based on pseudorandom quantum states; with <a href="https://makarandtapaswi.github.io/">Makarand Tapaswi</a> at <a href="https://www.wadhwaniai.org/">Wadhwani AI</a>, where I worked on training VAEs for self-supervised learning from unlabeled data for newborn anthropometry; and at <a href="https://www.linkedin.com/company/atlas-research-ai/">Atlas Research</a> as a quantitative trading and research intern. I also visited the <a href="https://uwaterloo.ca/math/">Faculty of Mathematics at the University of Waterloo</a> for a semester as an exchange student.</p>
 
 <p>Outside research, I am a percussionist with a particular interest in Indian classical instruments, and occasionally <a href="/writing/">write</a>.</p>
 
