@@ -52,7 +52,6 @@ make deploy
 
 - `index.markdown` - Homepage with profile photo, about, news, publications, talks, teaching
 - `writing.md` - Writing index page; lists every post in `_posts/`
-- `book-collection.md` - Static list of recommended books (plain markdown list)
 - `_posts/` - Markdown files rendered into individual writing pages
 
 ### Adding Publications
@@ -97,7 +96,7 @@ description: "One-line summary shown in the index."
 Key settings:
 - `enable_mathjax: true` - LaTeX support: inline `\( \)`, display `$$ $$`
 - `animated: true` - Page fade-in animation
-- `header_pages` - Navigation menu items (currently: writing.md, book-collection.md)
+- `header_pages` - Navigation menu items (currently: news.md, writing.md)
 
 ## Deployment
 

@@ -15,7 +15,6 @@ social_links:
 header_pages:
   - news.md
   - writing.md
-  - book-collection.md
 
 # Optional features
 animated:       false

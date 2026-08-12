@@ -6,6 +6,7 @@ description: "Poojan Shah is an AI research scientist joining Mistral. He design
 
 <div class="profile-header">
 <div class="profile-info">
+<p> Hi Stanger! Welcome to my corner of the internet.</p>
 <p>I am an upcoming AI Research Scientist at <a href="https://mistral.ai/">Mistral</a>. I recently graduated from the <a href="https://www.cse.iitd.ac.in/">Department of Computer Science &amp; Engineering</a> at <a href="https://home.iitd.ac.in/">IIT Delhi</a>, where I worked on algorithms for clustering problems with <a href="https://www.cse.iitd.ac.in/~rjaiswal/">Ragesh Jaiswal</a>.</p>
 
 <p>I am interested in designing provably efficient algorithms for high-dimensional data, with a focus on clustering. Much of my work explores how structural assumptions can break through worst-case computational barriers.</p>
@@ -27,8 +28,8 @@ description: "Poojan Shah is an AI research scientist joining Mistral. He design
 ## Publications
 
 
-<div class="pub-item numbered">
-<div class="pub-title"><span class="pub-number">[1]</span>Noisy k-means++ is Not <em>too</em> Noisy</div>
+<div class="pub-item">
+<div class="pub-title">Noisy k-means++ is Not <em>too</em> Noisy</div>
 <div class="pub-authors">Poojan Shah</div>
 <div class="pub-venue"><strong>Preprint</strong> - In submission.</div>
 <div class="pub-links">
@@ -40,8 +41,8 @@ description: "Poojan Shah is an AI research scientist joining Mistral. He design
 </div>
 </div>
 
-<div class="pub-item numbered">
-<div class="pub-title"><span class="pub-number">[2]</span>Fast k-means seeding under the manifold hypothesis</div>
+<div class="pub-item">
+<div class="pub-title">Fast k-means seeding under the manifold hypothesis</div>
 <div class="pub-authors">Poojan Shah, <a href="https://sites.google.com/view/shashwatagrawal">Shashwat Agrawal</a>, and <a href="https://www.cse.iitd.ac.in/~rjaiswal/">Ragesh Jaiswal</a></div>
 <div class="pub-venue"><strong>ICML 2026</strong> — Forty-Third International Conference on Machine Learning</div>
 <div class="pub-links">
@@ -55,8 +56,8 @@ description: "Poojan Shah is an AI research scientist joining Mistral. He design
 </div>
 </div>
 
-<div class="pub-item numbered">
-<div class="pub-title"><span class="pub-number">[3]</span>Quantum (inspired) D²-sampling with applications</div>
+<div class="pub-item">
+<div class="pub-title">Quantum (inspired) D²-sampling with applications</div>
 <div class="pub-authors">Poojan Shah and <a href="https://www.cse.iitd.ac.in/~rjaiswal/">Ragesh Jaiswal</a></div>
 <div class="pub-venue"><strong>ICLR 2025</strong> — Thirteenth International Conference on Learning Representations</div>
 <div class="pub-links">
@@ -73,7 +74,7 @@ We designed a quantum algorithm for D²-sampling (and through this, the first qu
 </details>
 </div>
 </div>
-## Selected Distinctions
+## Selected Honours
 
 <div class="distinctions-grid">
 
@@ -110,36 +111,9 @@ We designed a quantum algorithm for D²-sampling (and through this, the first qu
 <details class="pub-abstract">
 <summary><span class="pub-abstract-label">context</span>
 <a href="https://alumni.iitd.ac.in/scholarships-awards/722" class="btn-conf">Fellowship Record</a>
-<a href="https://home.iitd.ac.in/show.php?id=149&amp;in_sections=News" class="btn-blog">Full-Ride Announcement</a></summary>
-<div class="abstract-text">Selected as one of five incoming IIT Delhi undergraduates for a four-year full-ride fellowship awarded on the basis of JEE Advanced rank and continued academic standing.</div>
-</details>
-</div>
-</div>
-
-
-
-<div class="pub-item">
-<div class="pub-title">JEE Advanced 2022 — All India Rank 67</div>
-<div class="pub-venue">2022</div>
-<div class="pub-links">
-<details class="pub-abstract">
-<summary><span class="pub-abstract-label">context</span>
+<a href="https://home.iitd.ac.in/show.php?id=149&amp;in_sections=News" class="btn-blog">Full-Ride Announcement</a>
 <a href="https://en.wikipedia.org/wiki/Joint_Entrance_Examination_%E2%80%93_Advanced" class="btn-blog">About JEE Advanced</a></summary>
-<div class="abstract-text">Placed 67th nationally in JEE Advanced 2022, the competitive examination used for undergraduate admission to the Indian Institutes of Technology.</div>
-</details>
-</div>
-</div>
-
-
-
-<div class="pub-item">
-<div class="pub-title">Cornell–Maryland–Max Planck Research School</div>
-<div class="pub-venue">Selected participant, Saarbrücken, Germany, 2025</div>
-<div class="pub-links">
-<details class="pub-abstract">
-<summary><span class="pub-abstract-label">context</span>
-<a href="https://cmmrs2025.mpi-sws.org/" class="btn-conf">CMMRS 2025</a></summary>
-<div class="abstract-text">Selected for a week-long pre-doctoral research school at the Max Planck Institute for Software Systems, with faculty from Cornell University, the University of Maryland, and the Max Planck Institutes.</div>
+<div class="abstract-text">Selected as one of five incoming IIT Delhi undergraduates for a four-year full-ride fellowship awarded on the basis of JEE Advanced rank and continued academic standing.<br>Placed 67th nationally in JEE Advanced 2022, the competitive examination used for undergraduate admission to the Indian Institutes of Technology.</div>
 </details>
 </div>
 </div>
@@ -148,16 +122,16 @@ We designed a quantum algorithm for D²-sampling (and through this, the first qu
 
 ## Talks
 
-<div class="pub-item numbered">
-<div class="pub-title"><span class="pub-number">[1]</span>Quantum and Quantum Inspired Classical Algorithms for Clustering</div>
+<div class="pub-item">
+<div class="pub-title">Quantum and Quantum Inspired Classical Algorithms for Clustering</div>
 <div class="pub-venue">CS Group Meeting CQT - NUS, April 20, 2025</div>
 <div class="pub-links">
 <a href="https://iclr.cc/virtual/2025/poster/28068" class="btn-poster">Poster</a>
 </div>
 </div>
 
-<div class="pub-item numbered">
-<div class="pub-title"><span class="pub-number">[2]</span>Quantum Machine Learning without any Quantum</div>
+<div class="pub-item">
+<div class="pub-title">Quantum Machine Learning without any Quantum</div>
 <div class="pub-venue">TCS Seminar, IIT Delhi — Bharti 501, November 4, 2024</div>
 <div class="pub-links">
 <a href="https://drive.google.com/file/d/10hbt5_6Pd_qbcC5O_FxOspqenUsylO2V/view?usp=sharing" class="btn-slides">Slides</a>
