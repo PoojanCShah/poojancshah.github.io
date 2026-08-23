@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.4.3)  9 AUG 2026 13:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.4.3)  23 AUG 2026 16:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -640,62 +640,62 @@ Package: academicons 2025/09/20 v1.9.6-2 Academicons Icons
 tex)
 (/usr/local/texlive/2026/texmf-dist/tex/generic/academicons/academicons-generic
 .tex))
-Package hyperref Info: Option `colorlinks' set `true' on input line 40.
+Package hyperref Info: Option `colorlinks' set `true' on input line 41.
 LaTeX Font Info:    Trying to load font information for T1+jkp on input line 11
-1.
+2.
  (/usr/local/texlive/2026/texmf-dist/tex/latex/kpfonts/t1jkp.fd
 File: t1jkp.fd 2007/01/24 Fontinst v1.928 font definitions for T1/jkp.
 )
 (build/cv.aux)
 \openout1 = `cv.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/jkp/m/it on input line 111.
+LaTeX Font Info:    Checking defaults for OML/jkp/m/it on input line 112.
 LaTeX Font Info:    Trying to load font information for OML+jkp on input line 1
-11.
+12.
  (/usr/local/texlive/2026/texmf-dist/tex/latex/kpfonts/omljkp.fd
 File: omljkp.fd 2006/08/15 v1.0
 )
-LaTeX Font Info:    ... okay on input line 111.
-LaTeX Font Info:    Checking defaults for OMS/jkp/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 112.
+LaTeX Font Info:    Checking defaults for OMS/jkp/m/n on input line 112.
 LaTeX Font Info:    Trying to load font information for OMS+jkp on input line 1
-11.
+12.
 (/usr/local/texlive/2026/texmf-dist/tex/latex/kpfonts/omsjkp.fd
 File: omsjkp.fd 2006/08/15 v1.0
 )
-LaTeX Font Info:    ... okay on input line 111.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 111.
-LaTeX Font Info:    ... okay on input line 111.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 111.
-LaTeX Font Info:    ... okay on input line 111.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 111.
-LaTeX Font Info:    ... okay on input line 111.
-LaTeX Font Info:    Checking defaults for OMX/jkp/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 112.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 112.
+LaTeX Font Info:    ... okay on input line 112.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 112.
+LaTeX Font Info:    ... okay on input line 112.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 112.
+LaTeX Font Info:    ... okay on input line 112.
+LaTeX Font Info:    Checking defaults for OMX/jkp/m/n on input line 112.
 LaTeX Font Info:    Trying to load font information for OMX+jkp on input line 1
-11.
+12.
 
 (/usr/local/texlive/2026/texmf-dist/tex/latex/kpfonts/omxjkp.fd
 File: omxjkp.fd 2006/08/15 v1.0
 )
-LaTeX Font Info:    ... okay on input line 111.
-LaTeX Font Info:    Checking defaults for U/jkpexa/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 112.
+LaTeX Font Info:    Checking defaults for U/jkpexa/m/n on input line 112.
 LaTeX Font Info:    Trying to load font information for U+jkpexa on input line 
-111.
+112.
 
 (/usr/local/texlive/2026/texmf-dist/tex/latex/kpfonts/ujkpexa.fd
 File: ujkpexa.fd 2006/08/15 v1.0
 )
-LaTeX Font Info:    ... okay on input line 111.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 111.
-LaTeX Font Info:    ... okay on input line 111.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 111.
-LaTeX Font Info:    ... okay on input line 111.
-LaTeX Info: Redefining \microtypecontext on input line 111.
-Package microtype Info: Applying patch `item' on input line 111.
-Package microtype Info: Applying patch `toc' on input line 111.
-Package microtype Info: Applying patch `eqnum' on input line 111.
-Package microtype Info: Applying patch `footnote' on input line 111.
-Package microtype Info: Applying patch `verbatim' on input line 111.
-LaTeX Info: Redefining \microtypesetup on input line 111.
+LaTeX Font Info:    ... okay on input line 112.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 112.
+LaTeX Font Info:    ... okay on input line 112.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 112.
+LaTeX Font Info:    ... okay on input line 112.
+LaTeX Info: Redefining \microtypecontext on input line 112.
+Package microtype Info: Applying patch `item' on input line 112.
+Package microtype Info: Applying patch `toc' on input line 112.
+Package microtype Info: Applying patch `eqnum' on input line 112.
+Package microtype Info: Applying patch `footnote' on input line 112.
+Package microtype Info: Applying patch `verbatim' on input line 112.
+LaTeX Info: Redefining \microtypesetup on input line 112.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -759,32 +759,32 @@ Package microtype Info: Loading generic protrusion settings for font family
 \makeMPintoPDFobject=\count323
 \everyMPtoPDFconversion=\toks30
 )
-Package hyperref Info: Link coloring ON on input line 111.
+Package hyperref Info: Link coloring ON on input line 112.
  (build/cv.out) (build/cv.out)
 \@outlinefile=\write3
 \openout3 = `cv.out'.
 
 LaTeX Font Info:    Trying to load font information for U+fontawesomefree1 on i
-nput line 116.
+nput line 117.
 
 (/usr/local/texlive/2026/texmf-dist/tex/latex/fontawesome5/ufontawesomefree1.fd
 )
 LaTeX Font Info:    Trying to load font information for U+academicons on input 
-line 121.
+line 122.
  (/usr/local/texlive/2026/texmf-dist/tex/generic/academicons/uacademicons.fd
 File: uacademicons.fd 2025/09/17 Font definitions for U/academicons
 )
 LaTeX Font Info:    Trying to load font information for U+fontawesomebrands0 on
- input line 123.
+ input line 124.
 
 (/usr/local/texlive/2026/texmf-dist/tex/latex/fontawesome5/ufontawesomebrands0.
 fd)
 LaTeX Font Info:    Font shape `U/fontawesomebrands0/solid/n' in size <14.4> no
 t available
 (Font)              Font shape `U/fontawesomebrands0/regular/n' tried instead o
-n input line 123.
+n input line 124.
 LaTeX Font Info:    Trying to load font information for T1+jkpss on input line 
-127.
+128.
  (/usr/local/texlive/2026/texmf-dist/tex/latex/kpfonts/t1jkpss.fd
 File: t1jkpss.fd 2007/07/16 Fontinst v1.928 font definitions for T1/jkpss.
 )
@@ -812,10 +812,10 @@ Package rerunfilecheck Info: File `cv.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 17540 strings out of 467525
- 288153 string characters out of 5418983
- 720833 words of memory out of 5000000
- 46115 multiletter control sequences out of 15000+600000
+ 17541 strings out of 467525
+ 288172 string characters out of 5418983
+ 720873 words of memory out of 5000000
+ 46116 multiletter control sequences out of 15000+600000
  710295 words of font info for 165 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,11n,79p,999b,460s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -829,7 +829,7 @@ pe1/public/kpfonts/jkpmi.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/pu
 blic/kpfonts/jkpmit8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/publi
 c/kpfonts/jkpmn8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/kp
 fonts/jkpssbn8a.pfb>
-Output written on build/cv.pdf (1 page, 86602 bytes).
+Output written on build/cv.pdf (1 page, 86609 bytes).
 PDF statistics:
  101 PDF objects out of 1000 (max. 8388607)
  63 compressed objects within 1 object stream

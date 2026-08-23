@@ -22,6 +22,9 @@ bundle exec jekyll serve --watch --port 4001
 # Build static site to _site/
 make build
 
+# Generate PDFs for every post in _posts/ (requires pandoc + xelatex/MacTeX)
+make writing-pdfs
+
 # Quick deploy (add, commit, push with generic "Update site" message)
 # Prefer manual git commits with descriptive messages instead
 make deploy
@@ -79,7 +82,7 @@ Available semantic classes: `btn-arxiv`, `btn-conf`, `btn-code`, `btn-poster`, `
 
 ### Adding Writing
 
-Create files in `_posts/` with the naming pattern `YYYY-MM-DD-title.md`. Every post appears on `/writing/`.
+Create files in `_posts/` with the naming pattern `YYYY-MM-DD-title.md`. Every post appears on `/writing/`, which is the single source of truth for post content.
 
 Front matter:
 ```yaml
@@ -91,11 +94,13 @@ description: "One-line summary shown in the index."
 ---
 ```
 
+After adding or changing a post, run `make writing-pdfs` to regenerate its PDF (via Pandoc + XeLaTeX) into `assets/writing/pdfs/`, which `writing.md` links to automatically by post slug. Review the generated PDF, then commit both the post and its PDF together. Raw LaTeX can be used in a post when Markdown doesn't express what's needed.
+
 ## Configuration (_config.yml)
 
 Key settings:
 - `enable_mathjax: true` - LaTeX support: inline `\( \)`, display `$$ $$`
-- `animated: true` - Page fade-in animation
+- `animated: false` - Page fade-in animation (currently disabled)
 - `header_pages` - Navigation menu items (currently: news.md, writing.md)
 
 ## Deployment
