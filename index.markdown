@@ -6,7 +6,7 @@ seo_title: "Poojan Shah"
 <div class="profile-header">
 <div class="profile-info">
 <p> Hi, Stranger! Welcome to my corner of the internet.</p>
-<p>I am an upcoming AI Research Scientist at <a href="https://mistral.ai/">Mistral</a>. I recently graduated from the <a href="https://www.cse.iitd.ac.in/">Department of Computer Science &amp; Engineering</a> at <a href="https://home.iitd.ac.in/">IIT Delhi</a>, where I worked on algorithms for clustering problems with <a href="https://www.cse.iitd.ac.in/~rjaiswal/">Ragesh Jaiswal</a>.</p>
+<p>I am a Research Scientist in the pretraining science team at <a href="https://mistral.ai/">Mistral AI</a>. I recently graduated from the <a href="https://www.cse.iitd.ac.in/">Department of Computer Science &amp; Engineering</a> at <a href="https://home.iitd.ac.in/">IIT Delhi</a>, where I worked on algorithms for clustering problems with <a href="https://www.cse.iitd.ac.in/~rjaiswal/">Ragesh Jaiswal</a>.</p>
 
 <p>I enjoy thinking about the design and analysis of algorithms related (and unrelated) to the practice of modern information processing. Much of my work explores how structural assumptions can break through worst-case computational barriers.</p>
 
