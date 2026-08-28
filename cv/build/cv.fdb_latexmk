@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1787495022.61109 "cv.tex" "build/cv.pdf" "cv" 1787495023.47685 0
+["pdflatex"] 1787945711.22507 "cv.tex" "build/cv.pdf" "cv" 1787945712.0177 0
   "/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/academicons/academicons.enc" 1758138305 1913 283dadb2a00b197d8788e0687b94c508 ""
   "/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/fontawesome5/fa5brands0.enc" 1622837620 2920 d63721872b8c77041b88e51b8f7c291d ""
@@ -127,9 +127,9 @@
   "/usr/local/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1775226164 5573038 b99aad5e4898a9034e953632f940512b ""
   "/usr/local/texlive/2026/texmf-var/web2c/pdftex/pdflatex.fmt" 1775226036 3636772 9c510d3d36d29a8f28ff6e026b2f49d1 ""
   "/usr/local/texlive/2026/texmf.cnf" 1774209515 577 648cd9f92f9c0eac486f4c71c85cfbbe ""
-  "build/cv.aux" 1787495023.3791 162 55205a9e8a8eca30d36afb389b0617bf "pdflatex"
-  "build/cv.out" 1787495023.11811 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "cv.tex" 1787495000.17952 7371 3ff80ab3acbe8db0b59b4202ef3b4ad1 ""
+  "build/cv.aux" 1787945711.92149 162 55205a9e8a8eca30d36afb389b0617bf "pdflatex"
+  "build/cv.out" 1787945711.67671 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "cv.tex" 1787945631.20718 7397 63d412660d10150424a1c4eea7e46f49 ""
   (generated)
   "build/cv.aux"
   "build/cv.log"
