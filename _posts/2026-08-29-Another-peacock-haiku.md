@@ -17,5 +17,7 @@ _Mother, it is no gain, thy bondage of finery, if it keep one shut off from the 
 Inspired from the fresh showers, the following Haiku was revealed in my mind: 
 
 પિચ્છ ત્યજતાં,
+
 પંખ ફેલાવ્યાં, નભ
+
 પામ્યું મયૂરે.
