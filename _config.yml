@@ -33,6 +33,7 @@ exclude:
   - Makefile
   - AGENTS.md
   - CLAUDE.md
+  - WORKFLOW.md
   - vendor
   - scripts
   - tmp
