@@ -111,7 +111,6 @@ Push to `main` branch triggers automatic GitHub Pages deployment.
 
 - `CLAUDE.md` is in the `_config.yml` exclude list, so it won't appear in the built site.
 - The site uses `github-pages` gem (not standalone Jekyll), which pins Jekyll and plugin versions. Run `bundle update github-pages` to upgrade.
-- Images (profile photo, logos) are stored at the repo root (`me.JPEG`, `menew.jpeg`) and in `logos/`.
-- `poojan-shah-cv.pdf` lives at the repo root and is linked directly from `index.markdown`. Replace it in-place to update the CV.
-- Poster PDFs/PNGs (e.g. `ICLR2025Poster.png`) are also stored at the repo root and linked via `btn-poster` buttons in publication entries.
-- `CNAME` at the repo root sets the custom domain for GitHub Pages. Edit it to change the domain.
+- Images (profile photo, posters) are stored in `assets/images/`; favicon and apple-touch icons are in `logos/` (only modern sizes: 16, 32, 192, and 180).
+- `poojan-shah-cv.pdf` lives at the repo root and is linked directly from `index.markdown`. The source and its built output live in `cv/` (`cv.tex`, `poojan-shah-cv.pdf`); run `make cv` to rebuild. Only `cv/build/` intermediates are gitignored.
+- Poster PNGs (e.g. `ICLR2025Poster.png`) are stored in `assets/images/` and linked via `btn-poster` buttons in publication entries.

@@ -1,6 +1,12 @@
 # Generated site
 _site/
 
+# Scratch data
+tmp/
+
+# LaTeX build artifacts
+cv/build/
+
 # Dependencies
 vendor/
 .bundle/

@@ -6,7 +6,7 @@ description: "Poojan Shah is an AI research scientist working on efficient algor
 baseurl:     ""
 url:         "https://poojancshah.github.io"
 lang:        en
-default_image: "/poojan.jpg"
+default_image: "/assets/images/poojan.jpg"
 social_links:
   - "https://scholar.google.ca/citations?user=uedBN20AAAAJ"
   - "https://github.com/PoojanCShah/"

@@ -22,7 +22,7 @@ seo_title: "Poojan Shah"
 </ul>
 </div>
 <div class="profile-photo">
-<a href="poojan.jpg"><img src="poojan.jpg" alt="Poojan Shah"></a>
+<a href="/assets/images/poojan.jpg"><img src="/assets/images/poojan.jpg" alt="Poojan Shah"></a>
 </div>
 </div>
 
@@ -51,7 +51,7 @@ seo_title: "Poojan Shah"
 <summary><span class="pub-abstract-label">commentary</span>
 <a href="https://arxiv.org/abs/2602.01104" class="btn-arxiv">arXiv</a>
 <a href="https://openreview.net/forum?id=lgsMOTIAYu" class="btn-conf">OpenReview</a>
-<a href="/ICML2026Poster.png" class="btn-poster">Poster</a></summary>
+<a href="/assets/images/ICML2026Poster.png" class="btn-poster">Poster</a></summary>
 <div class="abstract-text">What began as a conversation about whether D²-sampling could be used to estimate the intrinsic dimension of data eventually led to a sampling algorithm that is provably fast on data with low intrinsic dimension. This is particularly interesting in light of the growing empirical evidence that high-dimensional machine learning datasets often have low intrinsic dimension, consistent with the manifold hypothesis. Our variant of D²-sampling is provably fast for data satisfying certain scaling laws, which can be theoretically motivated by the manifold hypothesis. Interestingly, after extensive checks across a wide range of datasets, we found that these scaling laws appear to be remarkably prevalent!</div>
 </details>
 </div>
@@ -66,7 +66,7 @@ seo_title: "Poojan Shah"
 <summary><span class="pub-abstract-label">commentary</span>
 <a href="https://arxiv.org/abs/2405.13351" class="btn-arxiv">arXiv</a>
 <a href="https://openreview.net/forum?id=tDIL7UXmSS" class="btn-conf">OpenReview</a>
-<a href="/ICLR2025Poster.png" class="btn-poster">Poster</a></summary>
+<a href="/assets/images/ICLR2025Poster.png" class="btn-poster">Poster</a></summary>
 <div class="abstract-text">
 
 We designed a quantum algorithm for D²-sampling (and through this, the first quantum approximation scheme for k-means with polylogarithmic running time in the Quantum RAM (QRAM) model) only to realise that (to put it bluntly in the words of a reviewer-2) "there is not much quantum here". This made us realise that, as with so many other Quantum Machine Learning (QML) algorithms in the QRAM model, our D²-sampling-based quantum clustering algorithms can also be dequantized in the sample-query access model of Ewin Tang <a href = "https://ewintang.com/assets/tang_thesis.pdf"> (PhD Thesis) </a>  to obtain a classical algorithm without much loss in the running time (unlike other QML dequantization results where there is a significant loss). We then realised that the dequantization, results in a fast implementation of k-means++, which has a lot of practical value.
