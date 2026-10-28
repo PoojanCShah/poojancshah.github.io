@@ -6,7 +6,7 @@
 \usepackage[protrusion=true,expansion=true]{microtype}
 \usepackage[
   letterpaper,
-  top=0.56in,
+  top=0.55in,
   bottom=0.55in,
   left=0.77in,
   right=0.77in
@@ -19,8 +19,9 @@
 \usepackage{fancyhdr}
 \usepackage{fontawesome5}
 \usepackage{academicons}
+\usepackage{soul}
 
-\definecolor{LinkBlue}{HTML}{2F668C}
+\definecolor{LinkBlue}{HTML}{0F6BE8}
 \definecolor{HeadingBlack}{HTML}{000000}
 \definecolor{ScholarBlue}{HTML}{4285F4}
 \definecolor{GitHubBlack}{HTML}{181717}
@@ -31,6 +32,7 @@
 \definecolor{PosterGreen}{HTML}{3F7668}
 \definecolor{BracketGray}{HTML}{777777}
 \definecolor{DateSlate}{HTML}{5F7180}
+\definecolor{FaintRule}{HTML}{B0B0B0}
 \hypersetup{
   colorlinks=true,
   urlcolor=LinkBlue,
@@ -48,14 +50,13 @@
 \pagestyle{fancy}
 \fancyhf{}
 \renewcommand{\headrulewidth}{0pt}
-\fancyfoot[C]{\small\thepage}
 \setlength{\footskip}{17pt}
 
 \newcommand{\cvsection}[1]{%
-  \par\needspace{3\baselineskip}%
-  \vspace{0.40\baselineskip}%
-  {\Large\bfseries\color{HeadingBlack} #1}\par
-  \vspace{0.20\baselineskip}%
+  \par\needspace{2.5\baselineskip}%
+  \vspace{0.30\baselineskip}%
+  {\large\bfseries\color{HeadingBlack} #1}\par
+  \vspace{0.16\baselineskip}%
 }
 
 \newcolumntype{D}{>{\raggedright\arraybackslash}p{0.90in}}
@@ -65,19 +66,19 @@
 \newcommand{\datedentry}[2]{%
   \begin{tabularx}{\textwidth}{@{}D@{\hspace{0.08in}}Y@{}}
     \textcolor{DateSlate}{#1} & #2
-  \end{tabularx}\par\vspace{0.20\baselineskip}%
+  \end{tabularx}\par\vspace{0.16\baselineskip}%
 }
 
 \newcommand{\experience}[2]{%
   \begin{tabularx}{\textwidth}{@{}E@{\hspace{0.12in}}Y@{}}
     \textcolor{DateSlate}{#1} & #2
-  \end{tabularx}\par\vspace{0.18\baselineskip}%
+  \end{tabularx}\par\vspace{0.16\baselineskip}%
 }
 
-\newcommand{\award}[2]{%
-  \begin{tabularx}{\textwidth}{@{}D@{\hspace{0.08in}}Y@{}}
-    \textcolor{DateSlate}{#1} & #2
-  \end{tabularx}\par\vspace{-0.10\baselineskip}%
+\newcommand{\numberedaward}[2]{%
+  \par\needspace{2\baselineskip}%
+  #1.\enspace #2%
+  \par\vspace{-0.10\baselineskip}%
 }
 
 \newcommand{\resourcelink}[3]{%
@@ -86,19 +87,21 @@
   \textcolor{BracketGray}{]}%
 }
 
-\newcommand{\publicationblock}[4]{%
-  \par\needspace{4\baselineskip}%
-  \textbf{#1}\par
-  \vspace{0.08\baselineskip}%
-  #2\par
-  \vspace{0.04\baselineskip}%
-  #3\quad #4\par
-  \vspace{0.30\baselineskip}%
+% Author names in italics; my own name carries a faint underline instead of bold.
+\setulcolor{FaintRule}
+\newcommand{\selfauthor}[1]{\textit{\ul{#1}}}
+
+\newcommand{\publicationblock}[5]{%
+  \par\needspace{3\baselineskip}%
+  #1.\enspace\textbf{#2}\par
+  \vspace{0.06\baselineskip}%
+  #3. #4\quad #5\par
+  \vspace{0.18\baselineskip}%
 }
 
 \newcommand{\nameditem}[2]{%
   \par\needspace{2\baselineskip}%
-  \textbf{#1}\hspace{0.55em}#2\par\vspace{0.28\baselineskip}%
+  \textbf{#1}\hspace{0.55em}#2\par\vspace{0.20\baselineskip}%
 }
 
 \newcommand{\contacticon}[3]{%
@@ -109,6 +112,7 @@
 % typographic X while retaining the correct clickable profile link.
 \newcommand{\xicon}{\raisebox{0.04em}{\sffamily\bfseries X}}
 
+\linespread{0.97}
 \begin{document}
 
 \begin{center}
@@ -118,7 +122,7 @@
   \quad|\quad
   \href{https://poojancshah.github.io/}{\faHome\enspace poojancshah.github.io}
   \par
-  \vspace{0.24\baselineskip}
+  \vspace{0.18\baselineskip}
   \contacticon{https://scholar.google.ca/citations?user=uedBN20AAAAJ}{ScholarBlue}{\aiGoogleScholar}
   \qquad
   \contacticon{https://github.com/PoojanCShah/}{GitHubBlack}{\faGithub}
@@ -129,12 +133,24 @@
 \end{center}
 \vspace{-0.20\baselineskip}
 
+\cvsection{Research Interests}
+
+My current focus is the optimization dynamics of pretraining large-scale
+transformers, with the goal of recipes that are more efficient, stable and
+predictable as models scale. Earlier work on clustering algorithms and
+beyond-worst-case algorithm design.
+
+\cvsection{Employment}
+
+\experience{August 2026--Present}{%
+AI Scientist, Pretraining Team, \href{https://mistral.ai/}{Mistral AI}
+}
+
 \cvsection{Education}
 
 \datedentry{2026}{%
   \textbf{B.Tech. in Computer Science and Engineering, Indian Institute of Technology Delhi}\newline
-  Advisor: \href{https://www.cse.iitd.ac.in/~rjaiswal/}{Ragesh Jaiswal}\newline
-  GPA: 9.75/10.00
+  GPA: 9.75/10.00 (Department Rank 3) \quad Advisor: \href{https://www.cse.iitd.ac.in/~rjaiswal/}{Prof. Ragesh Jaiswal}
 }
 
 \datedentry{2025}{%
@@ -142,42 +158,38 @@
   Grade: 94.20/100.00
 }
 
-\cvsection{Employment \& Research Experience}
-
-\experience{August 2026--Present}{%
-AI Scientist, Pretraining Science Team, \href{https://mistral.ai/}{Mistral AI}
-}
+\cvsection{Internships}
 
 \experience{Nov 2025--Feb 2026}{%
   Research Intern, \href{https://www.wadhwaniai.org/}{Wadhwani AI}\newline
   Host: \href{https://makarandtapaswi.github.io/}{Makarand Tapaswi}\newline
-  Self-supervised learning from unlabeled data for newborn anthropometry
+  \emph{Self-supervised learning from unlabeled data for newborn anthropometry}
 }
 
 \experience{May 2025--July 2025}{%
   Quantitative Research Intern, \href{https://www.atlasresearch.ai/}{Atlas Research} \newline
-  Optimized exchange data ingestion and API calls; developed statistical\newline
-  price-forecasting models and parameter-search algorithms
+  \emph{Optimized exchange data ingestion and API calls; developed statistical\newline
+  price-forecasting models and parameter-search algorithms}
 }
 
 \experience{May 2024--July 2024}{%
   Undergraduate Research Intern, \href{https://cs.quantumlah.org/}{Centre for Quantum Technologies, NUS}\newline
   Host: \href{https://www.comp.nus.edu.sg/~rahul/}{Rahul Jain}\newline
-  Studied cryptographic primitives based on pseudorandom quantum states 
+  \emph{Studied cryptographic primitives based on pseudorandom quantum states}
 }
 
 
 \cvsection{Selected Publications}
 
-\publicationblock
+\publicationblock{1}
   {Noisy \(k\)-means++ Is Not \emph{Too} Noisy}
-  {\textbf{Poojan Shah}}
+  {\selfauthor{Poojan Shah}}
   {Preprint, 2026}
   {\resourcelink{ArxivBlack}{https://arxiv.org/abs/2608.02318}{arXiv}}
 
-\publicationblock
+\publicationblock{2}
   {Fast \(k\)-means Seeding Under the Manifold Hypothesis}
-  {\textbf{Poojan Shah}, Shashwat Agrawal, Ragesh Jaiswal}
+  {\selfauthor{Poojan Shah}, \textit{Shashwat Agrawal}, \textit{Ragesh Jaiswal}}
   {ICML 2026}
   {%
     \resourcelink{ArxivBlack}{https://arxiv.org/abs/2602.01104}{arXiv}\enspace
@@ -185,9 +197,9 @@ AI Scientist, Pretraining Science Team, \href{https://mistral.ai/}{Mistral AI}
     \resourcelink{PosterGreen}{https://icml.cc/virtual/2026/poster/61918}{Poster}%
   }
 
-\publicationblock
+\publicationblock{3}
   {Quantum (Inspired) \(D^2\)-Sampling with Applications}
-  {\textbf{Poojan Shah}, Ragesh Jaiswal}
+  {\selfauthor{Poojan Shah}, \textit{Ragesh Jaiswal}}
   {ICLR 2025}
   {%
     \resourcelink{ArxivBlack}{https://arxiv.org/abs/2405.13351}{arXiv}\enspace
@@ -197,26 +209,33 @@ AI Scientist, Pretraining Science Team, \href{https://mistral.ai/}{Mistral AI}
 
 \cvsection{Selected Awards \& Honors}
 
-\award{2026}{\href{https://convocation.iitd.ac.in/api/uploadsNews/1786106054960-Convocation\%20Brochure\%202026\%20\%28English\%29.pdf}{Suresh Chandra Memorial Trust Award} \emph{(best B.Tech. software project in CSE)}}
-\award{2022}{Amit and Deepali Sinha Foundation Fellowship\newline
-  \emph{full undergraduate funding; top five at IIT Delhi}}
-\award{2022}{JEE Advanced 2022: All India Rank 67}
-\award{2025}{Selected Participant, Cornell--Maryland--Max Planck Research School}
-\award{2025-2026}{CSE Research Acceleration Fund Award for conference travels}
+\numberedaward{1}{\href{https://convocation.iitd.ac.in/api/uploadsNews/1786106054960-Convocation\%20Brochure\%202026\%20\%28English\%29.pdf}{Suresh Chandra Memorial Trust Award} \emph{(best B.Tech. Thesis project in the CSE Dept.)}}
+\numberedaward{2}{\href{https://alumni.iitd.ac.in/scholarships-awards/722}{Amit and Deepali Sinha Foundation Fellowship}, \textcolor{DateSlate}{2022}\newline
+  \emph{Four-year full-ride undergraduate scholarship; top five at IIT Delhi by JEE Advanced rank}}
+\numberedaward{3}{\href{https://csealumni.iitd.ac.in/cse-raf-travel-grants/}{CSE Research Acceleration Award} \emph{(funding for research and conference travel)}, \textcolor{DateSlate}{2025--2026}}
+\numberedaward{4}{Selected Participant, \href{https://cmmrs.mpi-sws.org/}{Cornell--Maryland--Max Planck Pre-doctoral Research School}, \textcolor{DateSlate}{2025}}
+\numberedaward{5}{All India Rank 67, JEE Advanced, \textcolor{DateSlate}{2022}}
 
+\cvsection{Talks}
 
+\datedentry{~\newline Feb 2026\newline Apr 2025}{%
+  \textbf{Quantum and Quantum-Inspired Classical Algorithms for Clustering}\newline
+  Invited Lightning Talk, \href{https://event.india.acm.org/arcs/home/}{ACM India ARCS 2026}, IIT Hyderabad\newline
+  CS Group Meeting, Centre for Quantum Technologies, NUS\quad
+  \resourcelink{PosterGreen}{https://iclr.cc/virtual/2025/poster/28068}{Poster}
+}
 
-% \cvsection{Research Interests}
-
-% Provably efficient algorithms for high-dimensional data, with an emphasis on clustering,
-% randomized algorithms, optimization, and quantum-inspired machine learning. I study how
-% structural assumptions---including low intrinsic dimension and the manifold hypothesis---can
-% break through worst-case computational barriers.
+\datedentry{~\newline Nov 2024}{%
+  \textbf{Quantum Machine Learning without any Quantum}\newline
+  \href{https://cstheory.iitd.ac.in/seminars.html}{TCS Seminar}, IIT Delhi\quad
+  \resourcelink{LinkBlue}{https://drive.google.com/file/d/10hbt5_6Pd_qbcC5O_FxOspqenUsylO2V/view?usp=sharing}{Slides}
+}
 
 \cvsection{Teaching}
 
-\nameditem{Head Teaching Assistant, \href{https://k-rajendra.github.io/courses/QuantumComputing/quantum252601.html}{COL7160: Quantum Computing}}{%
-  IIT Delhi (Winter 2026) \\ Recipient of the CSE Department's
+\datedentry{Winter 2026}{%
+  \textbf{Head Teaching Assistant, \href{https://k-rajendra.github.io/courses/QuantumComputing/quantum252601.html}{COL7160: Quantum Computing}}\newline
+  IIT Delhi\quad Recipient of the CSE Department's
   \href{https://homecse.iitd.ac.in/cse-iit-delhi-ta-award/}{Outstanding Teaching Assistant Award}.
 }
 
